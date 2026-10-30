@@ -79,8 +79,8 @@
     ]
   },
   "counts": {
-    "inventory_files": 8795,
-    "inventory_bytes": 114651588,
+    "inventory_files": 8985,
+    "inventory_bytes": 115938827,
     "policy_violations": 0
   },
   "excluded": [
@@ -1266,8 +1266,8 @@
   },
   "policy_violations": [],
   "source_verification": {
-    "checked": 8729,
-    "matched": 8729,
+    "checked": 8736,
+    "matched": 8736,
     "mismatched": [],
     "missing_sources": [],
     "critical_bad": []

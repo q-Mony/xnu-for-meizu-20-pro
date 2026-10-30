@@ -1,0 +1,1898 @@
+{
+  "schema": "nova-history-sources-v1",
+  "new_file_no_previous_version": true,
+  "policy": {
+    "docs": "all authored artifacts-nova Markdown except export subtree, TASK prompts, third-party reference/pinned/sources/snapshot trees, failed-run dirs, and dsh catalog",
+    "tools": "canonical R18 stream SHA tests plus R18 runtime analysis source; archival, preserve original assumptions, not a portable build entry",
+    "sanitize": [
+      "[redacted-device-serial]",
+      "<nova-root>",
+      "[local-home]/..."
+    ]
+  },
+  "summary": {
+    "docs_total": 200,
+    "docs_added": 178,
+    "docs_preserved_existing": 22,
+    "tools_total": 7,
+    "archived_total": 1
+  },
+  "docs": [
+    {
+      "path": "docs-nova/history/boot-latency-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-latency-nova/REPORT-nova.md",
+      "source_sha256": "f313084d55d9289368b378241c1c880abe449ab975094400c6947903f94ade26",
+      "export_sha256": "dde652b4f9c945ac6fac35592750ed17d95831c26b541eabcbe1c64b3afd7cbe",
+      "size": 10787,
+      "preserved_existing": true,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-optimization-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-optimization-nova/REPORT-nova.md",
+      "source_sha256": "d233785eaab057d5332531bbdd05e464cc67a5ef52787b1f1a36fc2bd39d3f86",
+      "export_sha256": "d233785eaab057d5332531bbdd05e464cc67a5ef52787b1f1a36fc2bd39d3f86",
+      "size": 7848,
+      "preserved_existing": true,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-optimization-nova/device-baseline-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-optimization-nova/device-baseline-nova/REPORT-nova.md",
+      "source_sha256": "049b5bb4b63309feb73b654d751c25ec7fff734129eb4eae92eb15156b4d23f5",
+      "export_sha256": "d55c192b208fe53c48f82d0d02a6c9f6aa5081e14140a9a85baf2292fc5101f5",
+      "size": 3976,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-optimization-nova/device-candidate-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-optimization-nova/device-candidate-nova/REPORT-nova.md",
+      "source_sha256": "dcf55c4cd422bf795adb48b201388a8bf2eb8ab5c2115e06e4859ce5f45e1580",
+      "export_sha256": "a61d99e1f8d7d8b33b6fe5c9361ba07b62f0dd35b062cb1301868848a5360215",
+      "size": 4314,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-optimization-nova/device-repeat-20261029T061747Z-nova/IPC-REPORT-nova.md",
+      "source": "artifacts-nova/boot-optimization-nova/device-repeat-20261029T061747Z-nova/IPC-REPORT-nova.md",
+      "source_sha256": "a5c6a48a2c346c70b969584a52288554f11fd83c95d68d286cec74b61ed994da",
+      "export_sha256": "fe0dd3c6b65466eb70de55125e3afb64d6aadad663c0d441190b98010f62c180",
+      "size": 5097,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-optimization-nova/device-repeat-20261029T061747Z-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-optimization-nova/device-repeat-20261029T061747Z-nova/REPORT-nova.md",
+      "source_sha256": "e5145315abcf6e03ad8493a57b67e0f66c7d677ba23e5401209aebb26dd52441",
+      "export_sha256": "e5145315abcf6e03ad8493a57b67e0f66c7d677ba23e5401209aebb26dd52441",
+      "size": 3690,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-optimization-nova/frozen-source-drift-nova.md",
+      "source": "artifacts-nova/boot-optimization-nova/frozen-source-drift-nova.md",
+      "source_sha256": "bd575cb18336f2f65ee7b1c252e4821629409102abd75be2dd56f8e7add124d0",
+      "export_sha256": "bd575cb18336f2f65ee7b1c252e4821629409102abd75be2dd56f8e7add124d0",
+      "size": 1752,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-optimization-nova/packaging-nova/README-nova.md",
+      "source": "artifacts-nova/boot-optimization-nova/packaging-nova/README-nova.md",
+      "source_sha256": "8db70b2936ae500251b00cb4d8bc37ab6adb1292952aee50de4d253885a8fbca",
+      "export_sha256": "98e5263c68c9f392e65ff8b2f14ee81b280bf2342ee387fa695f95998b53a697",
+      "size": 3013,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-optimization-nova/read-batching-analysis-20261029-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-optimization-nova/read-batching-analysis-20261029-nova/REPORT-nova.md",
+      "source_sha256": "2f01dfdcede51589ea0f6fc936eef02afd5a30f9ddba63af321098c007e5f161",
+      "export_sha256": "2f01dfdcede51589ea0f6fc936eef02afd5a30f9ddba63af321098c007e5f161",
+      "size": 4439,
+      "preserved_existing": true,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-optimization-nova/sha256-nova/README-nova.md",
+      "source": "artifacts-nova/boot-optimization-nova/sha256-nova/README-nova.md",
+      "source_sha256": "bffa796ffc0e5305d4a8a57bb4552bd6740dd58fefb481fd0391528bae1f38d7",
+      "export_sha256": "bffa796ffc0e5305d4a8a57bb4552bd6740dd58fefb481fd0391528bae1f38d7",
+      "size": 3750,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round10-nova/NEXT-STEPS-nova.md",
+      "source": "artifacts-nova/boot-speed-round10-nova/NEXT-STEPS-nova.md",
+      "source_sha256": "aa758cf4aa1675d005cd6a54636f05511c36b4383f9677c93d0f21e3293bae7e",
+      "export_sha256": "aa758cf4aa1675d005cd6a54636f05511c36b4383f9677c93d0f21e3293bae7e",
+      "size": 1110,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round10-nova/build-audit-nova/PREPARATION-nova.md",
+      "source": "artifacts-nova/boot-speed-round10-nova/build-audit-nova/PREPARATION-nova.md",
+      "source_sha256": "22dcd1b833472b1ed033a8672f6f9a101e2cd4c481fd9dcce298c19ab77588ac",
+      "export_sha256": "22dcd1b833472b1ed033a8672f6f9a101e2cd4c481fd9dcce298c19ab77588ac",
+      "size": 4510,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round10-nova/build-audit-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round10-nova/build-audit-nova/REPORT-nova.md",
+      "source_sha256": "cb726d69e70c4b4e2f5a79f75524dab23889b49c7f62e968bef74f74675a6114",
+      "export_sha256": "cb726d69e70c4b4e2f5a79f75524dab23889b49c7f62e968bef74f74675a6114",
+      "size": 5414,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round10-nova/failure-analysis-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round10-nova/failure-analysis-nova/REPORT-nova.md",
+      "source_sha256": "69fc44ccf7482537b3e4a70f2ea556d273ef14c0323b0680b4761fecc457090b",
+      "export_sha256": "6ade17ddb5aecaf6f02a024e7af00927cf2f3e22dd7711dde94da78143e32b72",
+      "size": 3527,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round10-nova/failure-analysis-nova/r11-diagnostic-contract-nova.md",
+      "source": "artifacts-nova/boot-speed-round10-nova/failure-analysis-nova/r11-diagnostic-contract-nova.md",
+      "source_sha256": "7487959fda21e8ab0ca3a08d5b17829f33b7e0751151872ced2d1704735b1ad0",
+      "export_sha256": "7487959fda21e8ab0ca3a08d5b17829f33b7e0751151872ced2d1704735b1ad0",
+      "size": 4873,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round10-nova/integration-review-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round10-nova/integration-review-nova/REPORT-nova.md",
+      "source_sha256": "a7a3d68d75946359899d3dd5a8194551a53386de54bd13b78b4bcd7bbac7cc09",
+      "export_sha256": "2009d484e88501a74ef3cf6cee1ed6dbb29e6e291dd60a8c16903147889fc03d",
+      "size": 3156,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round10-nova/policy-fixture-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round10-nova/policy-fixture-nova/REPORT-nova.md",
+      "source_sha256": "855d68695e730410ce92f354b8f84839b018b6f6b3acecfd414977323c15ac54",
+      "export_sha256": "855d68695e730410ce92f354b8f84839b018b6f6b3acecfd414977323c15ac54",
+      "size": 1050,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round10-nova/watchdog-policy-nova/DIAGNOSIS-nova.md",
+      "source": "artifacts-nova/boot-speed-round10-nova/watchdog-policy-nova/DIAGNOSIS-nova.md",
+      "source_sha256": "c2e10423067951a7f37c1f9c927cea30b0e0ac0116b643c40ff25a46925b1e36",
+      "export_sha256": "c2e10423067951a7f37c1f9c927cea30b0e0ac0116b643c40ff25a46925b1e36",
+      "size": 4531,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round10-nova/watchdog-policy-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round10-nova/watchdog-policy-nova/REPORT-nova.md",
+      "source_sha256": "060abf8ffb52a6c122de5d6ec8fb82715d50c89aad098cd740126643b2c55b89",
+      "export_sha256": "060abf8ffb52a6c122de5d6ec8fb82715d50c89aad098cd740126643b2c55b89",
+      "size": 5036,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round11-nova/NEXT-STEPS-nova.md",
+      "source": "artifacts-nova/boot-speed-round11-nova/NEXT-STEPS-nova.md",
+      "source_sha256": "75628925f2d51a70c9bd5ba553128a025f2eabe9d588638715378db7256099c9",
+      "export_sha256": "75628925f2d51a70c9bd5ba553128a025f2eabe9d588638715378db7256099c9",
+      "size": 541,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round11-nova/build-audit-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round11-nova/build-audit-nova/REPORT-nova.md",
+      "source_sha256": "05e9c3282ba118ac0432e31be19e5393b4ceb39076b50628c835c10e080bf715",
+      "export_sha256": "9c1f0e011ee29c79fe46044301ac61b03810b0f0b0dee6d92a65e84524dd0cb6",
+      "size": 2378,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round11-nova/failure-analysis-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round11-nova/failure-analysis-nova/REPORT-nova.md",
+      "source_sha256": "0ceb87eb77dbdd7fe9b51acb081afc056168a1d2a932b9849a5cfdd3c62185af",
+      "export_sha256": "0ceb87eb77dbdd7fe9b51acb081afc056168a1d2a932b9849a5cfdd3c62185af",
+      "size": 1062,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round11-nova/failure-log-review-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round11-nova/failure-log-review-nova/REPORT-nova.md",
+      "source_sha256": "c99a75ac5352ffe7362845b4e2de3d65aa10100c27f1640d0aeb0d196f4f1094",
+      "export_sha256": "a53c179268bf9e4312f14feee5a4e64a6caf7183de66f015a2549c9d59684153",
+      "size": 3200,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round11-nova/runtime-binding-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round11-nova/runtime-binding-nova/REPORT-nova.md",
+      "source_sha256": "85f436f0d84b1660f8bf9f8299956a361c128d9820349634a220c117290b27fc",
+      "export_sha256": "85f436f0d84b1660f8bf9f8299956a361c128d9820349634a220c117290b27fc",
+      "size": 4241,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round11-nova/runtime-log-parser-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round11-nova/runtime-log-parser-nova/REPORT-nova.md",
+      "source_sha256": "2b17e7a1f6aee717afa14f68da052fdee5014c06ac78f6a6b6cedd2b80617e87",
+      "export_sha256": "abb974b83c3f0cf17875f01e0c0e93b79b3c189dc29adeeb6e8721a137a5e035",
+      "size": 3106,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round11-nova/watchdog-runtime-nova/READONLY-FINDINGS-nova.md",
+      "source": "artifacts-nova/boot-speed-round11-nova/watchdog-runtime-nova/READONLY-FINDINGS-nova.md",
+      "source_sha256": "c1f531413564c693e2e3b8809ec78710815147c64ef6754de7d9caa567cfc330",
+      "export_sha256": "c1f531413564c693e2e3b8809ec78710815147c64ef6754de7d9caa567cfc330",
+      "size": 7296,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round11-nova/watchdog-runtime-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round11-nova/watchdog-runtime-nova/REPORT-nova.md",
+      "source_sha256": "f6a6e814db70d8b442a6693fcd5ced6da43b7dd962945c798e3af4cb28b27860",
+      "export_sha256": "f6a6e814db70d8b442a6693fcd5ced6da43b7dd962945c798e3af4cb28b27860",
+      "size": 4390,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round12-nova/NEXT-STEPS-nova.md",
+      "source": "artifacts-nova/boot-speed-round12-nova/NEXT-STEPS-nova.md",
+      "source_sha256": "412af08053a4018e3a338076246096c96c0a20db38d372cb8c8dcc8792bd9929",
+      "export_sha256": "412af08053a4018e3a338076246096c96c0a20db38d372cb8c8dcc8792bd9929",
+      "size": 1075,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round12-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round12-nova/REPORT-nova.md",
+      "source_sha256": "9da8beecf961c68b7e40b73b5b9a76de4a8dbd4380b93f9de113582081dd762b",
+      "export_sha256": "9da8beecf961c68b7e40b73b5b9a76de4a8dbd4380b93f9de113582081dd762b",
+      "size": 1025,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round12-nova/authorized-install-20261030T121551+0800-nova/EXECUTION-REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round12-nova/authorized-install-20261030T121551+0800-nova/EXECUTION-REPORT-nova.md",
+      "source_sha256": "6ac151e3bdff8a9b79cc0169cc4c8e0dc8e61271be73db768fe6cc290ec19b8e",
+      "export_sha256": "2da7f7203764b6e622fb8af3bfd70394900f3e223a4951eed0761c354e9cbfb6",
+      "size": 3478,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round12-nova/authorized-install-20261030T121551+0800-nova/SOL-ACCEPTANCE-nova.md",
+      "source": "artifacts-nova/boot-speed-round12-nova/authorized-install-20261030T121551+0800-nova/SOL-ACCEPTANCE-nova.md",
+      "source_sha256": "1dea91cb9d1595bd932d6f349097f88609b514590368ca2c82ade1b735a651f5",
+      "export_sha256": "1dea91cb9d1595bd932d6f349097f88609b514590368ca2c82ade1b735a651f5",
+      "size": 1016,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round12-nova/build-audit-nova/CHANGELOG-entry-nova.md",
+      "source": "artifacts-nova/boot-speed-round12-nova/build-audit-nova/CHANGELOG-entry-nova.md",
+      "source_sha256": "3fba424d15cf056a15b05770279a70f490b28949dabfaf3838b875f7cea2bd72",
+      "export_sha256": "3fba424d15cf056a15b05770279a70f490b28949dabfaf3838b875f7cea2bd72",
+      "size": 416,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round12-nova/build-audit-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round12-nova/build-audit-nova/REPORT-nova.md",
+      "source_sha256": "44257270366f2250aeb359ba9792ff61ea19fc59dc9131db4ef09abaceeb52c5",
+      "export_sha256": "44257270366f2250aeb359ba9792ff61ea19fc59dc9131db4ef09abaceeb52c5",
+      "size": 2001,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round12-nova/metadata-probe-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round12-nova/metadata-probe-nova/REPORT-nova.md",
+      "source_sha256": "380c4b08103efbab8f8017ef67bdb3c3d33ccb89563fa23f7d88d732055a9e08",
+      "export_sha256": "380c4b08103efbab8f8017ef67bdb3c3d33ccb89563fa23f7d88d732055a9e08",
+      "size": 3696,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round12-nova/parent-review-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round12-nova/parent-review-nova/REPORT-nova.md",
+      "source_sha256": "a3570ba3739abd98ab0d6d533ac2e71a7952acf71ef88239753fed2bb1031734",
+      "export_sha256": "a3570ba3739abd98ab0d6d533ac2e71a7952acf71ef88239753fed2bb1031734",
+      "size": 687,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round12-nova/stat-abi-review-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round12-nova/stat-abi-review-nova/REPORT-nova.md",
+      "source_sha256": "03d4f19c0d440ab8601d2b59f1ed5efe3ef2f803f8272c2ae40fe5c543b74641",
+      "export_sha256": "03d4f19c0d440ab8601d2b59f1ed5efe3ef2f803f8272c2ae40fe5c543b74641",
+      "size": 4265,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round13-nova/authorized-install-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round13-nova/authorized-install-nova/REPORT-nova.md",
+      "source_sha256": "c9f707e55b137979fa052e2e7df12810013c7d398d548b5647f15cc2705326e9",
+      "export_sha256": "c9f707e55b137979fa052e2e7df12810013c7d398d548b5647f15cc2705326e9",
+      "size": 4414,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round13-nova/build-audit-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round13-nova/build-audit-nova/REPORT-nova.md",
+      "source_sha256": "0a84457df184249e75346136099fe0a02d5830a858fb95ad94dd4e8a7ca8786b",
+      "export_sha256": "0a84457df184249e75346136099fe0a02d5830a858fb95ad94dd4e8a7ca8786b",
+      "size": 11456,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round13-nova/build-audit-nova/postlink-instructions-20261030T050930704350Z-nova/manual-control-flow-nova.md",
+      "source": "artifacts-nova/boot-speed-round13-nova/build-audit-nova/postlink-instructions-20261030T050930704350Z-nova/manual-control-flow-nova.md",
+      "source_sha256": "e30d86e8b8ef19ecd2a3cc1ff0c8d900e442edfeb1b2f08af0d74c96033678f3",
+      "export_sha256": "e30d86e8b8ef19ecd2a3cc1ff0c8d900e442edfeb1b2f08af0d74c96033678f3",
+      "size": 2529,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round13-nova/build-audit-nova/postlink-instructions-20261030T051011578113Z-nova/manual-control-flow-nova.md",
+      "source": "artifacts-nova/boot-speed-round13-nova/build-audit-nova/postlink-instructions-20261030T051011578113Z-nova/manual-control-flow-nova.md",
+      "source_sha256": "e30d86e8b8ef19ecd2a3cc1ff0c8d900e442edfeb1b2f08af0d74c96033678f3",
+      "export_sha256": "e30d86e8b8ef19ecd2a3cc1ff0c8d900e442edfeb1b2f08af0d74c96033678f3",
+      "size": 2529,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round13-nova/failure-log-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round13-nova/failure-log-nova/REPORT-nova.md",
+      "source_sha256": "15bf7f3f320256e78bb11cee68eaf48cbe01281be4eeb94e6d4ac91023548fb9",
+      "export_sha256": "15bf7f3f320256e78bb11cee68eaf48cbe01281be4eeb94e6d4ac91023548fb9",
+      "size": 2402,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round13-nova/install-preparation-nova/PREPARATION-RESULT-nova.md",
+      "source": "artifacts-nova/boot-speed-round13-nova/install-preparation-nova/PREPARATION-RESULT-nova.md",
+      "source_sha256": "cdabae7d3396dd1a507cce33ed53c7b0f55dfa2af31ef40e1d78e41e8391e60d",
+      "export_sha256": "cdabae7d3396dd1a507cce33ed53c7b0f55dfa2af31ef40e1d78e41e8391e60d",
+      "size": 4378,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round13-nova/owner-compat-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round13-nova/owner-compat-nova/REPORT-nova.md",
+      "source_sha256": "4753adf445e4e7cea7e0de70fdd8577ab0fd0491fe4d7e3a45cc915ab00df47e",
+      "export_sha256": "4753adf445e4e7cea7e0de70fdd8577ab0fd0491fe4d7e3a45cc915ab00df47e",
+      "size": 972,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round13-nova/owner-compat-nova/SOL-ACCEPTANCE-nova.md",
+      "source": "artifacts-nova/boot-speed-round13-nova/owner-compat-nova/SOL-ACCEPTANCE-nova.md",
+      "source_sha256": "e1ef2ab32c6bad3d02d1062b718b97296d1d5ad28b9c637774754011deec4f47",
+      "export_sha256": "e1ef2ab32c6bad3d02d1062b718b97296d1d5ad28b9c637774754011deec4f47",
+      "size": 2103,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round14-nova/PREPARATION-RESULT-nova.md",
+      "source": "artifacts-nova/boot-speed-round14-nova/PREPARATION-RESULT-nova.md",
+      "source_sha256": "095767e43558a3bf4350f87bda11b03039ffbdc172ab8d68665a0556e919ec21",
+      "export_sha256": "1c22d3b594836058e8b82359e9d8c5dcdd73d49b4b3ce4f31b599dd3b70fb47f",
+      "size": 6527,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round14-nova/authorized-install-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round14-nova/authorized-install-nova/REPORT-nova.md",
+      "source_sha256": "61dc8de307453f615fc29e37179454e2afb744b188036bdea3ef04008ce1fda5",
+      "export_sha256": "61dc8de307453f615fc29e37179454e2afb744b188036bdea3ef04008ce1fda5",
+      "size": 6642,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round14-nova/build-audit-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round14-nova/build-audit-nova/REPORT-nova.md",
+      "source_sha256": "5debf8fd2a69cac0b158c926807721818a9e76c935c8126d42412fbd3e9a949c",
+      "export_sha256": "5debf8fd2a69cac0b158c926807721818a9e76c935c8126d42412fbd3e9a949c",
+      "size": 6812,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round14-nova/build-audit-nova/postlink-instructions-20261030T060144723544Z-nova/manual-control-flow-nova.md",
+      "source": "artifacts-nova/boot-speed-round14-nova/build-audit-nova/postlink-instructions-20261030T060144723544Z-nova/manual-control-flow-nova.md",
+      "source_sha256": "56c272a7937e26f63aae7e15ad9d01b570dd6d363e37b4760a31c0fc144eb331",
+      "export_sha256": "56c272a7937e26f63aae7e15ad9d01b570dd6d363e37b4760a31c0fc144eb331",
+      "size": 6558,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round14-nova/marker-compat-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round14-nova/marker-compat-nova/REPORT-nova.md",
+      "source_sha256": "7371b8c0c22562ff68bb85b8424cae1b9be999355649d420933bb9f1ac1f1c70",
+      "export_sha256": "7371b8c0c22562ff68bb85b8424cae1b9be999355649d420933bb9f1ac1f1c70",
+      "size": 5163,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round14-nova/runtime-analysis-review-nova/review-result-nova.md",
+      "source": "artifacts-nova/boot-speed-round14-nova/runtime-analysis-review-nova/review-result-nova.md",
+      "source_sha256": "d82cfa4c6645432a860e28b2663e517be212cdbdcbe5dafa8eacf30def741f0d",
+      "export_sha256": "d82cfa4c6645432a860e28b2663e517be212cdbdcbe5dafa8eacf30def741f0d",
+      "size": 3370,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round14-nova/runtime-log-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round14-nova/runtime-log-nova/REPORT-nova.md",
+      "source_sha256": "6c82cb83b22f9646846cf842517d3a09b7e524056670b5fe16c6040b62757e7b",
+      "export_sha256": "6c82cb83b22f9646846cf842517d3a09b7e524056670b5fe16c6040b62757e7b",
+      "size": 4658,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round15-nova/arm-lock-review-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round15-nova/arm-lock-review-nova/REPORT-nova.md",
+      "source_sha256": "894bf069a655794ff126c0da3f4b1af17d2ee75c806905206972100c94c122f2",
+      "export_sha256": "894bf069a655794ff126c0da3f4b1af17d2ee75c806905206972100c94c122f2",
+      "size": 5254,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round15-nova/authorized-install-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round15-nova/authorized-install-nova/REPORT-nova.md",
+      "source_sha256": "8c54635c6bd6028d2580d3eefcac8e517998fb3a61128c4328bc71020dd57eb1",
+      "export_sha256": "8c54635c6bd6028d2580d3eefcac8e517998fb3a61128c4328bc71020dd57eb1",
+      "size": 4408,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round15-nova/backboard-analysis-review-nova/review-result-nova.md",
+      "source": "artifacts-nova/boot-speed-round15-nova/backboard-analysis-review-nova/review-result-nova.md",
+      "source_sha256": "fe4c6a91ad1ebba50e63d4234b2c73ffe075e57335752b5f419df8ffde85bb29",
+      "export_sha256": "fe4c6a91ad1ebba50e63d4234b2c73ffe075e57335752b5f419df8ffde85bb29",
+      "size": 3005,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round15-nova/backboard-init-analysis-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round15-nova/backboard-init-analysis-nova/REPORT-nova.md",
+      "source_sha256": "d876ada8217c5f53c56c29e69afdcaa7a87b101cb7d9c3453969c6032c0b1d7f",
+      "export_sha256": "d876ada8217c5f53c56c29e69afdcaa7a87b101cb7d9c3453969c6032c0b1d7f",
+      "size": 14409,
+      "preserved_existing": true,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round15-nova/bbs-evidence-review-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round15-nova/bbs-evidence-review-nova/REPORT-nova.md",
+      "source_sha256": "f0f2bf1f69886ee5aa1821bbf0848591895f98b4c5786e455e6ac9f60cd18f40",
+      "export_sha256": "f0f2bf1f69886ee5aa1821bbf0848591895f98b4c5786e455e6ac9f60cd18f40",
+      "size": 2965,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round15-nova/install-preparation-retry-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round15-nova/install-preparation-retry-nova/REPORT-nova.md",
+      "source_sha256": "159b75e59143c9abf492a1e90c6324e1c5b41f6a3098844eac0359abcec42dc6",
+      "export_sha256": "159b75e59143c9abf492a1e90c6324e1c5b41f6a3098844eac0359abcec42dc6",
+      "size": 9324,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round15-nova/launchd-request-binding-nova/BBS-POSITIVE-BINDING-nova.md",
+      "source": "artifacts-nova/boot-speed-round15-nova/launchd-request-binding-nova/BBS-POSITIVE-BINDING-nova.md",
+      "source_sha256": "57a2e0fd39c88cdf18cf9dc65860ee4d2002c7a4640d766a016c527efac791e2",
+      "export_sha256": "57a2e0fd39c88cdf18cf9dc65860ee4d2002c7a4640d766a016c527efac791e2",
+      "size": 3080,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round15-nova/launchd-request-binding-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round15-nova/launchd-request-binding-nova/REPORT-nova.md",
+      "source_sha256": "04967113c355276b4dbc020fba2ee2172c07010c62ff5affd2d79b18bd0406e2",
+      "export_sha256": "04967113c355276b4dbc020fba2ee2172c07010c62ff5affd2d79b18bd0406e2",
+      "size": 7754,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round15-nova/launchd-request-binding-nova/STATIC-ADDENDUM-nova.md",
+      "source": "artifacts-nova/boot-speed-round15-nova/launchd-request-binding-nova/STATIC-ADDENDUM-nova.md",
+      "source_sha256": "62a77ab691a57727d763b32831b96ffb5cf99675b5faaa31d28efe286d0b4890",
+      "export_sha256": "62a77ab691a57727d763b32831b96ffb5cf99675b5faaa31d28efe286d0b4890",
+      "size": 1926,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round15-nova/probe-correction-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round15-nova/probe-correction-nova/REPORT-nova.md",
+      "source_sha256": "04a42736674701943bcdd7ca1bd851da24c46f77d669a6510f37bae242e997b9",
+      "export_sha256": "04a42736674701943bcdd7ca1bd851da24c46f77d669a6510f37bae242e997b9",
+      "size": 6256,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round15-nova/remaining-latency-analysis-nova/NEXT-CANDIDATE-nova.md",
+      "source": "artifacts-nova/boot-speed-round15-nova/remaining-latency-analysis-nova/NEXT-CANDIDATE-nova.md",
+      "source_sha256": "91753b3e1f077b5527ba391b0440ad20374b097ab909855122b660058deb0006",
+      "export_sha256": "91753b3e1f077b5527ba391b0440ad20374b097ab909855122b660058deb0006",
+      "size": 6520,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round15-nova/remaining-latency-analysis-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round15-nova/remaining-latency-analysis-nova/REPORT-nova.md",
+      "source_sha256": "314e01c75df26d1283af63d591787e1bd14cf69b182116fd15fdc11d33e131fb",
+      "export_sha256": "314e01c75df26d1283af63d591787e1bd14cf69b182116fd15fdc11d33e131fb",
+      "size": 13080,
+      "preserved_existing": true,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round15-nova/runtime-report-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round15-nova/runtime-report-nova/REPORT-nova.md",
+      "source_sha256": "972675d6a1a4ffcb1ee677c29768eb10a306689140dbc5ec438f0f321b6cd9e5",
+      "export_sha256": "972675d6a1a4ffcb1ee677c29768eb10a306689140dbc5ec438f0f321b6cd9e5",
+      "size": 2029,
+      "preserved_existing": true,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round15-nova/sblong-probe-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round15-nova/sblong-probe-nova/REPORT-nova.md",
+      "source_sha256": "7490b9d5c461a8886aaa6a8fda35e8bc6bd138128f75dd1cfbdafd2b97815e5c",
+      "export_sha256": "7490b9d5c461a8886aaa6a8fda35e8bc6bd138128f75dd1cfbdafd2b97815e5c",
+      "size": 8108,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round15-nova/sol-final-review-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round15-nova/sol-final-review-nova/REPORT-nova.md",
+      "source_sha256": "14916667add2ed1b1417cb2bc2f47a627c4ac49a43e6ed402b3d0424e78903e0",
+      "export_sha256": "14916667add2ed1b1417cb2bc2f47a627c4ac49a43e6ed402b3d0424e78903e0",
+      "size": 2379,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round16-nova/authorized-install-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round16-nova/authorized-install-nova/REPORT-nova.md",
+      "source_sha256": "63662c14efeefb6ea23e2874606f69c17a2b1d430ad4eda488ea674a49fc36ea",
+      "export_sha256": "4c9ed42d70cba8fb6cca956b4c09aaad8b2016b024332e535b7092d30a174c9c",
+      "size": 3822,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round16-nova/final-build-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round16-nova/final-build-nova/REPORT-nova.md",
+      "source_sha256": "9d5d6980cb490dd983d0f4614595d2aba392ef334c5885e6acc45f60acdc09fe",
+      "export_sha256": "9d5d6980cb490dd983d0f4614595d2aba392ef334c5885e6acc45f60acdc09fe",
+      "size": 4420,
+      "preserved_existing": true,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round16-nova/install-preparation-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round16-nova/install-preparation-nova/REPORT-nova.md",
+      "source_sha256": "35c82929ff574c1caf0d36dafc1bddcbc5ba7984569848250d9ce581c1bab48c",
+      "export_sha256": "35c82929ff574c1caf0d36dafc1bddcbc5ba7984569848250d9ce581c1bab48c",
+      "size": 4048,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round16-nova/probe-review-fix-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round16-nova/probe-review-fix-nova/REPORT-nova.md",
+      "source_sha256": "c3c57dd8d4c107b662858e5a1d33cb8989a5550645c7826ebee8d43dc7d2ee80",
+      "export_sha256": "c3c57dd8d4c107b662858e5a1d33cb8989a5550645c7826ebee8d43dc7d2ee80",
+      "size": 4477,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round16-nova/report-errata-nova/ERRATA-nova.md",
+      "source": "artifacts-nova/boot-speed-round16-nova/report-errata-nova/ERRATA-nova.md",
+      "source_sha256": "f8ead297d3bc5b264138a3cd1b2ac9ac85ffb411a81dac7917470fe7d377099a",
+      "export_sha256": "f8ead297d3bc5b264138a3cd1b2ac9ac85ffb411a81dac7917470fe7d377099a",
+      "size": 1103,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round16-nova/root-cause-nova/FIX-PROPOSAL-nova.md",
+      "source": "artifacts-nova/boot-speed-round16-nova/root-cause-nova/FIX-PROPOSAL-nova.md",
+      "source_sha256": "790879903d5e0aaae16b7a5d205b61c8f638be264f2690a7ab4b8ac606868629",
+      "export_sha256": "790879903d5e0aaae16b7a5d205b61c8f638be264f2690a7ab4b8ac606868629",
+      "size": 6234,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round16-nova/root-cause-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round16-nova/root-cause-nova/REPORT-nova.md",
+      "source_sha256": "361f656243d327692ff54f6d88330fd99bcc7b8160d9a643fd00e58c15e6b319",
+      "export_sha256": "361f656243d327692ff54f6d88330fd99bcc7b8160d9a643fd00e58c15e6b319",
+      "size": 8405,
+      "preserved_existing": true,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round16-nova/runtime-report-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round16-nova/runtime-report-nova/REPORT-nova.md",
+      "source_sha256": "996a05e1fb77b8830cc9b22a40da974e54ec99c5c7be0f9f3ed7409f2c18e3c4",
+      "export_sha256": "d883e3daf081e3c9433ba4bcbca73fa4fdf8862b68adfdd74f661bce7ec84446",
+      "size": 7277,
+      "preserved_existing": true,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round16-nova/sol-final-acceptance-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round16-nova/sol-final-acceptance-nova/REPORT-nova.md",
+      "source_sha256": "db9cae13162f29539713ecf09d4eb2a073b44a2be3a1af9d33e169dcede0fd19",
+      "export_sha256": "db9cae13162f29539713ecf09d4eb2a073b44a2be3a1af9d33e169dcede0fd19",
+      "size": 2041,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round16-nova/sol-provisional-review-nova/REVIEW-NOTES-nova.md",
+      "source": "artifacts-nova/boot-speed-round16-nova/sol-provisional-review-nova/REVIEW-NOTES-nova.md",
+      "source_sha256": "c5aed29904570d445458179a8ab356d3e13beef28ffeb70f1792b574031f9931",
+      "export_sha256": "c5aed29904570d445458179a8ab356d3e13beef28ffeb70f1792b574031f9931",
+      "size": 4130,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round16-nova/target-selector-fix-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round16-nova/target-selector-fix-nova/REPORT-nova.md",
+      "source_sha256": "5a0b3e3bdefbe2cec63f44a98b0f0635abdde91bd177d93cfae5c3b7ef155f4d",
+      "export_sha256": "04d09852c803513037ac06ea2da34ecb9fe87580e1e6fc75bb1401ae76251846",
+      "size": 5210,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round17-nova/authorized-install-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round17-nova/authorized-install-nova/REPORT-nova.md",
+      "source_sha256": "853b7fb375ecbfcc4e26fac867b499799b778e4147597d5cde46154a447e7514",
+      "export_sha256": "fbcfa85696ab401991e228868054c42cbdd6fbff59d46aef9bc4b38a5c8b4070",
+      "size": 2159,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round17-nova/install-preparation-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round17-nova/install-preparation-nova/REPORT-nova.md",
+      "source_sha256": "acca38a802ab9cfb46c5bd9306bc233e4a92df3ce4f2c15d485e73f675d06d6d",
+      "export_sha256": "35d6e202712da61390e7c24249ce5436ffb7b65705b6aed033a800570e3e03d8",
+      "size": 3936,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round17-nova/log-encode-completion-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round17-nova/log-encode-completion-nova/REPORT-nova.md",
+      "source_sha256": "036d6815d25bab8954d32d5b882529206515a591251163fcba7173b330577034",
+      "export_sha256": "1bd7c3c1c7f8bee2fc9d91311cede1a5c0885866472aaa60325864ca6e9bf8d9",
+      "size": 10701,
+      "preserved_existing": true,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round17-nova/log-encode-fix-nova/host/r17-red-green/SUMMARY-nova.md",
+      "source": "artifacts-nova/boot-speed-round17-nova/log-encode-fix-nova/host/r17-red-green/SUMMARY-nova.md",
+      "source_sha256": "0eac614dbafbae0ae359f19557e4089517b909fbb3e41e14207507751424b617",
+      "export_sha256": "09b979266e4337f88cc345d4b6b236a6ffcef4862760cbf176be9334ac08dce0",
+      "size": 796,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round17-nova/runtime-analysis-sol-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round17-nova/runtime-analysis-sol-nova/REPORT-nova.md",
+      "source_sha256": "893b8c6d036a0f44896924fa7e007b12654ea4f9e5d249670980af8b84dda8a4",
+      "export_sha256": "893b8c6d036a0f44896924fa7e007b12654ea4f9e5d249670980af8b84dda8a4",
+      "size": 8873,
+      "preserved_existing": true,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round17-nova/sol-acceptance-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round17-nova/sol-acceptance-nova/REPORT-nova.md",
+      "source_sha256": "8f4dea3bb1e3201178a9220f7765deb89cd38c2c97f023b245dd4b89482198bd",
+      "export_sha256": "8f4dea3bb1e3201178a9220f7765deb89cd38c2c97f023b245dd4b89482198bd",
+      "size": 1843,
+      "preserved_existing": true,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round18-nova/SOL-REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round18-nova/SOL-REPORT-nova.md",
+      "source_sha256": "4e153726e7b93c044644b4989f2e7163aeb5875f25024ee8ca2b90accdd96d4e",
+      "export_sha256": "4e153726e7b93c044644b4989f2e7163aeb5875f25024ee8ca2b90accdd96d4e",
+      "size": 2439,
+      "preserved_existing": true,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round18-nova/authorized-install-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round18-nova/authorized-install-nova/REPORT-nova.md",
+      "source_sha256": "210b5b63ae3ebcc5c8b2fc62c247e16b2ecad9e70625c3b8c1bcc5a281141296",
+      "export_sha256": "c7ab262f920d2560cfbfcda074dff4e32ab2ede45ee17ffc11404b156be48b93",
+      "size": 3479,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round18-nova/build-package-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round18-nova/build-package-nova/REPORT-nova.md",
+      "source_sha256": "a869719564a23cb59d5c3207ecb9d9878a4ba06382c309318d404949f17e45ee",
+      "export_sha256": "a869719564a23cb59d5c3207ecb9d9878a4ba06382c309318d404949f17e45ee",
+      "size": 11047,
+      "preserved_existing": true,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round18-nova/install-preparation-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round18-nova/install-preparation-nova/REPORT-nova.md",
+      "source_sha256": "938fad1494b38cf399b0c765332bb5b2de6615e154370689197766c2c571e23e",
+      "export_sha256": "7d97f89a50bd4f7fc39ea4beda70067fc05ddd77750cb7fa90b5f40c8b769ebe",
+      "size": 3715,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round18-nova/receiver-blackout-plan-sol-nova/BOOT-ENDPOINTS-nova.md",
+      "source": "artifacts-nova/boot-speed-round18-nova/receiver-blackout-plan-sol-nova/BOOT-ENDPOINTS-nova.md",
+      "source_sha256": "aa89507caa894757a09677a90f05bc04307add965dcc7980a09b21677dc52ada",
+      "export_sha256": "aa89507caa894757a09677a90f05bc04307add965dcc7980a09b21677dc52ada",
+      "size": 1935,
+      "preserved_existing": true,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round18-nova/receiver-blackout-plan-sol-nova/PLAN-nova.md",
+      "source": "artifacts-nova/boot-speed-round18-nova/receiver-blackout-plan-sol-nova/PLAN-nova.md",
+      "source_sha256": "3cd5618ed0f1c02b88c26792297ea72535c4e8a6a85c6edfa5a1931e40873375",
+      "export_sha256": "3cd5618ed0f1c02b88c26792297ea72535c4e8a6a85c6edfa5a1931e40873375",
+      "size": 4031,
+      "preserved_existing": true,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round18-nova/runtime-analysis-sol-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round18-nova/runtime-analysis-sol-nova/REPORT-nova.md",
+      "source_sha256": "a05c64f6a8e8b33fd3e632efb54cbc6a5d5b05b443c24b6d3505504f06e0ad68",
+      "export_sha256": "dccc697a32ad0eabb5eb318a8756d81313f0b7be76514a59aefff4d04f7e307c",
+      "size": 5206,
+      "preserved_existing": true,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round18-nova/warm-sha-stream-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round18-nova/warm-sha-stream-nova/REPORT-nova.md",
+      "source_sha256": "058a10dd20bc06b52ca3bfc3ac9bf32816b69172818412116b1b1dab9688bcd1",
+      "export_sha256": "058a10dd20bc06b52ca3bfc3ac9bf32816b69172818412116b1b1dab9688bcd1",
+      "size": 13152,
+      "preserved_existing": true,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round2-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round2-nova/REPORT-nova.md",
+      "source_sha256": "2720689a1624e17f902e545967ed45a38fdd2ee02ccda75ef04a0440feed0404",
+      "export_sha256": "2720689a1624e17f902e545967ed45a38fdd2ee02ccda75ef04a0440feed0404",
+      "size": 4493,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round2-nova/baseline-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round2-nova/baseline-nova/REPORT-nova.md",
+      "source_sha256": "5c9588f8798561d6f8619ea26a4eefeb10df7e95a5b942840410b8035a084477",
+      "export_sha256": "8101172ee66dbdc1da7c628da1b3e80d0a9180caede5a9eb9eecc96403fffdea",
+      "size": 4833,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round2-nova/baseline-nova/smp-status-nova.md",
+      "source": "artifacts-nova/boot-speed-round2-nova/baseline-nova/smp-status-nova.md",
+      "source_sha256": "2d1f3298181ff0512f435dcf6ad56f14e8335531759f78a666f92beeddb72357",
+      "export_sha256": "3ca3561587cfe483a99b0cba0393a2d80e8df7aa59bd8344801389f7235dee80",
+      "size": 7758,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round2-nova/device-analysis-nova/root-verification-path-nova.md",
+      "source": "artifacts-nova/boot-speed-round2-nova/device-analysis-nova/root-verification-path-nova.md",
+      "source_sha256": "1b35f40347eb8aabe4d93ebe08526b7c48867849b01405fe879d57100876fe58",
+      "export_sha256": "101d98d6646b81b7475509d8bbffc3ff41cb673444711cd9ffb10055a78551df",
+      "size": 10186,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round2-nova/device-analysis-nova/service-comparison-nova.md",
+      "source": "artifacts-nova/boot-speed-round2-nova/device-analysis-nova/service-comparison-nova.md",
+      "source_sha256": "6b00f54e991b4f34441e1b2d4d54b3660ed913b32aa55b06a9092305a6702cb5",
+      "export_sha256": "83834c86e7ed9f1764ba9a30cb217a37333d5eecdc63c6d10589b6ad0bce91aa",
+      "size": 9004,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round2-nova/linked-rootio-audit-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round2-nova/linked-rootio-audit-nova/REPORT-nova.md",
+      "source_sha256": "d341c5238d823e4834039f8de3443b6d5600444881e5473bb501594bd8306f5f",
+      "export_sha256": "6c531b3607040fb9573383434b8d156a252488e4ee613704bfe1274ab994bf78",
+      "size": 7563,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round2-nova/root-tests-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round2-nova/root-tests-nova/REPORT-nova.md",
+      "source_sha256": "ed2ec850954650bc06008fdcd1aac91d531c5ce71adc0126bd0eb9fadc08a295",
+      "export_sha256": "ed2ec850954650bc06008fdcd1aac91d531c5ce71adc0126bd0eb9fadc08a295",
+      "size": 2669,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round2-nova/root-tests-nova/instrumentation-review-nova.md",
+      "source": "artifacts-nova/boot-speed-round2-nova/root-tests-nova/instrumentation-review-nova.md",
+      "source_sha256": "5ae1720dff2514ddaf653715e4e63f55e0defc87541098f953854b5eaab3684f",
+      "export_sha256": "e6d12b75130887cf8796afc1af2b6e440b0bb7c884e967aef560109700a8b613",
+      "size": 8089,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round2-nova/rootio-analysis-nova.md",
+      "source": "artifacts-nova/boot-speed-round2-nova/rootio-analysis-nova.md",
+      "source_sha256": "e49818caddbbd8096eeed6d853129df7758d76472837fee65f77cb3418d8e4fa",
+      "export_sha256": "45403e8884dfe891fa70c9a6efc9dc8422fc40b3757bb5b0bc1a5318fd9ce0aa",
+      "size": 4291,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round2-nova/service-waits-nova.md",
+      "source": "artifacts-nova/boot-speed-round2-nova/service-waits-nova.md",
+      "source_sha256": "a1cccbca65b06bdbb36d7315401578763225ddf50157bdd7a1a7765a8fc484e2",
+      "export_sha256": "965cf4ecf2e11ac05890a3d342506bac1a8eb126e8fa7be0bd8d5d338f461ebc",
+      "size": 13760,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round3-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round3-nova/REPORT-nova.md",
+      "source_sha256": "076e8db765beb7f7d39a61a6fda69a233a44e4ad6a13b4cc5118aab9f24db219",
+      "export_sha256": "076e8db765beb7f7d39a61a6fda69a233a44e4ad6a13b4cc5118aab9f24db219",
+      "size": 5770,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round3-nova/device-analysis-nova/rootio-independent-review-nova.md",
+      "source": "artifacts-nova/boot-speed-round3-nova/device-analysis-nova/rootio-independent-review-nova.md",
+      "source_sha256": "215827bcbc455d24ae9be8bb2a84e954c8f2433c6dceff509a2814a918ad712f",
+      "export_sha256": "2c4b71c7f5d48fb58e325493c7cbad6b86115dfe70d8dbbd93702efdb2bc0b98",
+      "size": 8926,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round3-nova/device-analysis-nova/service-comparison-nova.md",
+      "source": "artifacts-nova/boot-speed-round3-nova/device-analysis-nova/service-comparison-nova.md",
+      "source_sha256": "dce9fe854ed5b25bee7f35e54bd87e98914f4dbc4a80ab4f419351cd39af94f6",
+      "export_sha256": "10fd1106c97fc88ad935217d9abafea506203fa398ef9ac4b06a96f094d5336f",
+      "size": 6841,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round3-nova/linked-data-sha-audit-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round3-nova/linked-data-sha-audit-nova/REPORT-nova.md",
+      "source_sha256": "c9fa50881f6d7359b28e473eafdfd2738987e27b268e7ca411b38ab29ea5e187",
+      "export_sha256": "c9fa50881f6d7359b28e473eafdfd2738987e27b268e7ca411b38ab29ea5e187",
+      "size": 3390,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round3-nova/root-sha-tests-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round3-nova/root-sha-tests-nova/REPORT-nova.md",
+      "source_sha256": "87a802c23992893e44a06da95be24240a545e299421d9c4ca2be73770d6a5d3f",
+      "export_sha256": "dbd5fe58ac5a2190265db72a6946fb02fd158f0c5fc71ad99cf8d28ebf7d7827",
+      "size": 5008,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round4-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round4-nova/REPORT-nova.md",
+      "source_sha256": "a069e06c1c72aa77cad08e4dc592d6b3f3b6626e401c3be89681fadd5fd83847",
+      "export_sha256": "a069e06c1c72aa77cad08e4dc592d6b3f3b6626e401c3be89681fadd5fd83847",
+      "size": 7424,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round4-nova/device-analysis-nova/data-seed-feasibility-nova.md",
+      "source": "artifacts-nova/boot-speed-round4-nova/device-analysis-nova/data-seed-feasibility-nova.md",
+      "source_sha256": "548c4334c1d27474299601a5bd12e51d7241016fa1b7f724a0984646376f3973",
+      "export_sha256": "99c8440f254bb29f46d7be8bce38168437f2886f950b9de4aa57bde7e8c02eff",
+      "size": 13298,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round4-nova/device-analysis-nova/display-diagnostic-cost-review-nova.md",
+      "source": "artifacts-nova/boot-speed-round4-nova/device-analysis-nova/display-diagnostic-cost-review-nova.md",
+      "source_sha256": "a40eedbbb54ec8665b422cc8af7e85ac532c2a21a12dc544906ae5d521503e71",
+      "export_sha256": "b11a4bcc5e4ca3d57b7de7fafa110c2094f62d96aa5ed993834cae3259494e5d",
+      "size": 13597,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round4-nova/device-analysis-nova/launchd-message-review-nova.md",
+      "source": "artifacts-nova/boot-speed-round4-nova/device-analysis-nova/launchd-message-review-nova.md",
+      "source_sha256": "e40e3fccc35a02ebb136520938d546421d86942ff63080de2b70406fe72ecd18",
+      "export_sha256": "c21b25b071b1f32421feb1334c594ecd801970f79ead32baabe2c52b7078f078",
+      "size": 8725,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round4-nova/device-analysis-nova/lsdbt-analysis-nova.md",
+      "source": "artifacts-nova/boot-speed-round4-nova/device-analysis-nova/lsdbt-analysis-nova.md",
+      "source_sha256": "3c95b5af7915f1e91b588411e1b196b4fbd1ccf3fe52f1e61d4d7b44d6379100",
+      "export_sha256": "3c95b5af7915f1e91b588411e1b196b4fbd1ccf3fe52f1e61d4d7b44d6379100",
+      "size": 3376,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round4-nova/device-analysis-nova/lsdipc-analysis-nova.md",
+      "source": "artifacts-nova/boot-speed-round4-nova/device-analysis-nova/lsdipc-analysis-nova.md",
+      "source_sha256": "a8d2784aae1eafa22c193762af040fa52c3466c13a2445c19e72056b2f6b0d3a",
+      "export_sha256": "40702db8f517c140f5c81a853e8f357044148e1c5e1f43a9b21620d0742f437f",
+      "size": 10004,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round4-nova/independent-review-nova.md",
+      "source": "artifacts-nova/boot-speed-round4-nova/independent-review-nova.md",
+      "source_sha256": "6ef25611ce492a114933735faa21ae421249ec23d5908ecb1e12ef6272a1ca10",
+      "export_sha256": "541f5e3385740fe5ba0491d6b2076b136cb5623aa9496d3b4a19b1691ba24f05",
+      "size": 10022,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round4-nova/lsdbt-timing-tests-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round4-nova/lsdbt-timing-tests-nova/REPORT-nova.md",
+      "source_sha256": "26aa5627def11aa5513c1b18cff767ba1f27115d609bbdff0d9d7a8bd67443e2",
+      "export_sha256": "26aa5627def11aa5513c1b18cff767ba1f27115d609bbdff0d9d7a8bd67443e2",
+      "size": 2482,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round4-nova/lsdipc-timing-tests-nova/README-nova.md",
+      "source": "artifacts-nova/boot-speed-round4-nova/lsdipc-timing-tests-nova/README-nova.md",
+      "source_sha256": "d9945e2f179c0f34d1d407eb5fddf34c74546dce1cd30d60ea3d919fa6b9c957",
+      "export_sha256": "d9945e2f179c0f34d1d407eb5fddf34c74546dce1cd30d60ea3d919fa6b9c957",
+      "size": 4115,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round5-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round5-nova/REPORT-nova.md",
+      "source_sha256": "26a8e005d26f7c0f6bae2a48e388741329fe92f169060c34d4d33daf3d058338",
+      "export_sha256": "26a8e005d26f7c0f6bae2a48e388741329fe92f169060c34d4d33daf3d058338",
+      "size": 6388,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round5-nova/device-analysis-nova/independent-review-nova.md",
+      "source": "artifacts-nova/boot-speed-round5-nova/device-analysis-nova/independent-review-nova.md",
+      "source_sha256": "7844deca9f0c895c0100fdc6f9a3fbed201ccfce806e0e4d6807f96b16607de2",
+      "export_sha256": "7844deca9f0c895c0100fdc6f9a3fbed201ccfce806e0e4d6807f96b16607de2",
+      "size": 900,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round5-nova/independent-review-nova.md",
+      "source": "artifacts-nova/boot-speed-round5-nova/independent-review-nova.md",
+      "source_sha256": "4279a5cdea35673a0f0e723d875e8f814ad7e71a4dc4d262909a472936ea1b12",
+      "export_sha256": "10e2ddfd92e32f41f122e5f5921aea9885c7460b1bb277e6ab6111906d270c43",
+      "size": 8205,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round5-nova/linked-status-audit-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round5-nova/linked-status-audit-nova/REPORT-nova.md",
+      "source_sha256": "afec0ca0849d982fc4f85000430a30ed42b57150d5a3827cdf1609c2e92c06ac",
+      "export_sha256": "afec0ca0849d982fc4f85000430a30ed42b57150d5a3827cdf1609c2e92c06ac",
+      "size": 1492,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round5-nova/status-refresh-tests-nova/README-nova.md",
+      "source": "artifacts-nova/boot-speed-round5-nova/status-refresh-tests-nova/README-nova.md",
+      "source_sha256": "a82a4f8273a47f72ad022bc9531af1d01b34c522030cdf41f004827bcd21e21a",
+      "export_sha256": "a82a4f8273a47f72ad022bc9531af1d01b34c522030cdf41f004827bcd21e21a",
+      "size": 2385,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round5-nova/status-refresh-tests-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round5-nova/status-refresh-tests-nova/REPORT-nova.md",
+      "source_sha256": "7ce2d8f8d3197181452b4d74caac3d1f1a19a340a183f0b7cf1f5006218294c3",
+      "export_sha256": "87fd221fdea6b2d2dff88ab04e2fe7cf30a57fb101d6322d164e1e39ff21cadd",
+      "size": 5016,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round6-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round6-nova/REPORT-nova.md",
+      "source_sha256": "12357e65e68489b2ccb9c79a5ce1aea5e2a90c190eb5fdc4a4e1ef82ff189054",
+      "export_sha256": "3a416323dd948df003f68bd6262076cdd19c7c6f0ee109760dd611dd8c273d1a",
+      "size": 5347,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round6-nova/cpufreq-tests-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round6-nova/cpufreq-tests-nova/REPORT-nova.md",
+      "source_sha256": "9ea3347abd82f537d9d3fc25498996f18a588e721a29eeeeb115805d6b05a8e1",
+      "export_sha256": "9ea3347abd82f537d9d3fc25498996f18a588e721a29eeeeb115805d6b05a8e1",
+      "size": 4246,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round6-nova/device-analysis-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round6-nova/device-analysis-nova/REPORT-nova.md",
+      "source_sha256": "322a0399525802e46b9ea77cf28d0d275d17ff7e35cf37b11c6541580ad25cee",
+      "export_sha256": "fa9d98f34f219368eb03f7384c6e8219f9587e670946692b55521342e2b63e84",
+      "size": 7085,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round6-nova/device-analysis-nova/cpufreq-log-review-nova.md",
+      "source": "artifacts-nova/boot-speed-round6-nova/device-analysis-nova/cpufreq-log-review-nova.md",
+      "source_sha256": "1de691c67a952139dc9ff2ef34c3a2bdfdc3e7479932b8eb6491b1ccaea7fe91",
+      "export_sha256": "e41b4de45accbd80a91fcbef38f85dcea7153494c313a5495f2ab54d9599f1b7",
+      "size": 11561,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round6-nova/device-analysis-nova/next-probe-design-nova.md",
+      "source": "artifacts-nova/boot-speed-round6-nova/device-analysis-nova/next-probe-design-nova.md",
+      "source_sha256": "f3d2f75c91150ac52758dff05b4357b8ffca1192c20bf362c2b5ed61bdd58729",
+      "export_sha256": "b72f6c6416a0aae192edb929a19707abaf28921248b0dad2d0548a013682b31d",
+      "size": 12822,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round6-nova/independent-cpufreq-review-nova.md",
+      "source": "artifacts-nova/boot-speed-round6-nova/independent-cpufreq-review-nova.md",
+      "source_sha256": "54df83b19a17b0d496d451e273b2df9d4287219ba13acae520eb6baf9fad00ac",
+      "export_sha256": "54df83b19a17b0d496d451e273b2df9d4287219ba13acae520eb6baf9fad00ac",
+      "size": 9072,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round6-nova/independent-final-hook-review-nova.md",
+      "source": "artifacts-nova/boot-speed-round6-nova/independent-final-hook-review-nova.md",
+      "source_sha256": "61015532cfac36f0b7ddd5f09ca38fd117352b198b6f24b956ffe068c0f9a615",
+      "export_sha256": "61015532cfac36f0b7ddd5f09ca38fd117352b198b6f24b956ffe068c0f9a615",
+      "size": 7029,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round6-nova/independent-lsdcpu-review-final-nova.md",
+      "source": "artifacts-nova/boot-speed-round6-nova/independent-lsdcpu-review-final-nova.md",
+      "source_sha256": "b888648ccc6d533d3cdebcc201967c668cb3284edce79348a5c74bd01e5cf786",
+      "export_sha256": "b888648ccc6d533d3cdebcc201967c668cb3284edce79348a5c74bd01e5cf786",
+      "size": 4769,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round6-nova/independent-lsdcpu-review-nova.md",
+      "source": "artifacts-nova/boot-speed-round6-nova/independent-lsdcpu-review-nova.md",
+      "source_sha256": "bf8ad5b563ae6788d16c9641ec26aec0b18353758e2738a77b9360fb20c3f6f8",
+      "export_sha256": "e8b299b318073c6d659c64295542867e34067213c84dcca8d8ca3e2551a72133",
+      "size": 6814,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round6-nova/linked-diagnostics-audit-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round6-nova/linked-diagnostics-audit-nova/REPORT-nova.md",
+      "source_sha256": "4b122733db2350aa453107c18b0b2e4af5cdfe84c93d01ec52e013e9eeba4274",
+      "export_sha256": "4b122733db2350aa453107c18b0b2e4af5cdfe84c93d01ec52e013e9eeba4274",
+      "size": 3030,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round6-nova/lsd-cpu-tests-nova/README-nova.md",
+      "source": "artifacts-nova/boot-speed-round6-nova/lsd-cpu-tests-nova/README-nova.md",
+      "source_sha256": "42b0ddaf892bf6268b1846de0d92700aa214134d7bd74b7ce177bfb99db1deb3",
+      "export_sha256": "42b0ddaf892bf6268b1846de0d92700aa214134d7bd74b7ce177bfb99db1deb3",
+      "size": 7993,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round6-nova/packaging-nova/README-nova.md",
+      "source": "artifacts-nova/boot-speed-round6-nova/packaging-nova/README-nova.md",
+      "source_sha256": "c9439b546106af9ae9c3e79cb6ecf402ef12638134b8f79a47306da08c084c5d",
+      "export_sha256": "c9439b546106af9ae9c3e79cb6ecf402ef12638134b8f79a47306da08c084c5d",
+      "size": 3696,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round7-nova/NEXT-STEPS-nova.md",
+      "source": "artifacts-nova/boot-speed-round7-nova/NEXT-STEPS-nova.md",
+      "source_sha256": "cb7f399954cb9c1c71d26f6bbe2e3fbdea4f3d930017aab9acb8d50b0c6384b0",
+      "export_sha256": "cb7f399954cb9c1c71d26f6bbe2e3fbdea4f3d930017aab9acb8d50b0c6384b0",
+      "size": 1610,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round7-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round7-nova/REPORT-nova.md",
+      "source_sha256": "fea327e6a6b0cdc901ef7c1138d65eaf142db456278d1bd71d3cff7061ad3dd6",
+      "export_sha256": "ba78bf7e774bb06e70b2e6d05d15fea71135f03dcdccb823d0941348db07be57",
+      "size": 3670,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round7-nova/console-tests-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round7-nova/console-tests-nova/REPORT-nova.md",
+      "source_sha256": "89e959b462ccb84698abb9af8c3d14c91ed69d94dc9f0af5e704f57b4dafa031",
+      "export_sha256": "89e959b462ccb84698abb9af8c3d14c91ed69d94dc9f0af5e704f57b4dafa031",
+      "size": 4550,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round7-nova/device-analysis-nova/independent-timing-review-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round7-nova/device-analysis-nova/independent-timing-review-nova/REPORT-nova.md",
+      "source_sha256": "0e302b6ac653d974b10050a9dbdb03ab10cde81314b198ee8372367c87231ae5",
+      "export_sha256": "0e302b6ac653d974b10050a9dbdb03ab10cde81314b198ee8372367c87231ae5",
+      "size": 6734,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round7-nova/device-analysis-nova/lsd-timing-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round7-nova/device-analysis-nova/lsd-timing-nova/REPORT-nova.md",
+      "source_sha256": "d2bbecaf7ea3a6c4d58c96480ebe19e8dcc47e2322e493233cbd4b774457497c",
+      "export_sha256": "3d97d58dc103b703a88ef90cc51790e070d8759c7e1565a437f270b4259f031f",
+      "size": 8485,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round7-nova/device-analysis-nova/storage-logio-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round7-nova/device-analysis-nova/storage-logio-nova/REPORT-nova.md",
+      "source_sha256": "638323287161fef6941e225f106fe090c34bc76278ceb892a7c39664c835d676",
+      "export_sha256": "ebc0e553b2b777f6d63b92c991dabe3773be72962d3169019cc8d005b22e26d0",
+      "size": 6604,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round7-nova/device-analysis-nova/synthesis-final-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round7-nova/device-analysis-nova/synthesis-final-nova/REPORT-nova.md",
+      "source_sha256": "9dda723a33878fb8baf934ea3d2e8cc8324a48a7fbd5448626a4dcef3aef9c20",
+      "export_sha256": "9dda723a33878fb8baf934ea3d2e8cc8324a48a7fbd5448626a4dcef3aef9c20",
+      "size": 2749,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round7-nova/integration-review-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round7-nova/integration-review-nova/REPORT-nova.md",
+      "source_sha256": "9c6e37647d81a7a80eac256397ee8f6fea198e6f6d3906fdc8a59e3f9dd3a527",
+      "export_sha256": "9c6e37647d81a7a80eac256397ee8f6fea198e6f6d3906fdc8a59e3f9dd3a527",
+      "size": 8188,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round7-nova/linked-diagnostics-audit-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round7-nova/linked-diagnostics-audit-nova/REPORT-nova.md",
+      "source_sha256": "4614d6876cd25807d46e4e0dd426e02d1a7b24ace31dcf08f8b2499a33d471f7",
+      "export_sha256": "4614d6876cd25807d46e4e0dd426e02d1a7b24ace31dcf08f8b2499a33d471f7",
+      "size": 3767,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round7-nova/packaging-nova/README-nova.md",
+      "source": "artifacts-nova/boot-speed-round7-nova/packaging-nova/README-nova.md",
+      "source_sha256": "b6bec943355f27f39a5e01ef8eec66af7d6c5c372a8d81489d1fa0c4c7f0f7ec",
+      "export_sha256": "9145c7781641eb842f19c25859973d9439716c662f4d5a848b1310a292c4e48f",
+      "size": 3577,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round7-nova/timestamp-analysis-nova/README-nova.md",
+      "source": "artifacts-nova/boot-speed-round7-nova/timestamp-analysis-nova/README-nova.md",
+      "source_sha256": "cc3fc1203754537d01b4362e7300f2d42c57e9cfb62ffebdef21836c62d29041",
+      "export_sha256": "d6e06691240c31e522a8c5a5a9423bf1925ceccc4350f8927c7367432c8d4c5b",
+      "size": 7306,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round7-nova/timestamp-analysis-nova/replay-r6-no-timestamps-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round7-nova/timestamp-analysis-nova/replay-r6-no-timestamps-nova/REPORT-nova.md",
+      "source_sha256": "8b4bc25a201760b6c882148a837401308b1a7bc0f10691c2ed6e8a9c30c98b1a",
+      "export_sha256": "8b4bc25a201760b6c882148a837401308b1a7bc0f10691c2ed6e8a9c30c98b1a",
+      "size": 2770,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round7-nova/timestamp-analysis-nova/replay-r6-no-timestamps-nova/legacy-REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round7-nova/timestamp-analysis-nova/replay-r6-no-timestamps-nova/legacy-REPORT-nova.md",
+      "source_sha256": "fa5ccb90bfdf9eda6b1a416a7a5f7bbe75c835805c0c68d60156bd8be4862caf",
+      "export_sha256": "34d0e70c47884b457b364341bfad61e1b3a2728612c92c1cc715d2994db3bfb5",
+      "size": 12317,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round7-nova/timestamp-analysis-nova/round7-final-analysis-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round7-nova/timestamp-analysis-nova/round7-final-analysis-nova/REPORT-nova.md",
+      "source_sha256": "1be1d4d8d0a42ac0b2814909dfe907484be071b592cec6bc72360f071e38eb94",
+      "export_sha256": "1be1d4d8d0a42ac0b2814909dfe907484be071b592cec6bc72360f071e38eb94",
+      "size": 6043,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round7-nova/timestamp-analysis-nova/round7-final-analysis-nova/legacy-REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round7-nova/timestamp-analysis-nova/round7-final-analysis-nova/legacy-REPORT-nova.md",
+      "source_sha256": "50a385a6ba16f666b4ae244d95907665ff7e93caa0b8e8abaa5ccf90925d47ee",
+      "export_sha256": "adb008b6e5573462e5256a9cb88474e491fd551817df2ba5a8f2261cfb0616bc",
+      "size": 11742,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round7-nova/timestamp-analysis-nova/round7-first-analysis-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round7-nova/timestamp-analysis-nova/round7-first-analysis-nova/REPORT-nova.md",
+      "source_sha256": "fe01f6afddffce28e1c96d0c834e3bf053c74482f8bd9c8b9085c3dffcf31518",
+      "export_sha256": "fe01f6afddffce28e1c96d0c834e3bf053c74482f8bd9c8b9085c3dffcf31518",
+      "size": 6247,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round7-nova/timestamp-analysis-nova/round7-first-analysis-nova/legacy-REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round7-nova/timestamp-analysis-nova/round7-first-analysis-nova/legacy-REPORT-nova.md",
+      "source_sha256": "2aa62631d05dd9ba1e4caa5513ac9bb5bdcd1885342fb914b61d6752725f5c57",
+      "export_sha256": "8dc894e64fd4f6b74b0585f121386873e52459b82c5d63a95e5dbf833f40c4a9",
+      "size": 11742,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round7-nova/timestamp-analysis-nova/synthetic-protocol-example-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round7-nova/timestamp-analysis-nova/synthetic-protocol-example-nova/REPORT-nova.md",
+      "source_sha256": "054feb83b139627063266d7959e5e0e335488c03f66023221281acb0540dd8c8",
+      "export_sha256": "054feb83b139627063266d7959e5e0e335488c03f66023221281acb0540dd8c8",
+      "size": 3101,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round7-nova/timestamp-analysis-nova/synthetic-protocol-example-nova/legacy-REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round7-nova/timestamp-analysis-nova/synthetic-protocol-example-nova/legacy-REPORT-nova.md",
+      "source_sha256": "9adb7364372abcf9083fcdc9581bb90608188c333e85e8e80fe9490cbdd75723",
+      "export_sha256": "c94c5c85b5af6cec81f881dd271f5d4e9c20e51df47213e27591263f6b2f3752",
+      "size": 5558,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round8-nova/NEXT-STEPS-nova.md",
+      "source": "artifacts-nova/boot-speed-round8-nova/NEXT-STEPS-nova.md",
+      "source_sha256": "6edd359c4174407e0a8d8f6084999f60492580177f0f9f96c1f2e1d57ff1cd03",
+      "export_sha256": "6edd359c4174407e0a8d8f6084999f60492580177f0f9f96c1f2e1d57ff1cd03",
+      "size": 2604,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round8-nova/data-cache-path-nova/PROTOCOL-nova.md",
+      "source": "artifacts-nova/boot-speed-round8-nova/data-cache-path-nova/PROTOCOL-nova.md",
+      "source_sha256": "918683a9c96e4def4443670fa749c589b1344b05007dd6d4aa8b4b9a0272b06a",
+      "export_sha256": "918683a9c96e4def4443670fa749c589b1344b05007dd6d4aa8b4b9a0272b06a",
+      "size": 4807,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round8-nova/data-cache-path-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round8-nova/data-cache-path-nova/REPORT-nova.md",
+      "source_sha256": "04a5bd062f461917fb5b1e757eef3a3fe29170b9662caa06cd568833db85a3f9",
+      "export_sha256": "1dac12c38fd09041a18f87701af58e360c3ef6281decaf2c7e30d98c39a9988e",
+      "size": 12501,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round8-nova/filesystem-check-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round8-nova/filesystem-check-nova/REPORT-nova.md",
+      "source_sha256": "8a7b57626ba191e7d6b7bdd6c057e9104daad1b0799497d00d447cba6ab0e83e",
+      "export_sha256": "8a7b57626ba191e7d6b7bdd6c057e9104daad1b0799497d00d447cba6ab0e83e",
+      "size": 2311,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round8-nova/integration-review-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round8-nova/integration-review-nova/REPORT-nova.md",
+      "source_sha256": "e57961e53fff631b7577434128bd6e467557d2d8bc0a1df5f9dde0149b8740d5",
+      "export_sha256": "e57961e53fff631b7577434128bd6e467557d2d8bc0a1df5f9dde0149b8740d5",
+      "size": 7817,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round8-nova/integration-review-nova/trigger-review-nova.md",
+      "source": "artifacts-nova/boot-speed-round8-nova/integration-review-nova/trigger-review-nova.md",
+      "source_sha256": "14a2e4488cb5b3a9b146797b16bf1172c31447e8158e63ea7a664c978701510e",
+      "export_sha256": "14a2e4488cb5b3a9b146797b16bf1172c31447e8158e63ea7a664c978701510e",
+      "size": 2886,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round8-nova/linked-capture-audit-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round8-nova/linked-capture-audit-nova/REPORT-nova.md",
+      "source_sha256": "a3ab75342cacd9ca989d72e33186a390d60f5cd26dfd1dbdd282e365ef463b5d",
+      "export_sha256": "a3ab75342cacd9ca989d72e33186a390d60f5cd26dfd1dbdd282e365ef463b5d",
+      "size": 5191,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round8-nova/packaging-nova/README-nova.md",
+      "source": "artifacts-nova/boot-speed-round8-nova/packaging-nova/README-nova.md",
+      "source_sha256": "bb87d95f52ccd3ffebe21ca96ce8002ffd5ea6eae030f36b2f42fbd62e188c8c",
+      "export_sha256": "c0e094db083b282f531502a44835210b3bba3431be34b308b7ae21a03f178a6d",
+      "size": 4913,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round8-nova/scheduler-ipc-path-nova/A3-capture-design-review-nova.md",
+      "source": "artifacts-nova/boot-speed-round8-nova/scheduler-ipc-path-nova/A3-capture-design-review-nova.md",
+      "source_sha256": "6eb632121e566f38967ed704aed68e453751333ea112ce6313810cd6ba125d23",
+      "export_sha256": "6eb632121e566f38967ed704aed68e453751333ea112ce6313810cd6ba125d23",
+      "size": 9357,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round8-nova/scheduler-ipc-path-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round8-nova/scheduler-ipc-path-nova/REPORT-nova.md",
+      "source_sha256": "47c142394f39959348f0a8706f9c1771d0e059533de921294d801e9edd48f2df",
+      "export_sha256": "47c142394f39959348f0a8706f9c1771d0e059533de921294d801e9edd48f2df",
+      "size": 7466,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round8-nova/stability-analysis-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round8-nova/stability-analysis-nova/REPORT-nova.md",
+      "source_sha256": "d293c18c3e4d6f456b4e8a5ea28b7f070a2092c11c18ee97807a2da8927e4c3f",
+      "export_sha256": "fdc7bb420269b700c3afbe5ccce2cbe4cac6f475345ff356ad1d4257d5b48f0d",
+      "size": 9899,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round8-nova/stability-analysis-nova/setup-methods-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round8-nova/stability-analysis-nova/setup-methods-nova/REPORT-nova.md",
+      "source_sha256": "fcf1da2e36a3b6d647f49dfab6e0725ac4cecfe0a0ae1f97afb25089942de148",
+      "export_sha256": "fcf1da2e36a3b6d647f49dfab6e0725ac4cecfe0a0ae1f97afb25089942de148",
+      "size": 4939,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round8-nova/symbolication-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round8-nova/symbolication-nova/REPORT-nova.md",
+      "source_sha256": "a4be7e0ed5d6c7a7e1c32e14b1aff17682591a1a87a341fa727a9378d5916cf5",
+      "export_sha256": "60aed20939456473245c681f8369c075f9bae0840871fa092d6c3c403c084a21",
+      "size": 13377,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round8-nova/timing-analysis-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round8-nova/timing-analysis-nova/REPORT-nova.md",
+      "source_sha256": "0e084677c28bdc26927b2ff65b7c6db8c4c5229d0bed39a87ea7c276c227de0d",
+      "export_sha256": "cdaa156780dc7fb659369f60888d636f8ef9b51894d54c86269515ca7066ac9d",
+      "size": 9337,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round8-nova/warm-load-design-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round8-nova/warm-load-design-nova/REPORT-nova.md",
+      "source_sha256": "d707e2ef551b841344984ded2698475e034903827f5d195001e1cec64ca49f17",
+      "export_sha256": "5100292a44b4c87a545e048929bf75e2efd72c83d1a91253904ebd5c38e318bd",
+      "size": 16028,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round9-nova/build-audit-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round9-nova/build-audit-nova/REPORT-nova.md",
+      "source_sha256": "2b5568718226cad44c21e093ed3366ab8704ef6a098f3ed3cb5483ed10d2f59e",
+      "export_sha256": "2b5568718226cad44c21e093ed3366ab8704ef6a098f3ed3cb5483ed10d2f59e",
+      "size": 4674,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round9-nova/failure-analysis-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round9-nova/failure-analysis-nova/REPORT-nova.md",
+      "source_sha256": "5402283ad6e004491a3097979e9af4b798d3738f19eb6e807df51458384504b8",
+      "export_sha256": "5402283ad6e004491a3097979e9af4b798d3738f19eb6e807df51458384504b8",
+      "size": 5655,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round9-nova/integration-review-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round9-nova/integration-review-nova/REPORT-nova.md",
+      "source_sha256": "a5c1f0b8068f80c97f8f4c127840097fe663e6abdc358582d87f3b49d8142aa6",
+      "export_sha256": "a5c1f0b8068f80c97f8f4c127840097fe663e6abdc358582d87f3b49d8142aa6",
+      "size": 7132,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round9-nova/packaging-nova/README-nova.md",
+      "source": "artifacts-nova/boot-speed-round9-nova/packaging-nova/README-nova.md",
+      "source_sha256": "e781685386c1e9efe3c0c23522404495c5f6ac55c96395b76cda244c7d5e49d3",
+      "export_sha256": "e781685386c1e9efe3c0c23522404495c5f6ac55c96395b76cda244c7d5e49d3",
+      "size": 540,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round9-nova/warm-load-implementation-nova/CONTRACT-nova.md",
+      "source": "artifacts-nova/boot-speed-round9-nova/warm-load-implementation-nova/CONTRACT-nova.md",
+      "source_sha256": "cd0bde55c280b2053c7bca9bdfb6390f3dba3d11ba00e05b78752d814da3e749",
+      "export_sha256": "cd0bde55c280b2053c7bca9bdfb6390f3dba3d11ba00e05b78752d814da3e749",
+      "size": 5403,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-speed-round9-nova/warm-load-implementation-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-speed-round9-nova/warm-load-implementation-nova/REPORT-nova.md",
+      "source_sha256": "d09757d06b4f862f63e0bc9adc402667bbb8feb968bb80b047746a358b2e294c",
+      "export_sha256": "d09757d06b4f862f63e0bc9adc402667bbb8feb968bb80b047746a358b2e294c",
+      "size": 5834,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-timeline-nova/README-nova.md",
+      "source": "artifacts-nova/boot-timeline-nova/README-nova.md",
+      "source_sha256": "613a4c9ce8b5b1296205dd440569762cf2c93fe6278c3aaba8923a40a48854c8",
+      "export_sha256": "78123f2c84879b96b509eb548b16e54396c05f33ba4e1663f48a77e80c9b6900",
+      "size": 6374,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-timeline-nova/anchor-feasibility-nova.md",
+      "source": "artifacts-nova/boot-timeline-nova/anchor-feasibility-nova.md",
+      "source_sha256": "dd5f660f5a26f584f303699cfb972dd155088ca3d300c27c3d71d40a8a5b1f0e",
+      "export_sha256": "1b46e02f931e2e1ec573cd956587082f916fdefd1b4e4b6deca45e4b47719984",
+      "size": 11618,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-timeline-nova/round5-evidence-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-timeline-nova/round5-evidence-nova/REPORT-nova.md",
+      "source_sha256": "75b737c531cc08a02042c6119ba782bf5062ad8d4e0e1ed0cf59a8b75df95be2",
+      "export_sha256": "67646b3aeaa9bcc08b96b15b026753d0f05a6b99a504a15ba8458e7855377d33",
+      "size": 10761,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-timeline-nova/round5-final-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-timeline-nova/round5-final-nova/REPORT-nova.md",
+      "source_sha256": "75b737c531cc08a02042c6119ba782bf5062ad8d4e0e1ed0cf59a8b75df95be2",
+      "export_sha256": "67646b3aeaa9bcc08b96b15b026753d0f05a6b99a504a15ba8458e7855377d33",
+      "size": 10761,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-timeline-nova/round5-final-v2-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-timeline-nova/round5-final-v2-nova/REPORT-nova.md",
+      "source_sha256": "ba52abaae20ffe5370b69c2d18097539c60f0f7206ab2f92931841281c55cd6c",
+      "export_sha256": "4984631487a24567f9bfb294d2a7e6433ede756107339a2109815cdd3960cc6c",
+      "size": 11999,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-timeline-nova/round5-first-check-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-timeline-nova/round5-first-check-nova/REPORT-nova.md",
+      "source_sha256": "bef05a4e5f7b389c5e29ba7306f358968680a262669331fceb29d91a4f0c0a1f",
+      "export_sha256": "5b810408343d05dc14557ed60888f8d5a23bb1e490e7d77b119af284d5bcfff7",
+      "size": 10417,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-timeline-nova/round6-evidence-nova/READOUT-nova.md",
+      "source": "artifacts-nova/boot-timeline-nova/round6-evidence-nova/READOUT-nova.md",
+      "source_sha256": "518f8063cdd3948d8046c95ae64e1defa1990539de0a6829da154b52987bb602",
+      "export_sha256": "518f8063cdd3948d8046c95ae64e1defa1990539de0a6829da154b52987bb602",
+      "size": 2007,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-timeline-nova/round6-evidence-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-timeline-nova/round6-evidence-nova/REPORT-nova.md",
+      "source_sha256": "258b9ac60decd9faab9dce87c42800c828502c2c8b1ac0004e3b16a0770d05c0",
+      "export_sha256": "404a0e4220b2c6ec9b76782d3a2abab2babaa2b3efaf2bd72c0394747802fdd1",
+      "size": 10117,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-timeline-nova/round6-final-nova/READOUT-nova.md",
+      "source": "artifacts-nova/boot-timeline-nova/round6-final-nova/READOUT-nova.md",
+      "source_sha256": "3178fc69bff2024510eb4bb654641f4275893c354fe260a8cbf27819c42c4a40",
+      "export_sha256": "3178fc69bff2024510eb4bb654641f4275893c354fe260a8cbf27819c42c4a40",
+      "size": 1569,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-timeline-nova/round6-final-nova/REPORT-nova.md",
+      "source": "artifacts-nova/boot-timeline-nova/round6-final-nova/REPORT-nova.md",
+      "source_sha256": "94d171ca31b09bbd8a64204fd2586aaa0d38bad9ac0a94153d1177d42f13a5b6",
+      "export_sha256": "9995b99648497eb4ad0345e34b87b8940f50cc2bc6fd536837b3492ace9a44ff",
+      "size": 12131,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-timeline-nova/round7-parser-design-nova.md",
+      "source": "artifacts-nova/boot-timeline-nova/round7-parser-design-nova.md",
+      "source_sha256": "9e86e17ed7359f751a67241e85be5a9015c08510f948060b1328593cd8a38f17",
+      "export_sha256": "55c079af289d6e1bd7ddf8a7e6b5964f5c170358973807bb1542772fe8e62b11",
+      "size": 8562,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/boot-timeline-nova/timeline-independent-review-nova.md",
+      "source": "artifacts-nova/boot-timeline-nova/timeline-independent-review-nova.md",
+      "source_sha256": "7bd8ebc5385c352aad9d01738bbab1c60c0fbc465de94327ca69b2eed9fc3039",
+      "export_sha256": "0378c741dee59defabfcef9b040a49f80b36fccf3acc8db919cb621bb754f4bb",
+      "size": 11529,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/hackios-port-review-nova/REPORT-nova.md",
+      "source": "artifacts-nova/hackios-port-review-nova/REPORT-nova.md",
+      "source_sha256": "e5e7ed05952877bc4fb1438e11fa48a44208f745ed672dab81eecf14707c7c28",
+      "export_sha256": "ec54e9f4b80907f2c6ae93d3ce8eea17eae45e267858ac50ad7029a5fd7ceeeb",
+      "size": 12594,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/hackios-port-review-nova/meizu-hardware-baseline-nova.md",
+      "source": "artifacts-nova/hackios-port-review-nova/meizu-hardware-baseline-nova.md",
+      "source_sha256": "c4c82dd54704e419f700068b81e930c6319536c5c3e7cd4d4156b18fb0edbd38",
+      "export_sha256": "6f24cb9a05cf464b4856357d87a16a4f44e554d60323d76d67e58dd6fcae407f",
+      "size": 26855,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/hackios-port-review-nova/upstream-graphics-userland-nova.md",
+      "source": "artifacts-nova/hackios-port-review-nova/upstream-graphics-userland-nova.md",
+      "source_sha256": "fd7436254cb1ff875f4b4dced28691c7847ae00a371aa17f88fc4d1a8b656447",
+      "export_sha256": "c98e0f1d630a13d207be2774f9bb241b91b135e1a5edcd13a9ebc8e9c0bf8f45",
+      "size": 26940,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/hackios-port-review-nova/upstream-radio-battery-nova.md",
+      "source": "artifacts-nova/hackios-port-review-nova/upstream-radio-battery-nova.md",
+      "source_sha256": "5cd40f87354abd007fb39464bb09e757e00f28ebac01e3ea138595053fe0bd30",
+      "export_sha256": "5cd40f87354abd007fb39464bb09e757e00f28ebac01e3ea138595053fe0bd30",
+      "size": 19560,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/m2381-upstream-review-nova/DSH-RESEARCH-nova.md",
+      "source": "artifacts-nova/m2381-upstream-review-nova/DSH-RESEARCH-nova.md",
+      "source_sha256": "32a18285754bb3ee6f6f4c0551a0ba8a928502fafb4387d56f88809427cefaa1",
+      "export_sha256": "f163ad414552545d9c3775a4fbdb3e0c2ec48785af673edeb6d793bafad49078",
+      "size": 38430,
+      "preserved_existing": true,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/m2381-upstream-review-nova/REVIEW-FEEDBACK-nova.md",
+      "source": "artifacts-nova/m2381-upstream-review-nova/REVIEW-FEEDBACK-nova.md",
+      "source_sha256": "18f885904839640916a17acf9e48d45457209c1056bd3eb7067706f387ba8307",
+      "export_sha256": "18f885904839640916a17acf9e48d45457209c1056bd3eb7067706f387ba8307",
+      "size": 2795,
+      "preserved_existing": true,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/m2381-upstream-review-nova/SOL-ACCEPTANCE-nova.md",
+      "source": "artifacts-nova/m2381-upstream-review-nova/SOL-ACCEPTANCE-nova.md",
+      "source_sha256": "d1f924d9cab629354097555e8ef2a718b8fd4c1307424c2fb67b77d196f2f86b",
+      "export_sha256": "372186d84392c65267691325065f5aeb65da9e71056b88717a576c1faacc230c",
+      "size": 986,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/meizu-development-plan-nova/PLAN-nova.md",
+      "source": "artifacts-nova/meizu-development-plan-nova/PLAN-nova.md",
+      "source_sha256": "c0151bd692efb5acffe6de57be58503521f929536ae4fc56d23cd230dedab7b6",
+      "export_sha256": "6773e27f164989701687167b42089979bdc8dec51447663c1021bcd0f9d198ef",
+      "size": 32662,
+      "preserved_existing": true,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/pudding-pandora-upstream-review-nova/DSH-RESEARCH-nova.md",
+      "source": "artifacts-nova/pudding-pandora-upstream-review-nova/DSH-RESEARCH-nova.md",
+      "source_sha256": "410eb0b8e758de936484939799ec9d2bb5120c1beacff7b9661e8e185472c2a2",
+      "export_sha256": "ff748b1cb0a9b76e694ecdeb4a4285dc7678c0c6de28d9acf973c06804d8b36e",
+      "size": 21120,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/pudding-pandora-upstream-review-nova/REVIEW-FEEDBACK-nova.md",
+      "source": "artifacts-nova/pudding-pandora-upstream-review-nova/REVIEW-FEEDBACK-nova.md",
+      "source_sha256": "2fbcec18dd971aef95406dfcf75622dd57eaee09195304ce54f424b6abce6e28",
+      "export_sha256": "7f7dbe0f5f5b111dfcd5111ecd9d93418e09b0bfb3bc888259499151f42764a3",
+      "size": 3045,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/pudding-pandora-upstream-review-nova/SOL-ACCEPTANCE-nova.md",
+      "source": "artifacts-nova/pudding-pandora-upstream-review-nova/SOL-ACCEPTANCE-nova.md",
+      "source_sha256": "41e5a14671cd8fc937762aec459b3eba63e198fc23df8c5d1d57fb5325366d5b",
+      "export_sha256": "41e5a14671cd8fc937762aec459b3eba63e198fc23df8c5d1d57fb5325366d5b",
+      "size": 2309,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/sheng-research-nova/REPORT-nova.md",
+      "source": "artifacts-nova/sheng-research-nova/REPORT-nova.md",
+      "source_sha256": "52bf90ef539149f212a349b33fda16ab1eca96fd3f4a58719dbe70a215a02781",
+      "export_sha256": "0f1d50e8cb3d2ee071be65810da79ffab1fe82b87f9d7832e1267dc138ecb9ca",
+      "size": 10978,
+      "preserved_existing": true,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/sheng-research-nova/cpu-boot-nova/REPORT-nova.md",
+      "source": "artifacts-nova/sheng-research-nova/cpu-boot-nova/REPORT-nova.md",
+      "source_sha256": "0ac4281e3b70e584cc324c144d8329b76c18ead01bbfd1fe97dcf411cccdc2be",
+      "export_sha256": "2596b6e115b325392a061d47f05b95edd8f5c292ba454a1c9a8f105dd34cbd92",
+      "size": 22274,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/sheng-research-nova/services-drivers-nova/REPORT-nova.md",
+      "source": "artifacts-nova/sheng-research-nova/services-drivers-nova/REPORT-nova.md",
+      "source_sha256": "8ddd820009be8e77da1f4737ef70acb13981c8666c39dd5f0f84bf913626a178",
+      "export_sha256": "423b55418f890929f8f3b4c598f2a18a45208df10a2702a6da53cb3f1fb141ce",
+      "size": 22121,
+      "preserved_existing": false,
+      "sanitized": true
+    },
+    {
+      "path": "docs-nova/history/sheng-research-nova/storage-nova/REPORT-nova.md",
+      "source": "artifacts-nova/sheng-research-nova/storage-nova/REPORT-nova.md",
+      "source_sha256": "c8a8579ab52e2fc16e9b49a7944051968d0b95120764b0aea803e2bdae2433de",
+      "export_sha256": "5e8badc82a27d3cde68cd6be6d3b346c0814089a9d25512c0e45ea95f6b34e13",
+      "size": 17693,
+      "preserved_existing": false,
+      "sanitized": true
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools-nova/history/boot-speed-round18-nova/warm-sha-stream-nova/test-sha256-stream-nova.py",
+      "source": "artifacts-nova/boot-speed-round18-nova/warm-sha-stream-nova/test-sha256-stream-nova.py",
+      "source_sha256": "c03681be537fc7b50fd9aa689f91f710e509b3f5aa1fb376ea9b1b9a3e70dd4d",
+      "export_sha256": "c03681be537fc7b50fd9aa689f91f710e509b3f5aa1fb376ea9b1b9a3e70dd4d",
+      "size": 17030,
+      "preserved_existing": true,
+      "sanitized": false
+    },
+    {
+      "path": "tools-nova/history/boot-speed-round18-nova/warm-sha-stream-nova/warmload-adapter-nova.c",
+      "source": "artifacts-nova/boot-speed-round18-nova/warm-sha-stream-nova/warmload-adapter-nova.c",
+      "source_sha256": "ee901065bb2530327af8d1ac4bfcbed7e01e5921bb4633685d0125a8445e8f8f",
+      "export_sha256": "ee901065bb2530327af8d1ac4bfcbed7e01e5921bb4633685d0125a8445e8f8f",
+      "size": 1586,
+      "preserved_existing": true,
+      "sanitized": false
+    },
+    {
+      "path": "tools-nova/history/boot-speed-round18-nova/warm-sha-stream-nova/header-probe-nova.cpp",
+      "source": "artifacts-nova/boot-speed-round18-nova/warm-sha-stream-nova/header-probe-nova.cpp",
+      "source_sha256": "09e3463a430208cf6056f086fb56fc5e7ebc9eca80863b3e49f6d73a5c9353dd",
+      "export_sha256": "09e3463a430208cf6056f086fb56fc5e7ebc9eca80863b3e49f6d73a5c9353dd",
+      "size": 889,
+      "preserved_existing": true,
+      "sanitized": false
+    },
+    {
+      "path": "tools-nova/history/boot-speed-round18-nova/warm-sha-stream-nova/sha256-stream-cases-nova.c",
+      "source": "artifacts-nova/boot-speed-round18-nova/warm-sha-stream-nova/sha256-stream-cases-nova.c",
+      "source_sha256": "c7c57d2f149144524976c706c5647393144b48a72bd938a14d237f4fbc3243ba",
+      "export_sha256": "c7c57d2f149144524976c706c5647393144b48a72bd938a14d237f4fbc3243ba",
+      "size": 17059,
+      "preserved_existing": true,
+      "sanitized": false
+    },
+    {
+      "path": "tools-nova/history/boot-speed-round18-nova/warm-sha-stream-nova/warmload-fixture-nova.cpp",
+      "source": "artifacts-nova/boot-speed-round18-nova/warm-sha-stream-nova/warmload-fixture-nova.cpp",
+      "source_sha256": "a88785f2ffd90fd5b4560f1e6746a1bda76bb7d50a6e8cf3e1cb67bc132f4cc0",
+      "export_sha256": "a88785f2ffd90fd5b4560f1e6746a1bda76bb7d50a6e8cf3e1cb67bc132f4cc0",
+      "size": 10402,
+      "preserved_existing": true,
+      "sanitized": false
+    },
+    {
+      "path": "tools-nova/history/boot-speed-round18-nova/warm-sha-stream-nova/preserve-vectors-nova.s",
+      "source": "artifacts-nova/boot-speed-round18-nova/warm-sha-stream-nova/preserve-vectors-nova.s",
+      "source_sha256": "794f20c22d079ce7934bc698ea896d52959fbe10a45a9556c7b58a6d2509e384",
+      "export_sha256": "794f20c22d079ce7934bc698ea896d52959fbe10a45a9556c7b58a6d2509e384",
+      "size": 1082,
+      "preserved_existing": true,
+      "sanitized": false
+    },
+    {
+      "path": "tools-nova/history/boot-speed-round18-nova/runtime-analysis-sol-nova/analyze-r18-nova.py",
+      "source": "artifacts-nova/boot-speed-round18-nova/runtime-analysis-sol-nova/analyze-r18-nova.py",
+      "source_sha256": "ffd573349f899c010ce02d003e22920480f583663e2ee5a0d19ea6f4feedca43",
+      "export_sha256": "ffd573349f899c010ce02d003e22920480f583663e2ee5a0d19ea6f4feedca43",
+      "size": 8163,
+      "preserved_existing": true,
+      "sanitized": false
+    }
+  ],
+  "archived": [
+    {
+      "path": "docs-nova/AGENTS-source-nova.md",
+      "source": "AGENTS.md",
+      "source_sha256": "08dfba09b80e1f99ade2bac9eb6f8abc497821c4f453b535c4e4ca7e6299ef57",
+      "export_sha256": "09aa3af0043eb3ba9d9c3550a39669d8cdd20bf2c4d8856d72692f2cffd12185",
+      "size": 4617,
+      "sanitized": true,
+      "note": "project-root AGENTS sanitized archive"
+    }
+  ]
+}

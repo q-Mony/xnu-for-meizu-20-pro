@@ -1,0 +1,52 @@
+{
+  "schema": "nova-mu-baseline-verification-v1",
+  "new_file_no_previous_version": true,
+  "mu_basecore": {
+    "live_path": "uefi-sheng-nova/Mu_Basecore",
+    "base_commit_expected": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+    "base_commit_actual": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+    "status_lines": 11,
+    "status": [
+      " M ArmPkg/Library/ArmGenericTimerPhyCounterLib/ArmGenericTimerPhyCounterLib.c",
+      " M ArmPkg/Library/ArmGenericTimerPhyCounterLib/ArmGenericTimerPhyCounterLib.inf",
+      " M ArmPkg/Library/ArmGenericTimerVirtCounterLib/ArmGenericTimerVirtCounterLib.c",
+      " M ArmPkg/Library/ArmGenericTimerVirtCounterLib/ArmGenericTimerVirtCounterLib.inf",
+      " M MdeModulePkg/Application/BootManagerMenuApp/BootManagerMenu.c",
+      " M MdeModulePkg/Application/BootManagerMenuApp/BootManagerMenu.h",
+      " M MdeModulePkg/Bus/Usb/UsbBusDxe/UsbBus.h",
+      " M MdePkg/Include/AArch64/AsmMacroLib.h",
+      " M SecurityPkg/Library/AuthVariableLib/AuthService.c",
+      " M SecurityPkg/Library/AuthVariableLib/AuthVariableLib.inf",
+      " M UefiCpuPkg/Library/ArmMmuLib/AArch64/ArmMmuLibCore.c"
+    ],
+    "patch": "provenance/patches/mu_basecore-local-changes.patch",
+    "patch_sha256": "6c8bde435614e8130e36918c1486defa0a1facced684a9e91f8e97a58b4cbfc5",
+    "live_diff_sha256": "6c8bde435614e8130e36918c1486defa0a1facced684a9e91f8e97a58b4cbfc5",
+    "patch_equals_live_git_diff_binary": true,
+    "patch_files": 11,
+    "patch_paths": [
+      "ArmPkg/Library/ArmGenericTimerPhyCounterLib/ArmGenericTimerPhyCounterLib.c",
+      "ArmPkg/Library/ArmGenericTimerPhyCounterLib/ArmGenericTimerPhyCounterLib.inf",
+      "ArmPkg/Library/ArmGenericTimerVirtCounterLib/ArmGenericTimerVirtCounterLib.c",
+      "ArmPkg/Library/ArmGenericTimerVirtCounterLib/ArmGenericTimerVirtCounterLib.inf",
+      "MdeModulePkg/Application/BootManagerMenuApp/BootManagerMenu.c",
+      "MdeModulePkg/Application/BootManagerMenuApp/BootManagerMenu.h",
+      "MdeModulePkg/Bus/Usb/UsbBusDxe/UsbBus.h",
+      "MdePkg/Include/AArch64/AsmMacroLib.h",
+      "SecurityPkg/Library/AuthVariableLib/AuthService.c",
+      "SecurityPkg/Library/AuthVariableLib/AuthVariableLib.inf",
+      "UefiCpuPkg/Library/ArmMmuLib/AArch64/ArmMmuLibCore.c"
+    ],
+    "reverse_check_against_live_dirty": true,
+    "reverse_stderr": ""
+  },
+  "sol_dirty_source_baseline": {
+    "source": "sol-dirty-source-baseline-nova.json",
+    "total": 204,
+    "identical_export": 193,
+    "in_mu_patch": 11,
+    "unexplained": [],
+    "expected_mapping": "193 identical + 11 in Mu patch = 204"
+  },
+  "pass": true
+}

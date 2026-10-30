@@ -13,6 +13,9 @@
 - 原始 Apple kernelcache、签名 root 策略输入、设备暖 Data 分区、厂商
   `uefi-sheng-nova/Binaries/meizu20pro`。
 
-精选报告中的本地路径与设备序列号已替换为 `<nova-root>/...`、
-`[local-home]/...`、`[redacted-device-serial]`；原始报告哈希不再适用于替换后的
-副本，引用时以本仓库文件为准。
+`docs-nova/history/` 收录作者 Markdown 报告/计划，保留原相对结构；本地路径与
+设备序列号已替换为 `<nova-root>/...`、`[local-home]/...`、
+`[redacted-device-serial]`。`tools-nova/history/` 收录少量纯源码/测试归档，
+保留原始字节。两者都不是完整证据包：原始报告哈希不再适用于替换后的文档副本，
+原始日志、手机数据、dsh transcript/wrapper/config 与全部失败证据仍只在本地
+Nova 工作区。引用时以本仓库文件为准，不要声称已包含全部原始证据。

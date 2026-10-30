@@ -18,7 +18,10 @@ checkout（含 `Binaries`、`Build`、OpenSSL 测试数据和厂商二进制）�
 
 `OpenSSL` 子模块以固定 commit 的说明文件代替完整源码；`Mu_Basecore` 以固定
 commit + 本地补丁 `provenance/patches/mu_basecore-local-changes.patch` 代替完整
-checkout。两者都由 `prepare-source-nova.py` 或构建流程按 manifest 初始化。
+checkout。**`prepare-source-nova.py` 不初始化这两者**；它只处理
+`sources-nova/{xnu,libdispatch,libpthread}`。UEFI 依赖需按
+`docs-nova/BUILD.md` 第 3 节手动准备：clean pinned checkout、应用 Mu 补丁、把
+OpenSSL checkout 放到脚本期望路径。
 
 ## 排除
 
@@ -40,11 +43,15 @@ checkout。两者都由 `prepare-source-nova.py` 或构建流程按 manifest 初
 
 ## 构建时补齐
 
+XNU/libdispatch/libpthread 由 helper 恢复：
+
 ```sh
 python3 prepare-source-nova.py --fetch-references   # 显式联网拉取固定上游
 # 或提供一个已固定在 provenance/upstream-pins-nova.json commit 的参考目录
 python3 prepare-source-nova.py --reference-root /path/to/references
 ```
 
-`Mu_Basecore` 需应用本地补丁；`OpenSSL` 需 checkout 到
-`67b5686b4419b4cb8caa502711c41815f5279751`。`Binaries/meizu20pro` 不由本仓库提供。
+UEFI 依赖不经过 helper：`Mu_Basecore` 需在 clean pinned base 上应用本地补丁
+（11 个文件）；`OpenSSL` 需 checkout 到
+`67b5686b4419b4cb8caa502711c41815f5279751`。完整命令见
+`docs-nova/BUILD.md` 第 3 节。`Binaries/meizu20pro` 不由本仓库提供。

@@ -1,0 +1,1 @@
+2026-10-30：新增R12 build-audit/packaging脚本、冻结清单、构建和静态审计记录；新文件无旧版本。旧脚本修改前备份在snapshot-nova/boot-speed-round12-nova/{build-wrapper-archive-member-fix-nova,instruction-review-kind-register-fix-nova}。只在Nova构建，未操作设备；交付状态BUILT_AWAIT_USER_INSTALL_COMMAND。供主代理并入总CHANGELOG，本代理未改总文档。

@@ -1,0 +1,11 @@
+# R7 完成与接续
+
+第七轮已确认Hello并返回Android B；日志已采集分析完成，不要重复刷机或采集覆盖现有结果。当前A=96fc42236df897138936a2a9151735c96afdaeb9539786336f09d655da303d2c，B=7df205f172e553f76a68726c67ed7fcad112784f320941ce212433dee21745a2，匿名tag8258937a53b0。
+
+主报告 device-analysis-nova/synthesis-final-nova/REPORT-nova.md；真正最终parser输出 timestamp-analysis-nova/round7-final-analysis-nova；first-analysis保留但rootdevice阶段有已修正的inline漏认。
+
+已测最大区间SpringBoard exec捕获→Setup armed捕获152.523992969秒；launchd→SB21.108157239秒；根设备解析7.385559479秒；其余明确准备调用低于0.2秒。日志write0.360893125秒；lsd长等待外围约91秒rootio窗口read仅0.920148646秒。优先下一步符号化lsd工作线程435在重复容器操作附近的栈，明确调用点/请求类别/结果及单线程起止，区分正常枚举、重复无效查询和服务等待。R6/R7的3838次操作是稳定线索，不先认定冗余或关闭服务。
+
+CPU总记账24.959822552/70.286143854秒不能等同系统空闲；rootio未覆盖锁等待与排队，trap累计可并行不可相加。console无覆盖不代表IPC无损失：sbipc丢失267031、exec捕获上限256。没有精确Boot/Hello首帧锚点，不把Setup或日志首末当它们。
+
+生产源19项与已刷build完全一致；真机后只修离线parser，已有备份29测试及独立复核。继续任何源码/文档改动前备份，只写Nova；设备持续授权存在但每次仍新鲜核对身份模式槽位/哈希。

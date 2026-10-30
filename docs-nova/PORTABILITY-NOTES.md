@@ -14,26 +14,31 @@
 | `unixnu-nova` | `UNIXNU_DTB=$ROOT/inputs-nova/meizu20pro.dtb` | 用户自备 DTB 后设置 `UNIXNU_DTB`，或保留该路径 |
 | `unixnu-meizu20pro-nova/board.toml` | 可能有本地 `inputs-nova`/固件路径 | 按 `docs-nova/BUILD.md` 以用户自备输入覆盖 |
 
-精选历史报告中的 `<nova-root>/...`、`[local-home]/...` 是导出时隐私替换，不是
-可执行路径。
+`docs-nova/history/` 归档中的 `<nova-root>/...`、`[local-home]/...` 是导出时隐私
+替换，不是可执行路径。
 
 ## 构建树位置
 
-`prepare-source-nova.py` 只写入：
+`prepare-source-nova.py` 只写入本 checkout 的 `unixnu-main-nova/out/`：
 
 ```
-unixnu-main-nova/out/meizu20pro/
-├── .config
+unixnu-main-nova/out/
 ├── feeds/                      # 固定上游 reference checkout
-└── tree/
-    ├── .cache/xnu-work/        # sources-nova/xnu 恢复 + base Git 元数据
-    ├── .cache/libdispatch-work/
-    ├── .cache/libpthread-work/
-    └── build/xnu/owner-data-volume.h
+└── meizu20pro/
+    ├── .config
+    └── tree/
+        ├── .cache/xnu-work/        # sources-nova/xnu 恢复 + base Git 元数据
+        ├── .cache/libdispatch-work/
+        ├── .cache/libpthread-work/
+        └── build/xnu/owner-data-volume.h
 ```
 
 它不会写入其他 checkout，不会修改原始 Nova 工作区，也不会执行 `git clean`。
-已有不匹配的 cache 会在 `--replace-cache` 下被移动到带时间戳的备份，而不是删除。
+写入前会逐级拒绝 symlink 目标/祖先；已有不匹配的 dirty cache 默认拒绝覆盖，只有
+显式 `--replace-cache` 才会移动到带时间戳的备份，而不是删除。
+
+`docs-nova/history/` 与 `tools-nova/history/` 中的归档脚本保留原始本地路径/日志
+假设，只用于阅读或在隔离 fixture 中复用纯逻辑；不要直接执行。
 
 ## 缺少的私有输入
 

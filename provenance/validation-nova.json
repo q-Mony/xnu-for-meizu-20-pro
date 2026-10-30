@@ -3,8 +3,8 @@
   "new_file_no_previous_version": true,
   "repo": "repo-nova",
   "inventory": {
-    "file_count": 8795,
-    "total_bytes": 114651588,
+    "file_count": 8985,
+    "total_bytes": 115938827,
     "max_file_bytes": 3630250,
     "executable_count": 262
   },
@@ -22,7 +22,10 @@
     "device_serial_absent": true,
     "policy_fixture_pass": true,
     "source_byte_verification": true,
-    "r18_coverage_complete": true
+    "r18_coverage_complete": true,
+    "history_manifest_hashes": true,
+    "mu_baseline_verification": true,
+    "inventory_matches_git_visible": true
   },
   "pass": true,
   "nested_git": [],
@@ -66,8 +69,8 @@
     }
   ],
   "source_verification": {
-    "checked": 8729,
-    "matched": 8729,
+    "checked": 8736,
+    "matched": 8736,
     "mismatched_count": 0,
     "mismatched_sample": [],
     "missing_sources_count": 0,
@@ -78,14 +81,27 @@
     "matched": 6185,
     "explained_excluded": 1,
     "missing_unexplained": 0,
-    "extra_total": 2599,
+    "extra_total": 2787,
     "extra_groups": {
-      "out_of_r18_freeze_scope:fetched-dependency-snapshot": 430,
+      "export_docs_tools_metadata": 255,
       "out_of_r18_freeze_scope:uefi": 2089,
-      "export_docs_tools_metadata": 67,
+      "out_of_r18_freeze_scope:fetched-dependency-snapshot": 430,
       "current_after_r18_freeze": 13
     },
     "coverage_ratio_including_explained": 1.0
+  },
+  "history_manifest": {
+    "total": 208,
+    "bad": [],
+    "pass": true
+  },
+  "mu_baseline_verification": {
+    "pass": true,
+    "patch_equals_live_git_diff_binary": true,
+    "patch_files": 11,
+    "baseline_total": 204,
+    "baseline_identical": 193,
+    "baseline_in_patch": 11
   },
   "policy": {
     "excluded_records": 219,

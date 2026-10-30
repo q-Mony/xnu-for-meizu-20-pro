@@ -61,12 +61,42 @@
 
 - `unixnu-main-nova/LICENSE`、`unixnu-meizu20pro-nova/LICENSE`、
   `uefi-sheng-nova/LICENSE` 及其子模块内的 `LICENSE`/`COPYING`/`NOTICE` 原样保留。
-- 上游 XNU 使用 Apple 公共源码许可；Mu/UEFI 使用 BSD-2-Clause-Patent 等各自许可；
-  OpenSSL 使用 Apache-2.0。以各目录原始许可文件为准。
+- XNU 的 Apple 公共源码许可文件位于 `sources-nova/xnu/APPLE_LICENSE`，随完整
+  XNU 源码快照保留；Mu/UEFI 使用 BSD-2-Clause-Patent 等各自许可；OpenSSL 使用
+  Apache-2.0。以各目录原始许可文件为准。
 - 本导出只做源码搬运与文档整理，不对第三方代码重新许可。
+
+## 历史文档与归档工具来源
+
+`provenance/history-sources-nova.json` 记录 `docs-nova/history/` 与
+`tools-nova/history/` 的逐文件来源、原始 SHA-256 与导出 SHA-256：
+
+- 作者 Markdown 从 `artifacts-nova/` 按相对结构复制到 `docs-nova/history/`；
+  已存在的首轮精选文档保持不变。
+- 文件内容按当前文档规则替换 `<nova-root>`、`[local-home]` 与
+  `[redacted-device-serial]`；因此导出哈希通常不同于原始哈希，两个哈希都记录。
+- canonical R18 stream SHA 测试（`test-sha256-stream-nova.py`、
+  `warmload-adapter-nova.c`、`header-probe-nova.cpp`、`sha256-stream-cases-nova.c`、
+  `warmload-fixture-nova.cpp`、编译所需 `preserve-vectors-nova.s`）与 R18 runtime
+  analysis 源码保存在 `tools-nova/history/`，保留原始源码字节，不做路径替换。
+- 这些历史脚本保留原始本地日志/设备/路径假设，只是归档，不是可移植构建入口；
+  不得执行其中的硬件、刷机、恢复或 per-run 步骤。
+- 不包含原始日志、dsh transcript/wrapper/config、手机数据、第三方 research clone
+  或全部上游源码；不要声称本仓库包含全部原始证据。
+
+## Mu_Basecore 补丁与 Sol dirty-source 基线
+
+- `provenance/patches/mu_basecore-local-changes.patch` 与当前 live
+  `uefi-sheng-nova/Mu_Basecore` 的 `git diff --binary` 逐字节一致，覆盖 11 个文件；
+  base 为 `cfb93724a06ff86ff5ba971413368a7809ee42a5`。
+- `provenance/mu-baseline-verification-nova.json` 记录独立核对结果：
+  Sol dirty-source 基线共 204 项 → **193 项与导出逐字节一致 + 11 项在 Mu 补丁中
+  完整覆盖**，未解释缺失 0。
+- 补丁只应对 clean pinned base 应用；原始 live Mu_Basecore 已是 dirty，只读。
 
 ## 历史报告中的本地路径
 
-精选报告中的 `<nova-root>/...`、`[local-home]/...` 与
-`[redacted-device-serial]` 是导出时替换；原始证据仅存在于本地 Nova 工作区，
-不再分发。详见 `docs-nova/LOCAL-ONLY-EVIDENCE.md`。
+`docs-nova/history/` 与 `tools-nova/history/` 中的本地路径与设备序列号已替换为
+`<nova-root>/...`、`[local-home]/...`、`[redacted-device-serial]`（源码工具目录除外，
+其原始字节保留且已扫描）。原始证据仅存在于本地 Nova 工作区，不再分发。详见
+`docs-nova/LOCAL-ONLY-EVIDENCE.md`。

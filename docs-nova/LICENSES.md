@@ -32,4 +32,5 @@
 - `uefi-sheng-nova/Silicon/Silicium/SiliciumPkg/Applications/UFP/LICENSE.md` (15703 bytes, `1eca344a982282a0bcc20c09dbddd5c3d3a2fdc7fa33f138d26436ca4bcf855a`)
 
 第三方代码的许可与版权以各自目录中的原始文件为准。本导出不重新许可任何第三方代码。
-`unixnu-main-nova/APPLE_LICENSE` 等上游许可文件随 XNU 快照保留。
+XNU 的 Apple 公共源码许可文件位于 `sources-nova/xnu/APPLE_LICENSE`，随完整 XNU
+源码快照保留；其他上游许可/归属文件随各自目录保留。

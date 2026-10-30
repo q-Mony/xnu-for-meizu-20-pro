@@ -23,13 +23,29 @@ R18 冻结清单 `source-freeze-r18-nova.json` 共 6186 项。导出映射如下
 
 ## 覆盖
 
-逐项哈希、缺失与额外文件见 `provenance/coverage-r18-nova.json`。
-冻结清单内被策略排除的文件数应为 0；若有缺失必须在该 JSON 的 `missing` 中给出
-可解释原因。当前工作树在冻结后新增/修改的源码会作为“extra_current”记录，不影响
-冻结项字节一致性。
+R18 冻结清单共 **6186** 项，当前导出为 **6185 项逐字节匹配 + 1 项可解释排除**：
+
+| 类别 | 数量 | 说明 |
+|---|---:|---|
+| 哈希匹配 | 6185 | `provenance/coverage-r18-nova.json` 的 `rows` 全部 `match=true` |
+| 可解释排除 | 1 | `unixnu-main-nova/feeds.toml.bak-21H461`，备份后缀 `.bak-21H461`，按策略排除（非源码） |
+| 未解释缺失 | 0 | `missing` 为空 |
+| 含可解释排除的覆盖率 | 1.0 | `(6185 + 1) / 6186` |
+
+逐项哈希、缺失与额外文件见 `provenance/coverage-r18-nova.json`。当前工作树在冻结
+后新增/修改的源码会作为 `current_after_r18_freeze` 记录，不影响冻结项字节一致性。
 
 ## 快照不是 cache
 
 `sources-nova/xnu` 是当前工作树（含 100+ 修改与 31 个未跟踪源码文件）的完整源码，
 包含 `native_sha256` 头/汇编、`kern_exec`、`mach_msg` 等 Nova 修改。不要用
 “通用 clean/fetch”覆盖；`prepare-source-nova.py` 会把它恢复到构建树。
+
+## R18 stream SHA 测试源码
+
+canonical warm-Data stream SHA 测试与 fixture 归档在
+`tools-nova/history/boot-speed-round18-nova/warm-sha-stream-nova/`：
+`test-sha256-stream-nova.py`、`warmload-adapter-nova.c`、`header-probe-nova.cpp`、
+`sha256-stream-cases-nova.c`、`warmload-fixture-nova.cpp`，以及编译所需的
+`preserve-vectors-nova.s`。这些文件保留原始源码字节，但保留原始本地路径/日志/
+设备假设，是**归档**而非可移植构建入口；不要在未隔离的情况下执行。

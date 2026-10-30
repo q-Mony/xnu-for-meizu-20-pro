@@ -83,14 +83,55 @@ def load_json(path: Path):
 def inside(path: Path) -> bool:
     try:
         return path.resolve().is_relative_to(ROOT.resolve())
-    except OSError:
+    except (OSError, RuntimeError):
         return False
 
 
 def ensure_inside(path: Path) -> Path:
+    """Reject a mutation destination unless it is a real path inside ROOT.
+
+    The check is deliberately lexical as well as resolved: a symlink that points
+    back inside the checkout is still rejected, because this helper must never
+    follow or remove a link to decide where to write.
+    """
+    try:
+        rel = path.relative_to(ROOT)
+    except ValueError:
+        raise PrepareError(f"refusing to write outside checkout: {path}") from None
+    if not rel.parts or ".." in rel.parts:
+        raise PrepareError(f"refusing ambiguous mutation destination: {path}")
+    current = ROOT
+    for part in rel.parts:
+        current = current / part
+        if current.is_symlink():
+            raise PrepareError(
+                f"refusing to write through symlink: {current.relative_to(ROOT)}")
     if not inside(path):
         raise PrepareError(f"refusing to write outside checkout: {path}")
     return path
+
+
+def guard_tree_destinations(pins: dict) -> None:
+    """Guard every mutation destination/ancestor before any mkdir/copy/move/clone."""
+    destinations = [
+        OUT_ROOT,
+        OUT,
+        TREE,
+        TREE / ".cache",
+        TREE / "build",
+        TREE / "build" / "xnu",
+        OUT_ROOT / "feeds",
+        OUT / ".config",
+        TREE / "build" / "xnu" / "owner-data-volume.h",
+    ]
+    for destination in destinations:
+        ensure_inside(destination)
+    for name in WORK_ITEMS:
+        if name not in pins:
+            raise PrepareError(f"missing upstream pin for {name}")
+        _, cache_rel = WORK_ITEMS[name]
+        ensure_inside(TREE / Path(cache_rel).relative_to("tree"))
+        ensure_inside(feed_dir(pins[name]))
 
 
 def feed_dir(pin: dict) -> Path:
@@ -146,6 +187,7 @@ def backup_path(path: Path) -> Path:
 
 def clone_at(source: Path, destination: Path, commit: str) -> None:
     ensure_inside(destination)
+    ensure_inside(destination.parent)
     if destination.exists():
         raise PrepareError(f"refusing to clone over existing path: {destination}")
     destination.parent.mkdir(parents=True, exist_ok=True)
@@ -157,6 +199,7 @@ def clone_at(source: Path, destination: Path, commit: str) -> None:
 
 def fetch_at(url: str, ref: str, destination: Path, commit: str) -> None:
     ensure_inside(destination)
+    ensure_inside(destination.parent)
     destination.parent.mkdir(parents=True, exist_ok=True)
     run(["git", "clone", "--depth", "1", "--branch", ref, "--no-tags", url, str(destination)])
     if head(destination) != commit:
@@ -168,6 +211,7 @@ def fetch_at(url: str, ref: str, destination: Path, commit: str) -> None:
 
 def ensure_feed(name: str, pin: dict, reference_root: Path | None, fetch: bool) -> Path | None:
     destination = feed_dir(pin)
+    ensure_inside(destination)
     if head(destination) == pin["commit"]:
         return destination
     if destination.exists():
@@ -221,6 +265,8 @@ def prepare_item(name: str, pin: dict, reference_root: Path | None, fetch: bool,
     snapshot_rel, cache_rel = WORK_ITEMS[name]
     source = ROOT / snapshot_rel
     cache = TREE / Path(cache_rel).relative_to("tree")
+    ensure_inside(cache)
+    ensure_inside(cache.parent)
     if not source.is_dir():
         raise PrepareError(f"missing snapshot: {snapshot_rel}")
     feed = ensure_feed(name, pin, reference_root, fetch) if not dry_run else feed_dir(pin)
@@ -269,6 +315,8 @@ def prepare_config(dry_run: bool) -> dict:
     if not CONFIG.is_file():
         raise PrepareError("missing configs-nova/meizu20pro-r18.config")
     target = OUT / ".config"
+    ensure_inside(target)
+    ensure_inside(target.parent)
     record = {"config": str(target.relative_to(ROOT)),
               "source": str(CONFIG.relative_to(ROOT)),
               "sha256": sha256(CONFIG)}
@@ -293,6 +341,8 @@ def prepare_owner(dry_run: bool) -> dict:
     if not OWNER.is_file():
         raise PrepareError("missing configs-nova/owner-data-volume.h")
     target = TREE / "build" / "xnu" / "owner-data-volume.h"
+    ensure_inside(target)
+    ensure_inside(target.parent)
     record = {"owner_header": str(target.relative_to(ROOT)),
               "source": str(OWNER.relative_to(ROOT)),
               "sha256": sha256(OWNER)}
@@ -364,15 +414,19 @@ def main() -> int:
         if not required.exists():
             raise PrepareError(f"not a complete export checkout: missing {required}")
 
+    # Guard every mutation destination/ancestor before the first mkdir/copy/move.
+    # This must happen before prepare_config/prepare_owner, which previously wrote
+    # .config/owner-data-volume.h through an out/tree symlink before any check.
+    guard_tree_destinations(pins)
+
+    if not args.dry_run:
+        (TREE / ".cache").mkdir(parents=True, exist_ok=True)
+        (TREE / "build" / "xnu").mkdir(parents=True, exist_ok=True)
+
     result = {"schema": "nova-prepare-v1", "root": str(ROOT), "dry_run": args.dry_run,
               "network": bool(args.fetch_references and not args.dry_run),
               "items": [], "config": prepare_config(args.dry_run),
               "owner": prepare_owner(args.dry_run)}
-    if not args.dry_run:
-        # The build tree must exist before snapshots are restored.
-        ensure_inside(TREE)
-        (TREE / ".cache").mkdir(parents=True, exist_ok=True)
-        (TREE / "build" / "xnu").mkdir(parents=True, exist_ok=True)
     for name in WORK_ITEMS:
         result["items"].append(prepare_item(
             name, pins[name], reference_root, args.fetch_references, args.replace_cache, args.dry_run))

@@ -11,6 +11,7 @@ fixture test (writes only to a system temporary directory).
 from __future__ import annotations
 
 import argparse
+import codecs
 import json
 import re
 import tempfile
@@ -57,7 +58,10 @@ def is_text(path: Path) -> bool:
     if b"\x00" in data:
         return False
     try:
-        data.decode("utf-8")
+        # An incremental decoder tolerates a multibyte UTF-8 sequence that is
+        # cut by the fixed-size head read; a full strict decode would misclassify
+        # otherwise valid large Markdown/JSON files as binary.
+        codecs.getincrementaldecoder("utf-8")().decode(data, final=False)
     except UnicodeDecodeError:
         return False
     controls = sum(1 for b in data if b < 9 or 13 < b < 32)
