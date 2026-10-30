@@ -1,0 +1,43 @@
+{
+  "new_file_no_previous_version": true,
+  "reviewed_at": "2026-10-30T19:46:29.169699+08:00",
+  "status": "ACCEPTED_LOCAL_CANDIDATE_AWAIT_USER_INSTALL_COMMAND",
+  "source_review": "<nova-root>/artifacts-nova/boot-speed-round18-nova/warm-sha-stream-nova/SOL-ACCEPTANCE-nova.json",
+  "source_review_sha256": "eb6e4bb529d01c03489fd70ceac14122684fe9f788f828c5cc677bb129cad38a",
+  "full_build_review_sha256": "6bbe1579a727c85fdbfa3c523107fb14d189b18756d87df4d811120d9927f56f",
+  "result_sha256": "f416f7908e5c1789d67ffaab0fde80ac353cfead2de6fdad829fb3e604535abe",
+  "artifact_inventory_sha256": "2477b88e6c526134b669246ca81ec5a46e6a57df5f5c529fb8559c40255f6a32",
+  "verified_path_hash_records": 49,
+  "package_validation_checks": 41,
+  "candidate_image": "<nova-root>/artifacts-nova/boot-speed-round18-nova/build-package-nova/package/boot-warm-r18-streamsha-candidate-nova/boot-warm-r18-streamsha-candidate-nova.img",
+  "candidate_image_sha256": "be40edfedadbc161e3e86864c9d8803243c34426f78007f983213c07c879c21b",
+  "payload_kernel_sha256": "46a1dbd844d42350b306d04c8603526f7ab1b6b760b945b084adb97ae4f6b8d2",
+  "raw_kernel_sha256": "6baa8e83f6cc408f843c9bd5cb5c5e1c3fa7f48e4d6e235338f936e461a99055",
+  "independent_container_checks": [
+    "R17 header/envelope byte equality outside SHA1/FAT",
+    "Android v0 SHA1 recomputed from actual image bytes",
+    "actual FAT slice equals re-extracted FAT input",
+    "re-extracted kernel equals payload hash",
+    "only kernel differs among extracted EFI files"
+  ],
+  "source_count": 6186,
+  "actual_executor_request_headers": [
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "reasoningEffort": "high"
+    }
+  ],
+  "dsh_session": "session-194965f0-ed81-427e-b014-18bf35f36b3c",
+  "installation_authorized": false,
+  "hardware_tested": false,
+  "phone_operations_this_turn": 0,
+  "phone_state_last_observed": "Android B; no current device query performed",
+  "remaining": [
+    "36.320938s before backboardd request delivery root cause unresolved; independent exec-relative sampling plan prepared",
+    "Hello black screen root cause unresolved; display/console/input evidence plan prepared",
+    "Boot-menu to Hello endpoints missing; no exact total claimed",
+    "8.666060s warm hash is prior measured cost, not a promised saving"
+  ],
+  "evidence_retention_caveat": "Initial failed GREEN directory was removed by executor; failure transcript evidence and truthful disclosure retained. Final passing logs/results and pre-change RED retained."
+}

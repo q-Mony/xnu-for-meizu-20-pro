@@ -1,0 +1,27 @@
+{
+ "schema": "nova-r18-source-verify-v1",
+ "new_file_no_previous_version": true,
+ "baseline": "<nova-root>/artifacts-nova/boot-speed-round17-nova/log-encode-completion-nova/source-freeze-r17-nova.json",
+ "baseline_sha256": "1ebeb2bb4ece61019c7a4567ffe0455c1dd4174d23207d68957a08408f32b69b",
+ "expected_count": 6186,
+ "verified_count": 6186,
+ "missing": [],
+ "mismatched": [
+  "unixnu-main-nova/drivers/NativeRamBlock/NativeRamBlock.cpp",
+  "unixnu-main-nova/out/meizu20pro/tree/.cache/xnu-work/libkern/crypto/corecrypto_sha2.c",
+  "unixnu-main-nova/out/meizu20pro/tree/.cache/xnu-work/libkern/libkern/crypto/native_sha256.h"
+ ],
+ "unexpected_changed": [],
+ "exactly_three_intended_changes": true,
+ "old_source_sha256": {
+  "unixnu-main-nova/drivers/NativeRamBlock/NativeRamBlock.cpp": "228ad81cd6e2c65839d7293f3f7929124db2cfbd190b13e4f6af5e67a338c699",
+  "unixnu-main-nova/out/meizu20pro/tree/.cache/xnu-work/libkern/crypto/corecrypto_sha2.c": "95da14af9619dafcfc4168c92d7c0c858b70fee68c6f47324b07b66fc4a6b421",
+  "unixnu-main-nova/out/meizu20pro/tree/.cache/xnu-work/libkern/libkern/crypto/native_sha256.h": "b7fa8774e982f365c59273d254cb855515f45293ecf7f7fb5e262f6f5e7c611e"
+ },
+ "new_source_sha256": {
+  "unixnu-main-nova/drivers/NativeRamBlock/NativeRamBlock.cpp": "08437deda6354ff660a41af7f2ea56ada41c90183a78f1935f0ae326402cbacb",
+  "unixnu-main-nova/out/meizu20pro/tree/.cache/xnu-work/libkern/crypto/corecrypto_sha2.c": "a5996632c820928896bd9b2f8790ce703cbde838925343c0c809b193ecb56172",
+  "unixnu-main-nova/out/meizu20pro/tree/.cache/xnu-work/libkern/libkern/crypto/native_sha256.h": "faa8a909cf7b5ec353d87b2e1de1258fa33d212906b2617b2a838009d03dc742"
+ },
+ "pass": true
+}

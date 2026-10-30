@@ -1,0 +1,325 @@
+{
+  "new_file_no_previous_version": true,
+  "status": "R18_WARM_SHA_STAGE_IMPROVEMENT_MEASURED_OTHER_BOTTLENECK_REMAINS",
+  "reader": "Sol direct; no dsh or subagents",
+  "generated_at": "2026-10-30T20:09:48.817488+08:00",
+  "capture": {
+    "captured_utc": "2026-10-30T12:07:53.391253+00:00",
+    "partition": "/dev/block/by-name/unixnu",
+    "partition_bytes": 68719476736,
+    "window_bytes": 33554432,
+    "ring_total": 1596749,
+    "text_bytes": 1596922,
+    "dropped": 0,
+    "reserved": 0,
+    "raw_sha256": "b032c84b882184ee3e9991c0f69b4293d4566c72e88aa89d56d1db17c0d70804",
+    "text_sha256": "ebb550998cc7f4cad5c2fda939cdef3c82e557181328804afc36c161561e71dd",
+    "nul_bytes": 0,
+    "no_reboot_or_slot_change": true,
+    "raw_partition_read_only": true
+  },
+  "record_count": 6685,
+  "first_timestamp_seconds": 17.50984359375,
+  "last_timestamp_seconds": 332.692505625,
+  "clock_epoch": "CNTVCT aligned with Mach; Boot-menu origin not recorded",
+  "warmload_fields": {
+    "status": "0",
+    "capture_id": "4013558640",
+    "bytes": "231153664",
+    "start_ticks": "461965528",
+    "source_ticks": "480388679",
+    "read_ticks": "6082171",
+    "hash_ticks": "21578847",
+    "import_ticks": "33335551",
+    "publish_ticks": "513742284",
+    "end_ticks": "513744500",
+    "first_read_ticks": "513770151"
+  },
+  "warmload_seconds": {
+    "start_ticks": 24.060704583333333,
+    "source_ticks": 25.020243697916666,
+    "read_ticks": 0.31677973958333333,
+    "hash_ticks": 1.12389828125,
+    "import_ticks": 1.7362266145833334,
+    "publish_ticks": 26.757410625,
+    "end_ticks": 26.757526041666665,
+    "wall_start_to_end_seconds": 2.696821458333332,
+    "hash_nested_in_import": true
+  },
+  "phase_intervals": {
+    "root_device_resolve": {
+      "begin": {
+        "ticks": 349354506,
+        "line": 102
+      },
+      "end": {
+        "ticks": 522060257,
+        "line": 138
+      },
+      "elapsed_seconds": 8.995091197916667
+    },
+    "root_mount": {
+      "begin": {
+        "ticks": 522060499,
+        "line": 139
+      },
+      "end": {
+        "ticks": 522414311,
+        "line": 158
+      },
+      "elapsed_seconds": 0.018427708333333334
+    },
+    "systemos_prepare": {
+      "begin": {
+        "ticks": 527536184,
+        "line": 184
+      },
+      "end": {
+        "ticks": 530524859,
+        "line": 220
+      },
+      "elapsed_seconds": 0.15566015625
+    },
+    "data_prepare": {
+      "begin": {
+        "ticks": 530525234,
+        "line": 221
+      },
+      "end": {
+        "ticks": 530639727,
+        "line": 237
+      },
+      "elapsed_seconds": 0.005963177083333333
+    }
+  },
+  "anchors": {
+    "launchd": {
+      "line": 256,
+      "capture_ticks": 531161092,
+      "seconds": 27.664640208333335,
+      "pid": 1,
+      "taskgen": 4
+    },
+    "SpringBoard": {
+      "line": 732,
+      "capture_ticks": 937203173,
+      "seconds": 48.812665260416665,
+      "pid": 26,
+      "taskgen": 57
+    },
+    "backboardd": {
+      "line": 894,
+      "capture_ticks": 1008492850,
+      "seconds": 52.52566927083333,
+      "pid": 55,
+      "taskgen": 247
+    },
+    "Setup_armed": {
+      "line": 1672,
+      "seconds": 95.28022453125,
+      "capture_ticks": 1829380311,
+      "pid": 170,
+      "taskgen": 612,
+      "is_hello_first_frame": false
+    }
+  },
+  "lifecycle": {
+    "line": 1605,
+    "fields": {
+      "v": "16",
+      "why": "finish",
+      "missing": "unknown",
+      "seq": "202",
+      "taskgen": "57",
+      "tid": "254",
+      "pid": "26",
+      "request_id": "6001009",
+      "recv_id": "6001009",
+      "reply_id": "6001109",
+      "reply_cookie": "af8483ed650e9db0",
+      "reply_epoch": "1694",
+      "req_ticks": "1008487814",
+      "recv_ticks": "1708988067",
+      "copyout_ticks": "1708988439",
+      "reply_begin_ticks": "1708991564",
+      "reply_end_ticks": "1708991714",
+      "finish_ticks": "1709027679",
+      "recv_token": "1",
+      "reply_token": "2",
+      "recv_server_pid": "55",
+      "recv_server_taskgen": "247",
+      "recv_server_tid": "1208",
+      "reply_server_pid": "55",
+      "reply_server_taskgen": "247",
+      "reply_server_tid": "1208",
+      "recv_result": "0",
+      "reply_result": "0",
+      "finish_result": "0",
+      "flags": "req:1,recv:1,copyout:1,reply:1,reply_end:1,finish:1",
+      "dropped": "0",
+      "invalid_identity": "2",
+      "duplicate_release": "0",
+      "lock_drops": "recv_begin:0,recv_end:0,reply_begin:0,reply_end:0,finish:0,drain:0"
+    },
+    "segments_seconds": {
+      "req_ticks__recv_ticks": 36.48438817708333,
+      "recv_ticks__copyout_ticks": 1.9375e-05,
+      "copyout_ticks__reply_begin_ticks": 0.00016276041666666666,
+      "reply_begin_ticks__reply_end_ticks": 7.8125e-06,
+      "reply_end_ticks__finish_ticks": 0.0018731770833333332,
+      "receive_to_sender_finish": 0.002063125,
+      "request_to_sender_finish": 36.48645130208333
+    }
+  },
+  "cs4k_count": 23,
+  "cs4k_totals": {
+    "bytes": 2724626432,
+    "reads": 10403,
+    "total_ms": 19365,
+    "read_ms": 10920,
+    "hash_ms": 8419
+  },
+  "comparisons": {
+    "warm_hash_ticks": {
+      "r17_seconds": 8.6660596875,
+      "r18_seconds": 1.12389828125,
+      "saved_seconds": 7.542161406250001,
+      "reduction_percent": 87.03103461344583
+    },
+    "warm_read_ticks": {
+      "r17_seconds": 0.33108984375,
+      "r18_seconds": 0.31677973958333333,
+      "saved_seconds": 0.01431010416666667,
+      "reduction_percent": 4.322121151342828
+    },
+    "warm_import_ticks": {
+      "r17_seconds": 9.2970215625,
+      "r18_seconds": 1.7362266145833334,
+      "saved_seconds": 7.560794947916666,
+      "reduction_percent": 81.32491569572679
+    },
+    "warm_wall_start_to_end_seconds": {
+      "r17_seconds": 10.258028958333334,
+      "r18_seconds": 2.696821458333332,
+      "saved_seconds": 7.561207500000002,
+      "reduction_percent": 73.71013993733649
+    },
+    "phase_root_device_resolve": {
+      "r17_seconds": 16.27311359375,
+      "r18_seconds": 8.995091197916667,
+      "saved_seconds": 7.278022395833334,
+      "reduction_percent": 44.72421552215181
+    },
+    "phase_root_mount": {
+      "r17_seconds": 0.0182053125,
+      "r18_seconds": 0.018427708333333334,
+      "saved_seconds": -0.00022239583333333313,
+      "reduction_percent": -1.22159854895835
+    },
+    "phase_systemos_prepare": {
+      "r17_seconds": 0.15504057291666667,
+      "r18_seconds": 0.15566015625,
+      "saved_seconds": -0.0006195833333333123,
+      "reduction_percent": -0.399626576242294
+    },
+    "phase_data_prepare": {
+      "r17_seconds": 0.0059477083333333335,
+      "r18_seconds": 0.005963177083333333,
+      "saved_seconds": -1.5468749999999858e-05,
+      "reduction_percent": -0.2600791621422793
+    },
+    "clock_launchd": {
+      "r17_seconds": 34.5446075,
+      "r18_seconds": 27.664640208333335,
+      "saved_seconds": 6.879967291666663,
+      "reduction_percent": 19.916183131235936
+    },
+    "clock_SpringBoard": {
+      "r17_seconds": 55.63495296875,
+      "r18_seconds": 48.812665260416665,
+      "saved_seconds": 6.822287708333334,
+      "reduction_percent": 12.262592748420934
+    },
+    "clock_backboardd": {
+      "r17_seconds": 59.318655364583336,
+      "r18_seconds": 52.52566927083333,
+      "saved_seconds": 6.792986093750002,
+      "reduction_percent": 11.451685902182145
+    },
+    "clock_Setup_armed": {
+      "r17_seconds": 102.12506713541667,
+      "r18_seconds": 95.28022453125,
+      "saved_seconds": 6.844842604166672,
+      "reduction_percent": 6.702411852606656
+    },
+    "target_request_to_receiver": {
+      "r17_seconds": 36.3209378125,
+      "r18_seconds": 36.48438817708333,
+      "saved_seconds": -0.1634503645833334,
+      "reduction_percent": -0.45001691703863794
+    }
+  },
+  "faults": {
+    "Assertion failed": [],
+    "sbfault": [],
+    "panic(cpu": [],
+    "panic=": []
+  },
+  "tracked_core_process_exits": [],
+  "all_exit_counts": {
+    "identityservices": 17,
+    "GradientPosterEx": 2,
+    "CollectionsPoste": 1,
+    "ExtragalacticPos": 1,
+    "EmojiPosterExten": 1,
+    "maild": 1,
+    "com.apple.mobile": 1
+  },
+  "swap_logged_count": 16,
+  "last_logged_swap": {
+    "line": 4167,
+    "ticks": 2162368091,
+    "seconds": 112.62333807291667,
+    "message": "NEGRONI FB: swap 18 layer 0 surface 3 1080x2400 fmt 0x42475241 bpr 4352 a 0,0 1080x2400 b 0,0 1080x2400"
+  },
+  "hello_confirmed_by_user": true,
+  "actual_hello_first_frame_seconds": null,
+  "boot_menu_to_hello_seconds": null,
+  "black_screen_this_run": "user has not reported whether it recurred; existing sampling cannot prove absence",
+  "source_hashes_current_and_frozen": {
+    "unixnu-main-nova/drivers/NativeRamBlock/NativeRamBlock.cpp": "08437deda6354ff660a41af7f2ea56ada41c90183a78f1935f0ae326402cbacb",
+    "unixnu-main-nova/drivers/NativeRamBlock/WarmLoad.h": "f1f7d33b96cae0ee1dfdf39f0177adf002dd27fc6731e26b13baedfac7f9324e",
+    "unixnu-main-nova/out/meizu20pro/tree/.cache/xnu-work/libkern/crypto/corecrypto_sha2.c": "a5996632c820928896bd9b2f8790ce703cbde838925343c0c809b193ecb56172",
+    "unixnu-main-nova/out/meizu20pro/tree/.cache/xnu-work/libkern/libkern/crypto/native_sha256.h": "faa8a909cf7b5ec353d87b2e1de1258fa33d212906b2617b2a838009d03dc742",
+    "unixnu-main-nova/out/meizu20pro/tree/.cache/xnu-work/osfmk/ipc/mach_msg.c": "3fed44b5df64348e95ec7b489ade00cd7bbfbe3c790ee59159c47d9acaf91341",
+    "unixnu-main-nova/out/meizu20pro/tree/.cache/xnu-work/bsd/kern/kern_exec.c": "62892df1cbfb216e2d5f847b26678f75012e590a080ff7a083303992778893d1",
+    "unixnu-main-nova/drivers/NegroniDisplay/NegroniFramebuffer.cpp": "25209699e2a138c6441a350c2f2f134dcb405cd5df3aeb5ad8a9bd6a51c0614b"
+  },
+  "baseline_evidence_sha256": "6e5b4b0b3cfff11463aa5b84e482b24187ac3332b6857753c30ba94a7f76ba0d",
+  "post_capture_device_state": {
+    "new_file_no_previous_version": true,
+    "status": "ANDROID_B_RECOVERY_AND_READONLY_PRECHECK_PASS",
+    "checked_utc": "2026-10-30T12:07:51.872696+00:00",
+    "installer_sha256": "7c1d5687aa92d2ee1d59d3e9936a637066845774394131f7071a85c33286b0b6",
+    "capture_tool_sha256": "65c9f6ff93453c8ce7b2cd63c87b3cc0d64342bef2b22ea018e46eca15f5a0d9",
+    "current_slot": "b",
+    "partition_hashes": {
+      "boot_a": "be40edfedadbc161e3e86864c9d8803243c34426f78007f983213c07c879c21b",
+      "boot_b": "7df205f172e553f76a68726c67ed7fcad112784f320941ce212433dee21745a2"
+    },
+    "warm_export_sha256": "7e6cc19843c0ee28eb8f1891a7d53e074688743902ef9ccf01b20d1a48e57140",
+    "export_backup_and_gpt_rechecked": true,
+    "readonly_checks_device_mutated": false,
+    "recovery_action": "one B selection and reboot, no flash",
+    "adb_wait_seconds": 15.366463250000379
+  },
+  "device_left": "Android B",
+  "production_edits": false,
+  "new_candidate_built_or_installed_this_turn": false,
+  "limitations": [
+    "One paired phone run; stage difference is measured but no multi-run variance bound.",
+    "Overlapping stages cannot be added to derive total savings.",
+    "Setup armed is not Hello first frame and clock has no Boot-menu origin.",
+    "16-swap cap and no power/frame-content trace cannot establish black-screen cause or absence."
+  ]
+}

@@ -1,0 +1,90 @@
+{
+ "schema": "nova-r18-package-validation-v1",
+ "new_file_no_previous_version": true,
+ "package": "<nova-root>/artifacts-nova/boot-speed-round18-nova/build-package-nova/package/boot-warm-r18-streamsha-candidate-nova",
+ "manifest": "<nova-root>/artifacts-nova/boot-speed-round18-nova/build-package-nova/package/boot-warm-r18-streamsha-candidate-nova/evidence-nova/verification-nova.json",
+ "manifest_sha256": "4a63a7675930f6de13213efd83f9b5d74ae9dbd8cd14510824284451b59e9110",
+ "checks": {
+  "r14_pinned": true,
+  "r15_pinned": true,
+  "r17_pinned": true,
+  "candidate_image_sha256": true,
+  "payload_sha256": true,
+  "raw_sha256": true,
+  "raw_equals_build_raw": true,
+  "image_length_96mib": true,
+  "layout_ramdisk_90mib": true,
+  "candidate_layout_equals_r14": true,
+  "header_prefix_bytes_equal_r14": true,
+  "pre_fat_bytes_equal_r14": true,
+  "post_fat_bytes_equal_r14": true,
+  "header_prefix_bytes_equal_r17": true,
+  "pre_fat_bytes_equal_r17": true,
+  "post_fat_bytes_equal_r17": true,
+  "android_v0_sha1_recomputed": true,
+  "efi_file_set_and_hashes": true,
+  "preserved_efi_files_byte_identical_r14": true,
+  "preserved_efi_files_byte_identical_r17": true,
+  "toml_byte_identical": true,
+  "scratch_data_byte_identical_r17": true,
+  "trustcache_byte_identical_r17": true,
+  "only_kernel_changed_in_efi": true,
+  "r15_envelope_equality": true,
+  "r17_envelope_equality": true,
+  "raw_entry_unpatched": true,
+  "payload_entry_patched_once": true,
+  "payload_markers": true,
+  "streaming_symbols_present": true,
+  "pan_passed": true,
+  "pan_tool_pinned": true,
+  "path_shim_pinned": true,
+  "packer_self_hash": true,
+  "source_hashes_match": true,
+  "source_freeze_pass": true,
+  "changed_objects_match": true,
+  "build_result_hash": true,
+  "flags": true,
+  "payload_differs_from_raw": true,
+  "payload_size_equals_raw": true
+ },
+ "entries": {
+  "raw": {
+   "entry": 18446744005128197256,
+   "branch_target": 18446744005128204380,
+   "start_first_cpu": 18446744005128204380
+  },
+  "patched": {
+   "entry": 18446744005128197256,
+   "branch_target": 18446744005128197376,
+   "start_first_cpu": 18446744005128204380
+  }
+ },
+ "layout": {
+  "ramstart": 1851392,
+  "ramdisk_size": 94371840,
+  "page": 4096,
+  "kernel_size": 1844805,
+  "footer_magic": "AVBf"
+ },
+ "hashes": {
+  "candidate_image": "be40edfedadbc161e3e86864c9d8803243c34426f78007f983213c07c879c21b",
+  "payload_kernel": "46a1dbd844d42350b306d04c8603526f7ab1b6b760b945b084adb97ae4f6b8d2",
+  "raw_kernel": "6baa8e83f6cc408f843c9bd5cb5c5e1c3fa7f48e4d6e235338f936e461a99055",
+  "r14_envelope": "6ea4078227980d8c1f0a98982fa6dd37e5a91b251384674dca53699b0f264641",
+  "r15_image": "53470de0d676da3e41cb9c6a894b62b10686e0ef0480799535db0d1e331fe0ed",
+  "r17_image": "8796d6c5824ce563fda8b4d0e1a429f235749254648cc160534e5807283338d6"
+ },
+ "markers": {
+  "nova: life v=16": true,
+  "meizu: sbfault-regs": true,
+  "nova: sblong v=15": true,
+  "meizu: selection attempt=": true
+ },
+ "streaming_symbols": {
+  "_native_sha256_stream_init": true,
+  "_native_sha256_stream_update": true,
+  "_native_sha256_stream_final": true,
+  "_native_sha256_digest": true
+ },
+ "pass": true
+}

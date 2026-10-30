@@ -1,0 +1,19 @@
+{
+  "schema": "nova-local-patch-v1",
+  "base_commit": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+  "dirty_count": 11,
+  "dirty": [
+    " M ArmPkg/Library/ArmGenericTimerPhyCounterLib/ArmGenericTimerPhyCounterLib.c",
+    " M ArmPkg/Library/ArmGenericTimerPhyCounterLib/ArmGenericTimerPhyCounterLib.inf",
+    " M ArmPkg/Library/ArmGenericTimerVirtCounterLib/ArmGenericTimerVirtCounterLib.c",
+    " M ArmPkg/Library/ArmGenericTimerVirtCounterLib/ArmGenericTimerVirtCounterLib.inf",
+    " M MdeModulePkg/Application/BootManagerMenuApp/BootManagerMenu.c",
+    " M MdeModulePkg/Application/BootManagerMenuApp/BootManagerMenu.h",
+    " M MdeModulePkg/Bus/Usb/UsbBusDxe/UsbBus.h",
+    " M MdePkg/Include/AArch64/AsmMacroLib.h",
+    " M SecurityPkg/Library/AuthVariableLib/AuthService.c",
+    " M SecurityPkg/Library/AuthVariableLib/AuthVariableLib.inf",
+    " M UefiCpuPkg/Library/ArmMmuLib/AArch64/ArmMmuLibCore.c"
+  ],
+  "patch": "provenance/patches/mu_basecore-local-changes.patch"
+}

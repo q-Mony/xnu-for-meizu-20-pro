@@ -1,0 +1,1275 @@
+{
+  "schema": "nova-export-policy-v1",
+  "new_file_no_previous_version": true,
+  "rules": {
+    "deny_extensions": [
+      ".a",
+      ".bc",
+      ".bin",
+      ".dbr",
+      ".dll",
+      ".dmg",
+      ".dtb",
+      ".dylib",
+      ".efi",
+      ".exe",
+      ".fd",
+      ".fv",
+      ".fw",
+      ".gz",
+      ".im4p",
+      ".img",
+      ".ipsw",
+      ".jks",
+      ".key",
+      ".keystore",
+      ".lib",
+      ".macho",
+      ".mbn",
+      ".metallib",
+      ".o",
+      ".obj",
+      ".p12",
+      ".pdb",
+      ".pem",
+      ".pfx",
+      ".pyc",
+      ".so",
+      ".spv",
+      ".tar",
+      ".xz",
+      ".zip",
+      ".zst",
+      ".zstd"
+    ],
+    "backup_suffixes": [
+      "bak",
+      "pre",
+      "old",
+      "orig",
+      "rej",
+      "~"
+    ],
+    "max_file_bytes": 52428800,
+    "max_image_bytes": 8388608,
+    "deny_names": [
+      ".env",
+      "local.toml",
+      ".DS_Store",
+      "id_rsa",
+      "id_ed25519"
+    ],
+    "deny_dirs": [
+      ".git",
+      ".mypy_cache",
+      ".pytest_cache",
+      ".ruff_cache",
+      ".tox",
+      ".venv",
+      "DerivedData",
+      "__pycache__",
+      "node_modules"
+    ],
+    "secret_content": [
+      "private-key",
+      "aws-access-key",
+      "github-token",
+      "github-pat",
+      "slack-token"
+    ]
+  },
+  "counts": {
+    "inventory_files": 8795,
+    "inventory_bytes": 114650606,
+    "policy_violations": 0
+  },
+  "excluded": [
+    {
+      "target": "uefi-sheng-nova/BootShim/BootShim.bin",
+      "source": "uefi-sheng-nova/BootShim/BootShim.bin",
+      "reason": "deny-extension:.bin"
+    },
+    {
+      "target": "uefi-sheng-nova/BootShim/BootShim.elf",
+      "source": "uefi-sheng-nova/BootShim/BootShim.elf",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/.git",
+      "source": "uefi-sheng-nova/Common/Mu/.git",
+      "reason": "vcs-cache"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/HidPkg/Crates/HiiKeyboardLayout/resources/test/KeyboardLayout.bin",
+      "source": "uefi-sheng-nova/Common/Mu/HidPkg/Crates/HiiKeyboardLayout/resources/test/KeyboardLayout.bin",
+      "reason": "deny-extension:.bin"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/HidPkg/Crates/HiiKeyboardLayout/resources/test/KeyboardLayoutNs.bin",
+      "source": "uefi-sheng-nova/Common/Mu/HidPkg/Crates/HiiKeyboardLayout/resources/test/KeyboardLayoutNs.bin",
+      "reason": "deny-extension:.bin"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/MfciPkg/Private/Certs/SharedMfciTrustAnchor.cer",
+      "source": "uefi-sheng-nova/Common/Mu/MfciPkg/Private/Certs/SharedMfciTrustAnchor.cer",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/CA-NotTrusted.cer",
+      "source": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/CA-NotTrusted.cer",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/CA-NotTrusted.pfx",
+      "source": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/CA-NotTrusted.pfx",
+      "reason": "deny-extension:.pfx"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/CA-NotTrusted.pvk",
+      "source": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/CA-NotTrusted.pvk",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/CA.cer",
+      "source": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/CA.cer",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/CA.pfx",
+      "source": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/CA.pfx",
+      "reason": "deny-extension:.pfx"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/CA.pvk",
+      "source": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/CA.pvk",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/Leaf-NoEku.cer",
+      "source": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/Leaf-NoEku.cer",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/Leaf-NoEku.pfx",
+      "source": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/Leaf-NoEku.pfx",
+      "reason": "deny-extension:.pfx"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/Leaf-NoEku.pvk",
+      "source": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/Leaf-NoEku.pvk",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/Leaf-test.cer",
+      "source": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/Leaf-test.cer",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/Leaf-test.pfx",
+      "source": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/Leaf-test.pfx",
+      "reason": "deny-extension:.pfx"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/Leaf-test.pvk",
+      "source": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/Leaf-test.pvk",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/Root.cer",
+      "source": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/Root.cer",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/Root.pfx",
+      "source": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/Root.pfx",
+      "reason": "deny-extension:.pfx"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/Root.pvk",
+      "source": "uefi-sheng-nova/Common/Mu/MfciPkg/UnitTests/MfciPolicyParsingUnitTest/data/certs/Root.pvk",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/MsApplicationPkg/SecureBootRecovery/Payload/DBUpdate.bin",
+      "source": "uefi-sheng-nova/Common/Mu/MsApplicationPkg/SecureBootRecovery/Payload/DBUpdate.bin",
+      "reason": "deny-extension:.bin"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/MsGraphicsPkg/Library/ColorBarDisplayDeviceStateLib/Resources/UnlockBitmap.bmp",
+      "source": "uefi-sheng-nova/Common/Mu/MsGraphicsPkg/Library/ColorBarDisplayDeviceStateLib/Resources/UnlockBitmap.bmp",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/MsGraphicsPkg/OnScreenKeyboardDxe/Resources/KeyboardIcon_Medium.bmp",
+      "source": "uefi-sheng-nova/Common/Mu/MsGraphicsPkg/OnScreenKeyboardDxe/Resources/KeyboardIcon_Medium.bmp",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/MsGraphicsPkg/OnScreenKeyboardDxe/Resources/KeyboardIcon_Small.bmp",
+      "source": "uefi-sheng-nova/Common/Mu/MsGraphicsPkg/OnScreenKeyboardDxe/Resources/KeyboardIcon_Small.bmp",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/MsGraphicsPkg/SimpleWindowManagerDxe/Resources/MousePointer_Medium.bmp",
+      "source": "uefi-sheng-nova/Common/Mu/MsGraphicsPkg/SimpleWindowManagerDxe/Resources/MousePointer_Medium.bmp",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/MsGraphicsPkg/SimpleWindowManagerDxe/Resources/MousePointer_Small.bmp",
+      "source": "uefi-sheng-nova/Common/Mu/MsGraphicsPkg/SimpleWindowManagerDxe/Resources/MousePointer_Small.bmp",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu/MsGraphicsPkg/Universal/TimeoutSpinner/Resources/NoNVMe.bmp",
+      "source": "uefi-sheng-nova/Common/Mu/MsGraphicsPkg/Universal/TimeoutSpinner/Resources/NoNVMe.bmp",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu_OEM_Sample/.git",
+      "source": "uefi-sheng-nova/Common/Mu_OEM_Sample/.git",
+      "reason": "vcs-cache"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu_OEM_Sample/OemPkg/FrontPage/Resources/BootLogo.bmp",
+      "source": "uefi-sheng-nova/Common/Mu_OEM_Sample/OemPkg/FrontPage/Resources/BootLogo.bmp",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu_OEM_Sample/OemPkg/FrontPage/Resources/FirmwareSettings.bmp",
+      "source": "uefi-sheng-nova/Common/Mu_OEM_Sample/OemPkg/FrontPage/Resources/FirmwareSettings.bmp",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu_OEM_Sample/OemPkg/FrontPage/Resources/FrontpageLogo.bmp",
+      "source": "uefi-sheng-nova/Common/Mu_OEM_Sample/OemPkg/FrontPage/Resources/FrontpageLogo.bmp",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu_OEM_Sample/OemPkg/FrontPage/Resources/FrontpageLogo@2x.bmp",
+      "source": "uefi-sheng-nova/Common/Mu_OEM_Sample/OemPkg/FrontPage/Resources/FrontpageLogo@2x.bmp",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu_OEM_Sample/OemPkg/FrontPage/Resources/LBAT.bmp",
+      "source": "uefi-sheng-nova/Common/Mu_OEM_Sample/OemPkg/FrontPage/Resources/LBAT.bmp",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu_OEM_Sample/OemPkg/FrontPage/Resources/NoBoot.bmp",
+      "source": "uefi-sheng-nova/Common/Mu_OEM_Sample/OemPkg/FrontPage/Resources/NoBoot.bmp",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu_OEM_Sample/OemPkg/FrontPage/Resources/THOT.bmp",
+      "source": "uefi-sheng-nova/Common/Mu_OEM_Sample/OemPkg/FrontPage/Resources/THOT.bmp",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Common/Mu_OEM_Sample/OemPkg/FrontPage/Resources/VolumeUp.bmp",
+      "source": "uefi-sheng-nova/Common/Mu_OEM_Sample/OemPkg/FrontPage/Resources/VolumeUp.bmp",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Common/SSDT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Common/SSDT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Blackbolt/APIC.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Blackbolt/APIC.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Blackbolt/DBG2.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Blackbolt/DBG2.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Blackbolt/DSDT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Blackbolt/DSDT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Blackbolt/DSDT_Minimal.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Blackbolt/DSDT_Minimal.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Blackbolt/FACP.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Blackbolt/FACP.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Blackbolt/GTDT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Blackbolt/GTDT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/APIC.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/APIC.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/CSRT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/CSRT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/DBG2.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/DBG2.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/DSDT_IDP.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/DSDT_IDP.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/DSDT_Minimal.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/DSDT_Minimal.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/FACP.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/FACP.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/FACS.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/FACS.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/GTDT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/GTDT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/IORT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/IORT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/MCFG.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/MCFG.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/PPTT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/PPTT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/SPCR.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Cedros/SPCR.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Divar/APIC.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Divar/APIC.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Divar/DSDT_Minimal.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Divar/DSDT_Minimal.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Divar/FACP.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Divar/FACP.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Divar/GTDT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Divar/GTDT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Divar/PPTT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Divar/PPTT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Hana/APIC.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Hana/APIC.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Hana/CSRT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Hana/CSRT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Hana/DBG2.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Hana/DBG2.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Hana/DSDT_Minimal.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Hana/DSDT_Minimal.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Hana/FACP.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Hana/FACP.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Hana/GTDT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Hana/GTDT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Hana/IORT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Hana/IORT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Hana/MCFG.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Hana/MCFG.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Hana/PPTT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Hana/PPTT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/APIC.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/APIC.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/AeoB/builtin/BSRC_BT.bin",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/AeoB/builtin/BSRC_BT.bin",
+      "reason": "deny-extension:.bin"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/AeoB/builtin/BSRC_QSPI.bin",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/AeoB/builtin/BSRC_QSPI.bin",
+      "reason": "deny-extension:.bin"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/AeoB/builtin/BSRC_SPI.bin",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/AeoB/builtin/BSRC_SPI.bin",
+      "reason": "deny-extension:.bin"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/AeoB/builtin/BSRC_UART_2Wire_1.bin",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/AeoB/builtin/BSRC_UART_2Wire_1.bin",
+      "reason": "deny-extension:.bin"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/AeoB/builtin/BSRC_UART_2Wire_2.bin",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/AeoB/builtin/BSRC_UART_2Wire_2.bin",
+      "reason": "deny-extension:.bin"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/AeoB/builtin/BSRC_UART_4Wire_1.bin",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/AeoB/builtin/BSRC_UART_4Wire_1.bin",
+      "reason": "deny-extension:.bin"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/AeoB/builtin/BSRC_UART_4Wire_2.bin",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/AeoB/builtin/BSRC_UART_4Wire_2.bin",
+      "reason": "deny-extension:.bin"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/AeoB/builtin/RADS.bin",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/AeoB/builtin/RADS.bin",
+      "reason": "deny-extension:.bin"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/AeoB/builtin/RCDS.bin",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/AeoB/builtin/RCDS.bin",
+      "reason": "deny-extension:.bin"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/AeoB/builtin/SMMC.bin",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/AeoB/builtin/SMMC.bin",
+      "reason": "deny-extension:.bin"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/CSRT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/CSRT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/DBG2.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/DBG2.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/DSDT_MTP.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/DSDT_MTP.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/DSDT_Minimal.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/DSDT_Minimal.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/DSDT_QRD.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/DSDT_QRD.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/FACP.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/FACP.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/FACS.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/FACS.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/GTDT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/GTDT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/IORT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/IORT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/MCFG.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/MCFG.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/PPTT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/PPTT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/SPCR.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kailua/SPCR.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kamorta/APIC.4Cores.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kamorta/APIC.4Cores.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kamorta/APIC.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kamorta/APIC.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kamorta/DSDT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kamorta/DSDT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kamorta/DSDT_Minimal.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kamorta/DSDT_Minimal.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kamorta/FACP.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kamorta/FACP.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kamorta/GTDT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kamorta/GTDT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kodiak/APIC.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kodiak/APIC.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kodiak/CSRT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kodiak/CSRT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kodiak/DBG2.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kodiak/DBG2.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kodiak/DSDT_Minimal.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kodiak/DSDT_Minimal.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kodiak/FACP.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kodiak/FACP.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kodiak/GTDT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kodiak/GTDT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kodiak/IORT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kodiak/IORT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kodiak/MCFG.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kodiak/MCFG.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kodiak/PPTT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kodiak/PPTT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kodiak/SPCR.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kodiak/SPCR.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kona/APIC.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kona/APIC.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kona/CSRT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kona/CSRT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kona/DBG2.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kona/DBG2.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kona/DSDT_Minimal.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kona/DSDT_Minimal.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kona/FACP.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kona/FACP.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kona/GTDT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kona/GTDT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kona/IORT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kona/IORT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kona/MCFG.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kona/MCFG.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kona/PPTT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Kona/PPTT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Lahaina/APIC.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Lahaina/APIC.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Lahaina/DBG2.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Lahaina/DBG2.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Lahaina/DSDT_MTP.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Lahaina/DSDT_MTP.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Lahaina/DSDT_Minimal.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Lahaina/DSDT_Minimal.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Lahaina/FACP.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Lahaina/FACP.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Lahaina/GTDT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Lahaina/GTDT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Lahaina/IORT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Lahaina/IORT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Lahaina/MCFG.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Lahaina/MCFG.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Lahaina/PPTT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Lahaina/PPTT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Moorea/APIC.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Moorea/APIC.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Moorea/CSRT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Moorea/CSRT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Moorea/DBG2.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Moorea/DBG2.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Moorea/DSDT_Minimal.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Moorea/DSDT_Minimal.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Moorea/FACP.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Moorea/FACP.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Moorea/FACS.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Moorea/FACS.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Moorea/GTDT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Moorea/GTDT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Moorea/IORT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Moorea/IORT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Moorea/MCFG.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Moorea/MCFG.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Moorea/PPTT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Moorea/PPTT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Napali/APIC.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Napali/APIC.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Napali/CSRT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Napali/CSRT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Napali/DBG2.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Napali/DBG2.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Napali/DSDT_Minimal.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Napali/DSDT_Minimal.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Napali/FACP.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Napali/FACP.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Napali/FACS.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Napali/FACS.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Napali/GTDT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Napali/GTDT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Napali/IORT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Napali/IORT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Napali/MCFG.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Napali/MCFG.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Napali/PPTT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Napali/PPTT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Nazgul/APIC.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Nazgul/APIC.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Nazgul/DSDT_Minimal.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Nazgul/DSDT_Minimal.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Nazgul/FACP.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Nazgul/FACP.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Nazgul/GTDT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Nazgul/GTDT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Nicobar/APIC.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Nicobar/APIC.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Nicobar/DSDT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Nicobar/DSDT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Nicobar/DSDT_Minimal.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Nicobar/DSDT_Minimal.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Nicobar/FACP.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Nicobar/FACP.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Nicobar/GTDT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Nicobar/GTDT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Palawan/APIC.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Palawan/APIC.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Palawan/DSDT_Minimal.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Palawan/DSDT_Minimal.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Palawan/FACP.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Palawan/FACP.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Palawan/GTDT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Palawan/GTDT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Palima/APIC.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Palima/APIC.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Palima/DBG2.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Palima/DBG2.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Palima/DSDT_Minimal.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Palima/DSDT_Minimal.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Palima/FACP.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Palima/FACP.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Palima/GTDT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Palima/GTDT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Palima/PPTT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Palima/PPTT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Rennell/APIC.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Rennell/APIC.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Rennell/CSRT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Rennell/CSRT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Rennell/DBG2.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Rennell/DBG2.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Rennell/DSDT_Minimal.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Rennell/DSDT_Minimal.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Rennell/FACP.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Rennell/FACP.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Rennell/FACS.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Rennell/FACS.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Rennell/GTDT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Rennell/GTDT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Rennell/IORT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Rennell/IORT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Rennell/MCFG.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Rennell/MCFG.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Rennell/PPTT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Rennell/PPTT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Starlord/APIC.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Starlord/APIC.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Starlord/DSDT_Minimal.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Starlord/DSDT_Minimal.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Starlord/FACP.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Starlord/FACP.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Starlord/GTDT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Starlord/GTDT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Waipio/APIC.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Waipio/APIC.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Waipio/DBG2.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Waipio/DBG2.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Waipio/DSDT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Waipio/DSDT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Waipio/DSDT_Minimal.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Waipio/DSDT_Minimal.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Waipio/FACP.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Waipio/FACP.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Waipio/GTDT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Waipio/GTDT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Waipio/PPTT.aml",
+      "source": "uefi-sheng-nova/Silicium-ACPI/Silicon/Qualcomm/Waipio/PPTT.aml",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicon/Qualcomm/NicobarPkg/Drivers/UsbPwrEnablerDxe/UsbPwrEnablerDxe.depex",
+      "source": "uefi-sheng-nova/Silicon/Qualcomm/NicobarPkg/Drivers/UsbPwrEnablerDxe/UsbPwrEnablerDxe.depex",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicon/Qualcomm/NicobarPkg/Drivers/UsbPwrEnablerDxe/UsbPwrEnablerDxe.efi",
+      "source": "uefi-sheng-nova/Silicon/Qualcomm/NicobarPkg/Drivers/UsbPwrEnablerDxe/UsbPwrEnablerDxe.efi",
+      "reason": "deny-extension:.efi"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicon/Silicium/SiliciumPkg/Applications/UFP/ufpdevicefw.efi",
+      "source": "uefi-sheng-nova/Silicon/Silicium/SiliciumPkg/Applications/UFP/ufpdevicefw.efi",
+      "reason": "deny-extension:.efi"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicon/Silicium/SiliciumPkg/Include/Resources/BootLogo.bmp",
+      "source": "uefi-sheng-nova/Silicon/Silicium/SiliciumPkg/Include/Resources/BootLogo.bmp",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicon/Silicium/SiliciumPkg/Include/Resources/MassStorage.bmp",
+      "source": "uefi-sheng-nova/Silicon/Silicium/SiliciumPkg/Include/Resources/MassStorage.bmp",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicon/Silicium/SiliciumPkg/Include/Resources/NoBootOS.bmp",
+      "source": "uefi-sheng-nova/Silicon/Silicium/SiliciumPkg/Include/Resources/NoBootOS.bmp",
+      "reason": "binary-content"
+    },
+    {
+      "target": "uefi-sheng-nova/Silicon/Silicium/SiliciumPkg/Include/Resources/SecureBoot/SiPolicy.p7b",
+      "source": "uefi-sheng-nova/Silicon/Silicium/SiliciumPkg/Include/Resources/SecureBoot/SiPolicy.p7b",
+      "reason": "binary-content"
+    },
+    {
+      "target": "unixnu-main-nova/drivers/ArmCpu/.git",
+      "source": "unixnu-main-nova/drivers/ArmCpu/.git",
+      "reason": "vcs-cache"
+    },
+    {
+      "target": "unixnu-main-nova/drivers/ArmDTPlatform/.git",
+      "source": "unixnu-main-nova/drivers/ArmDTPlatform/.git",
+      "reason": "vcs-cache"
+    },
+    {
+      "target": "unixnu-main-nova/drivers/ArmVirtPlatform/.git",
+      "source": "unixnu-main-nova/drivers/ArmVirtPlatform/.git",
+      "reason": "vcs-cache"
+    },
+    {
+      "target": "unixnu-main-nova/drivers/DarwinBoot/.git",
+      "source": "unixnu-main-nova/drivers/DarwinBoot/.git",
+      "reason": "vcs-cache"
+    },
+    {
+      "target": "unixnu-main-nova/drivers/NativeAES/.git",
+      "source": "unixnu-main-nova/drivers/NativeAES/.git",
+      "reason": "vcs-cache"
+    },
+    {
+      "target": "unixnu-main-nova/drivers/NativeAdreno/.git",
+      "source": "unixnu-main-nova/drivers/NativeAdreno/.git",
+      "reason": "vcs-cache"
+    },
+    {
+      "target": "unixnu-main-nova/drivers/NativeGeniSpi/.git",
+      "source": "unixnu-main-nova/drivers/NativeGeniSpi/.git",
+      "reason": "vcs-cache"
+    },
+    {
+      "target": "unixnu-main-nova/drivers/NativeHidInput/.git",
+      "source": "unixnu-main-nova/drivers/NativeHidInput/.git",
+      "reason": "vcs-cache"
+    },
+    {
+      "target": "unixnu-main-nova/drivers/NativeKeyStoreEvents/.git",
+      "source": "unixnu-main-nova/drivers/NativeKeyStoreEvents/.git",
+      "reason": "vcs-cache"
+    },
+    {
+      "target": "unixnu-main-nova/drivers/NativeMetal/.git",
+      "source": "unixnu-main-nova/drivers/NativeMetal/.git",
+      "reason": "vcs-cache"
+    },
+    {
+      "target": "unixnu-main-nova/drivers/NativeMobileDisplay/.git",
+      "source": "unixnu-main-nova/drivers/NativeMobileDisplay/.git",
+      "reason": "vcs-cache"
+    },
+    {
+      "target": "unixnu-main-nova/drivers/NativeRamBlock/.git",
+      "source": "unixnu-main-nova/drivers/NativeRamBlock/.git",
+      "reason": "vcs-cache"
+    },
+    {
+      "target": "unixnu-main-nova/drivers/NativeUfs/.git",
+      "source": "unixnu-main-nova/drivers/NativeUfs/.git",
+      "reason": "vcs-cache"
+    },
+    {
+      "target": "unixnu-main-nova/drivers/NativeVirtioBlock/.git",
+      "source": "unixnu-main-nova/drivers/NativeVirtioBlock/.git",
+      "reason": "vcs-cache"
+    },
+    {
+      "target": "unixnu-main-nova/drivers/NativeVirtioConsole/.git",
+      "source": "unixnu-main-nova/drivers/NativeVirtioConsole/.git",
+      "reason": "vcs-cache"
+    },
+    {
+      "target": "unixnu-main-nova/feeds.toml.bak-21H461",
+      "source": "unixnu-main-nova/feeds.toml.bak-21H461",
+      "reason": "backup"
+    },
+    {
+      "target": "unixnu-main-nova/kits/AdrenoFirmware/.git",
+      "source": "unixnu-main-nova/kits/AdrenoFirmware/.git",
+      "reason": "vcs-cache"
+    },
+    {
+      "target": "unixnu-main-nova/kits/AdrenoPM4/.git",
+      "source": "unixnu-main-nova/kits/AdrenoPM4/.git",
+      "reason": "vcs-cache"
+    },
+    {
+      "target": "unixnu-main-nova/kits/AirNir/.git",
+      "source": "unixnu-main-nova/kits/AirNir/.git",
+      "reason": "vcs-cache"
+    },
+    {
+      "target": "unixnu-main-nova/kits/ArmSmmu4K/.git",
+      "source": "unixnu-main-nova/kits/ArmSmmu4K/.git",
+      "reason": "vcs-cache"
+    },
+    {
+      "target": "unixnu-main-nova/kits/NativePrelink/.git",
+      "source": "unixnu-main-nova/kits/NativePrelink/.git",
+      "reason": "vcs-cache"
+    },
+    {
+      "target": "unixnu-main-nova/kits/VerifiedRoot/.git",
+      "source": "unixnu-main-nova/kits/VerifiedRoot/.git",
+      "reason": "vcs-cache"
+    },
+    {
+      "target": "unixnu-meizu20pro-nova/board.toml.bak-before-customdisplay",
+      "source": "unixnu-meizu20pro-nova/board.toml.bak-before-customdisplay",
+      "reason": "backup"
+    },
+    {
+      "target": "unixnu-meizu20pro-nova/board.toml.bak-before-vendorhw",
+      "source": "unixnu-meizu20pro-nova/board.toml.bak-before-vendorhw",
+      "reason": "backup"
+    },
+    {
+      "target": "unixnu-meizu20pro-nova/unixnu.lock.bak-21H461",
+      "source": "unixnu-meizu20pro-nova/unixnu.lock.bak-21H461",
+      "reason": "backup"
+    }
+  ],
+  "excluded_by_reason": {
+    "backup": 4,
+    "vcs-cache": 23,
+    "deny-extension:.bin": 14,
+    "binary-content": 171,
+    "deny-extension:.pfx": 5,
+    "deny-extension:.efi": 2
+  },
+  "policy_fixture": {
+    "schema": "nova-export-policy-test-v1",
+    "pass": true,
+    "results": [
+      {
+        "case": "code/main.c",
+        "expected_allowed": true,
+        "allowed": true,
+        "reason": "source-text-or-text-asset",
+        "pass": true
+      },
+      {
+        "case": "docs/README.md",
+        "expected_allowed": true,
+        "allowed": true,
+        "reason": "source-text-or-text-asset",
+        "pass": true
+      },
+      {
+        "case": "docs/diagram.svg",
+        "expected_allowed": true,
+        "allowed": true,
+        "reason": "image-doc-asset",
+        "pass": true
+      },
+      {
+        "case": "phone.img",
+        "expected_allowed": false,
+        "allowed": false,
+        "reason": "deny-extension:.img",
+        "pass": true
+      },
+      {
+        "case": "boot.macho",
+        "expected_allowed": false,
+        "allowed": false,
+        "reason": "deny-extension:.macho",
+        "pass": true
+      },
+      {
+        "case": "backup.bak-20260101",
+        "expected_allowed": false,
+        "allowed": false,
+        "reason": "backup",
+        "pass": true
+      },
+      {
+        "case": "id_ed25519",
+        "expected_allowed": false,
+        "allowed": false,
+        "reason": "ssh-private-key-name",
+        "pass": true
+      },
+      {
+        "case": "token.txt",
+        "expected_allowed": false,
+        "allowed": false,
+        "reason": "secret-content:github-token",
+        "pass": true
+      },
+      {
+        "case": "blob",
+        "expected_allowed": false,
+        "allowed": false,
+        "reason": "binary-content",
+        "pass": true
+      },
+      {
+        "case": ".env",
+        "expected_allowed": false,
+        "allowed": false,
+        "reason": "local-secret-or-config",
+        "pass": true
+      }
+    ]
+  },
+  "policy_violations": [],
+  "source_verification": {
+    "checked": 8729,
+    "matched": 8729,
+    "mismatched": [],
+    "missing_sources": [],
+    "critical_bad": []
+  }
+}

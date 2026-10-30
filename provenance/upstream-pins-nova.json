@@ -1,0 +1,48 @@
+{
+  "AvailabilityVersions": {
+    "commit": "933f9360f1b70dfbda5548386a3d65e0358b4f7d",
+    "ref": "AvailabilityVersions-141.1",
+    "url": "https://github.com/apple-oss-distributions/AvailabilityVersions.git"
+  },
+  "IOStorageFamily": {
+    "commit": "e45fbe30a7879e0b16e26dddb78538f1b00e0bff",
+    "ref": "main",
+    "url": "https://github.com/apple-oss-distributions/IOStorageFamily.git"
+  },
+  "Mu_Basecore": {
+    "commit": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+    "local_patch": "provenance/patches/mu_basecore-local-changes.patch",
+    "ref": "release/202608",
+    "url": "https://github.com/microsoft/mu_basecore.git"
+  },
+  "OpenSSL": {
+    "commit": "67b5686b4419b4cb8caa502711c41815f5279751",
+    "url": "https://github.com/openssl/openssl.git"
+  },
+  "corecrypto-2023": {
+    "commit": "11fba65b12d8830630e248dfa8344caf8b065f26",
+    "url": "https://github.com/ONLYA/corecrypto-2023.git"
+  },
+  "libdispatch": {
+    "commit": "30fe6a7d945340ce69cef121132f049e810089a5",
+    "ref": "libdispatch-1477.100.9",
+    "url": "https://github.com/apple-oss-distributions/libdispatch.git"
+  },
+  "libplatform": {
+    "commit": "a00a4cc36da2110578bcf3b8eeeeb93dcc7f4e11",
+    "ref": "libplatform-316.100.10",
+    "url": "https://github.com/apple-oss-distributions/libplatform.git"
+  },
+  "libpthread": {
+    "commit": "c0e60fb5ecfc54cf379c261d3f9572cc22ded891",
+    "ref": "libpthread-519.120.4",
+    "url": "https://github.com/apple-oss-distributions/libpthread.git"
+  },
+  "new_file_no_previous_version": true,
+  "schema": "nova-source-pins-v1",
+  "xnu": {
+    "commit": "d8b80295118ef25ac3a784134bcf95cd8e88109f",
+    "ref": "xnu-10063.141.1",
+    "url": "https://github.com/apple-oss-distributions/xnu.git"
+  }
+}

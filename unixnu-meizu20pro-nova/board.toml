@@ -1,0 +1,289 @@
+# Board description of the Meizu 20 Pro (SM8550), read by the unixnu build driver.
+#
+# STATUS: skeleton. Only values measured on this phone are filled in. The Meizu-specific pieces
+# (UEFI port, Goodix touch, ADT builder, display/timings) do not exist yet, so nothing here
+# builds or boots. The facts and their sources are listed in README.md.
+
+[board]
+name = "meizu20pro"
+soc = "SM8550"
+description = "Meizu 20 Pro"
+kit = "meizu20pro"                 # the package/ of this repository appears as kits/meizu20pro
+
+# Target image. Kept identical to sheng (the only qualified SM8550 port) until a Meizu-compatible
+# device identity exists. These fields describe the IPSW, not the phone.
+[ipsw]
+url = "https://updates.cdn-apple.com/2025FallFCS/fullrestores/122-77006/1158E502-D76D-4226-AA06-ED5E30CD1111/iPhone10,3,iPhone10,6_16.7.16_20H392_Restore.ipsw"
+product = "iPhone10,3"
+version = "16.7.16"
+build = "20H392"
+device_class = "d22ap"
+chip_id = 0x8015
+board_id = 6
+fetch = ["KernelCache", "DeviceTree", "StaticTrustCache", "Cryptex1,SystemTrustCache"]
+
+# The GPT entry "unixnu" carved out of the tail of userdata on 2026-10-23
+# (64 GiB; userdata kept its start and now ends at LBA 44613375). Images go to
+# the unixnu partition, never to userdata.
+[userdata]
+partition = "unixnu"
+first_lba = 44613376
+last_lba = 61390591
+lba_bytes = 4096
+windows = [
+  { name = "OS", component = "OS" },
+  { name = "SystemOS", component = "Cryptex1,SystemOS" },
+]
+
+[kernel]
+defconfig = "meizu20pro_defconfig"
+# PAN is required by this board's kernel; reject stale selected configs and
+# verify the final prelinked copyin/copyout instruction sequences.
+require_native_pan = true
+# Generic builders (scripts/ of this repository or of UniXNU). Board-specific ones (platform
+# power, boot progress, legacy display, GPU) are added once their Meizu sources exist.
+archives = [
+  "build-corecrypto-14.py",
+  "build-corecrypto-14.py --namespace",
+  "build-arm-driver.py ArmDTPlatform",
+  "build-arm-driver.py ArmCpu",
+  "build-native-meizu-touch.py",
+  # Re-pinned to the 20H392 IOHIDFamily ABI (vtable 0x5CBE2D0, C2 0x4726B9C,
+  # gMetaClass 0x6A128E0, text bb044497...): the touch digitizer publishes as
+  # an IOHIDDevice through the original class.
+  "build-native-meizu-hid.py",
+  "build-native-meizu-bootlog.py",
+  # One read-only EPSS snapshot from autolog, gated by nova-cpufreq-probe=1.
+  "build-native-meizu-cpufreq-probe.py",
+  # GCC snapshot only; no hardware access without meizu-usb-probe=1.
+  "build-native-meizu-usb-probe.py",
+  "build-meizu-watchdog-policy.py",
+  "build-libpthread-kernel.py",
+  # Signed per-block policy for the OS window flashed into unixnu, then NativeUfs with its
+  # verified-block mode (the driver only acts on the native-ufs-* boot arguments).
+  "build-meizu-verified-root.py",
+  "build-meizu-storage-family.py",
+  "build-arm-driver.py NativeUfs",
+  "build-meizu-storage-metadata.py",
+  "build-mockfs-fixture.py",
+  "build-sheng-platform-power.py",
+  "build-arm-driver.py NativeRamBlock",
+  # Last: invalidates XNU objects after other archive builders inspect them.
+  # Default-off; enabled only with XNU_MEIZU_AKS_NOTIFY=1.
+  "build-meizu-aks-notify.py",
+  # Added back once the board has booted once and can supply qualification evidence:
+  #   build-arm-driver.py NativeAES / build-native-aes-bindings.py / build-arm-driver.py NativeUfs
+  #   build-arm-driver.py NativeVirtioBlock / build-arm-driver.py NativeRamBlock
+  #   build-native-virtio-bindings.py (needs build/storage-abi/interface-audit.json from a live
+  #   storage metadata snapshot) / build-mockfs-fixture.py
+]
+
+[kernel.prelink]
+tool = "kits/NativePrelink/emit_prelink.py"
+kernel = "build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/mach.development.bcm2837.unstripped.noctf"
+# kernelcache_sha256: add once the target kernelcache is fixed.
+slide = "-0x1000000"
+# early_security_init is intentionally absent: sheng's AMFI address belongs to that board's link.
+# The list below is the generic Apple bundle set carried over from sheng; review it for the Meizu
+# bring-up (storage, HID, display) before the first prelink.
+roots = [
+  "com.apple.AppleFSCompression.AppleFSCompressionTypeZlib",
+  "com.apple.driver.AppleARMPlatform",
+  "com.apple.driver.AppleARMWatchdogTimer",
+  "com.apple.driver.AppleAudioClockLibs",
+  "com.apple.driver.AppleEffaceableStorage",
+  "com.apple.driver.AppleIISController",
+
+  "com.apple.driver.AppleMobileFileIntegrity",
+  "com.apple.driver.ApplePMGR",
+  "com.apple.driver.IODARTFamily",
+  "com.apple.filesystems.apfs",
+  "com.apple.iokit.CoreAnalyticsFamily",
+  "com.apple.iokit.IOAVFamily",
+  "com.apple.iokit.IOAudio2Family",
+  "com.apple.iokit.IOCECFamily",
+  "com.apple.iokit.IOCryptoAcceleratorFamily",
+
+  "com.apple.iokit.IOHDCPFamily",
+
+  "com.apple.iokit.IOReportFamily",
+  "com.apple.iokit.IOSlowAdaptiveClockingFamily",
+
+  "com.apple.kec.Libm",
+  "com.apple.kec.corecrypto",
+  "com.apple.kext.AppleMatch",
+  "com.apple.kext.CoreTrust",
+  "com.apple.security.AppleImage4",
+  "com.apple.security.sandbox",
+  "com.apple.iokit.IOHIDFamily",
+  "com.apple.iokit.IOHIDEventDriver",
+  "com.apple.iokit.IOStorageFamily",
+]
+
+[firmware]
+# Built from the Mu-Silicium checkout (--uefi ~/unixnu_ports/uefi-sheng), whose untracked
+# Platforms/Meizu/meizu20proPkg holds this board's package. First-console mode: the package keeps
+# MEIZU_VENDOR_HW = 0, so the previous stage's display keeps scanning out and no vendor driver runs.
+config = "meizu20pro"
+dsc = "Platforms/Meizu/meizu20proPkg/meizu20pro.dsc"
+fd = "Build/meizu20proPkg/{target}_CLANGPDB/FV/SILICIUM_UEFI.fd"
+packages = [
+  "{uefi}",
+  "{uefi}/Platforms/Meizu",
+  "{tree}/package",
+  "{tree}/drivers/DarwinBoot",
+  "{edk2}",
+  "{uefi}/Common/Mu",
+  "{uefi}/Common/Mu_OEM_Sample",
+  "{uefi}/Silicon/Qualcomm",
+  "{uefi}/Silicon/Silicium",
+  "{uefi}/Silicium-ACPI",
+  "{uefi}/Silicium-ACPI/Platforms/Meizu",
+  "{uefi}/Silicium-ACPI/Silicon/Qualcomm",
+]
+# Applied to the edk2 (mu_basecore feeds) checkout for the build only, then reverted.
+# Gic-Spurious: mask a level IRQ that has no handler instead of re-taking it forever
+# (sheng PORTING.md: leftover IPCC INTID 0x105). Needed once vendor drivers run.
+patches = ["Resources/MuPatches/Gic-Spurious.patch"]
+
+[firmware.defines]
+ENABLE_SECUREBOOT = "1"
+DEVICE_MODEL = "meizu20pro"
+MEMORY_PROTECTION = "TRUE"
+SHIP_MODE = "FALSE"
+BUILDID_STRING = "meizu20pro-research"
+# 1 = also load the vendor UEFI drivers extracted from this phone's uefi_b partition
+# (Binaries/meizu20pro: SMEM, clocks, RPMh, UFS, USB, charger). 0 = first console on the
+# previous stage's display. The DSC only defaults these two; the values here win.
+MEIZU_VENDOR_HW = "0"
+# 1 = this phone's own DisplayDxe (needs MEIZU_VENDOR_HW = 1), with the panel XMLs from its
+# uefi partition in Include/RAW.inc. 0 = SimpleFbDxe on the frame buffer the previous stage
+# left scanning out. Untested on hardware; the first-console variant stays the default.
+USE_CUSTOM_DISPLAY_DRIVER = "0"
+
+[payload]
+volume = "MEIZUESP"
+# boot_b is 100,663,296 bytes (96 MiB) on this phone; the Android boot image adds ~1.8 MiB of
+# gzip(FD) + DTB in front of the ramdisk. 80 MiB leaves the kernel (49.4 MiB) room to grow and
+# keeps the whole boot.img under the partition.
+size_mib = 90
+loader = "firmware"
+title = "Boot"
+# The low DRAM bank is 0x80000000..0x100000000 on this phone (board DT /memory, eight
+# Kailua-era fragments); only the first 2 GiB are handed to XNU for bring-up, as on sheng.
+dram_size = "0x80000000"
+# Off while the exception-screen chain occupies the padding after stage 2: the panic screen needs
+# that padding itself. Re-enable with the exception screen removed.
+panic_screen = false
+# Bring-up aid added on 2026-10-23 (acceptance criterion 1): the stage-2 cave installs VBAR_EL1, so
+# faults after the MMU enable draw ESR/ELR/FAR/SCTLR/TCR on the frame buffer instead of hanging,
+# and a white band marks the post-MMU checkpoint. It replaces the timed reset, which shared padding.
+entry_probe_exception_screen = true
+# Every step on the panel (2026-10-23): the kernel-side frame buffer console starts at the kernel
+# entry and prints "[n] NAME=value" for the entry, the MMU site, the checked functions, every
+# kprintf line and the interrupt counter. Numbers are the order the lines were drawn.
+entry_probe_blog = true
+# Function entry checkpoints, drawn by the patcher's stubs. The frame buffer is outside the
+# window DarwinBoot hands over and XNU never maps it itself (initialize_screen runs with a NULL
+# boot_vinfo here), so the checkpoints taken before a mapping exists are recorded and replayed.
+# _vm_commpage_init runs right after initialize_screen in kernel_bootstrap: the kv stub maps the
+# panel with ml_io_map_unmappable there, then every later line and kprintf output is drawn.
+# Late-stage hooks only: the 2 KiB checkpoint area cannot hold the whole early table.
+entry_probe_hooks = ["_panic", "_bsd_init", "_devfs_kernel_mount", "_siginit",
+                     "_bsd_utaskbootstrap", "_bsdinit_task",
+                     "_load_init_program", "_execve"]
+entry_probe_hooks_kv = ["_vm_commpage_init"]
+# arm_vm_init switches TTBR0 away from the bootstrap tables right after
+# _set_mmu_ttb_alternate; the first checkpoint after that puts it back so the
+# console keeps drawing (the frame buffer mapping is in those tables).
+entry_probe_hooks_keep = ["_pmap_bootstrap"]
+# The early reporter only owns VBAR until the kernel's own exception machinery is up;
+# machine_startup is past arm_init/arm_vm_init, so hand the vectors back there.
+entry_probe_hooks_vec = ["_kernel_bootstrap"]
+# The common IRQ entry: the console shows the interrupt count and CNTPCT every 64 interrupts.
+entry_probe_hook_irq = ["_sleh_irq"]
+# Apple routes the arch timer to FIQ (PPI 27); count both to see which one ticks.
+entry_probe_hook_fiq = ["_sleh_fiq"]
+
+
+# entry_probe_reset_delay = 6               # timed reset (mutually exclusive with the exception screen)
+# entry_probe_reset_after = "_arm_vm_init"
+# entry_probe_reset_in = "_arm_init"        # default
+# entry_probe_reset_occurrence = 1          # default
+# entry_probe_reset_before = false          # default
+# --skip-setup helper; --no-auto-dim also stops SpringBoard from dimming and sleeping the system.
+# skip_setup_tool = "scripts/seed-data-skip-setup.py"
+# skip_setup_args = ["--no-auto-dim"]
+# The offline-* toggles of sheng drive that board's bring-up layers; they are not carried over.
+# TODO: dram_size (the SMEM RAM table value), trust caches, ADT and the splash region.
+kernel_args = [
+  "-v",
+  "serial=3",
+  "debug=0x14e",
+  # The 20H392 watchdogd's selector-2 test expects the provider to panic without returning.
+  # Do not enable the no-op compatibility provider; ask watchdogd to skip its test path instead.
+  "wdt_test=no_user_checkin",
+  # Temporary diagnostic only: opt in to the volatile Data watchdogd launch override.
+  "meizu-disable-watchdogd=1",
+  # Disable watchdog PMU boot-stage writes on this non-Apple platform. The device-tree no-pmu
+  # property is also emitted under /arm-io/wdt for customer builds.
+  "wdt=-1",
+  "-wdt_no_pmu",
+  # Goodix Berlin D bring-up: 4 = clocks, pins, GENI I2C, identification, then the event loop.
+  # Without this the touch service stays off and the boot log says nothing about the panel.
+  "meizu-touch=4",
+  # AMFI needs an ApplePMGRNub; the board package publishes one (see kits/sheng).
+  "sheng-pmgr=2",
+  # ArmCpu only probes secondary CPU nubs when sheng-smp=1. The ADT below
+  # already describes all eight SM8550 cores and PSCI/SMC; use routed SPI
+  # IPIs on the same ArmCpu path as sheng, then check all seven step7 counters.
+  "sheng-smp=1",
+  "armcpu-spi-ipi=1",
+  "armcpu-diagnostics=1",
+  # NativeUfs reads the OS windows from the GPT entry "unixnu" (the 64 GiB split behind
+  # userdata). The driver is not linked yet: its IOBlockStorageDevice bindings need the
+  # metadata this probe dumps (the 16.7.16 kernelcache keeps no kext symbols).
+  "native-ufs-partition=unixnu",
+  # Root from the UFS windows: XNU waits for the IOMedia whose UUID the ADT root-matching
+  # names (the 16.7.16 OS volume), which NativeUfs publishes after verifying every read.
+  "native-ufs-root=1",
+  "native-ufs-diagnostics=1",
+]
+
+# Second menu entry: a small EFI tool that rewrites the Qualcomm A/B attributes
+# (GPT byte 54) so the next boot is Android in slot b, then resets. Built by the
+# firmware step from meizu20proPkg/Tools/BootAndroid.
+# The tool is packed into the firmware volume (meizu20pro.fdf), not this FAT
+# volume: fixed-media images are denied by the image verification policy the FD
+# is built with, while firmware-volume images run ("fv:<FILE_GUID>").
+# Disabled: the 0/0 firmware has no UFS driver, so the tool cannot see the GPT
+# (it returns "Not Found"). Slot switching is done with fastboot / bootctl until
+# the kernel-side UFS path exists. Re-enable together with MEIZU_VENDOR_HW or a
+# working disk driver.
+#[[payload.extra_tools]]
+#id = "android"
+#title = "Android (slot b)"
+#fv = "5D3B7A11-9C3E-4F0B-8B6A-2E7C1D4A9F31"
+
+# Bring-up ADT: only nodes XNU's boot path requires, filled from this phone's exported DT
+# (GIC 0x17100000, PSCI smc, eight 0x100-spaced cores, UFS 0x1d84000). The iPad identity is the
+# unchanged target tree; the platform identity stays meizu,meizu20pro.
+# /arm-io/disp0 matches negroni,display with SimpleFbDxe's 1080x2400 default;
+# /chosen/negroni-gop-handoff is a 56-byte zero placeholder. DarwinBoot must fill it
+# from the final GOP and independently verified final UEFI memory map. Custom DisplayDxe
+# may choose another mode: pass matching --display-width/--display-height to the ADT
+# generator and reject any runtime mismatch. Do not infer size/base from this tree.
+[payload.adt]
+tool = "scripts/make-meizu-adt.py"
+chip_id = "207"                       # SM8550, qcom,msm-id in the board DT
+owned_memory_size = "0x130000000"     # DarwinBoot window, same request as sheng
+cpu_regs = "0,0x100,0x200,0x300,0x400,0x500,0x600,0x700"
+iphone_identity = true                 # iOS 16.7.16 target: iPhone10,3 / D22, iPhone X product values
+unique_chip_id = "required"           # the platform seed is not stored in any repository
+# The 16.7.16 OS volume (SydneyUpdate20H392.D22D221OS) of the image flashed into unixnu.
+root_match_volume_uuid = "DADD93F8-DBBF-4B17-A1DF-0F11E64172F7"
+packed_data_ramdisk = true
+
+# No [[bootimg.dtb_node]] splash override: the exported board DT already carries
+# /reserved-memory/splash_region at 0xB8000000/0x2B00000, the same range the firmware marks
+# "Display Reserved". fdtput -c refuses to create a node that already exists.

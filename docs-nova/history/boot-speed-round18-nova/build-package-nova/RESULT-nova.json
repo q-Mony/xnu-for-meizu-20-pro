@@ -1,0 +1,232 @@
+{
+ "schema": "nova-r18-build-package-result-v1",
+ "new_file_no_previous_version": true,
+ "generated_utc": "2026-10-30T11:42:23Z",
+ "status": "BUILT_AWAIT_NEW_USER_INSTALL_COMMAND",
+ "installation_allowed": false,
+ "install_authorized": false,
+ "install_allowed": false,
+ "do_not_flash": true,
+ "hardware_tested": false,
+ "device_accessed": false,
+ "installer_created": false,
+ "installer_executed": false,
+ "performance_claim": false,
+ "config": {
+  "provider": "deepseek-official",
+  "model": "deepseek-flash",
+  "reasoningEffort": "high",
+  "delegation": false,
+  "fallback": false,
+  "device_operations": 0,
+  "note": "Fixed executor configuration required by the task; no delegation or fallback."
+ },
+ "acceptance": {
+  "path": "<nova-root>/artifacts-nova/boot-speed-round18-nova/warm-sha-stream-nova/SOL-ACCEPTANCE-nova.json",
+  "sha256": "eb6e4bb529d01c03489fd70ceac14122684fe9f788f828c5cc677bb129cad38a",
+  "status": "SOURCE_AND_FINAL_GREEN_ACCEPTED_AWAIT_FULL_BUILD"
+ },
+ "evidence_correction": {
+  "warm_sha_report": "<nova-root>/artifacts-nova/boot-speed-round18-nova/warm-sha-stream-nova/REPORT-nova.md",
+  "warm_sha_report_sha256": "058a10dd20bc06b52ca3bfc3ac9bf32816b69172818412116b1b1dab9688bcd1",
+  "warm_sha_result_sha256": "1431592168bad630d98e08356f5c1b2826a76ea9205877735fd985287835ad35",
+  "warm_sha_result_unchanged": true,
+  "sol_first_green_evidence_sha256": "1edfeedc1537653febe314763359594716bb42bb2664026a4371148f550cefac",
+  "initial_failure_disclosed": true,
+  "original_failed_dir_available": false,
+  "statement": "First GREEN failed (streaming -6, warmload -6 at PayloadHash, production NativeRamBlock 1 from stale 357 B export header); test padding/binding assumptions and the generated header were fixed. Executor deleted the first failed green-run directory before rerun; only Sol transcript evidence remains. GREEN result not changed and not rerun here."
+ },
+ "baseline_r17": {
+  "source_freeze": {
+   "path": "<nova-root>/artifacts-nova/boot-speed-round17-nova/log-encode-completion-nova/source-freeze-r17-nova.json",
+   "sha256": "1ebeb2bb4ece61019c7a4567ffe0455c1dd4174d23207d68957a08408f32b69b",
+   "count": 6186
+  },
+  "raw_kernel_sha256": "658c301b39597f2879ab1a0ac0730a93f5d4677592d490deac581dfa25273946",
+  "candidate_image_sha256": "8796d6c5824ce563fda8b4d0e1a429f235749254648cc160534e5807283338d6",
+  "manifest_sha256": "275fa8644d118453cc23dc3ae1dfc22ecc0448b9ed47e3526995416bbe8fa7ab"
+ },
+ "source_freeze": {
+  "path": "<nova-root>/artifacts-nova/boot-speed-round18-nova/build-package-nova/source-freeze-r18-nova.json",
+  "sha256": "77f483d631ad403930c2631df0a324754d88893046caffbaa8d4db15cd9355fc",
+  "verify_sha256": "8d1d4684bd3ab017b9d2dc5773500c7c2f4ddafe319bbe738fe59a1c652becd5",
+  "postbuild_check_sha256": "638f99aa9402e0bcff5baf470982ba87b3cc7978ac2919d430d69d3211e4c3d8",
+  "count": 6186,
+  "missing": [],
+  "unexpected_changed_files": [],
+  "changed_from_baseline": [
+   "unixnu-main-nova/drivers/NativeRamBlock/NativeRamBlock.cpp",
+   "unixnu-main-nova/out/meizu20pro/tree/.cache/xnu-work/libkern/crypto/corecrypto_sha2.c",
+   "unixnu-main-nova/out/meizu20pro/tree/.cache/xnu-work/libkern/libkern/crypto/native_sha256.h"
+  ],
+  "old_source_sha256": {
+   "unixnu-main-nova/drivers/NativeRamBlock/NativeRamBlock.cpp": "228ad81cd6e2c65839d7293f3f7929124db2cfbd190b13e4f6af5e67a338c699",
+   "unixnu-main-nova/out/meizu20pro/tree/.cache/xnu-work/libkern/crypto/corecrypto_sha2.c": "95da14af9619dafcfc4168c92d7c0c858b70fee68c6f47324b07b66fc4a6b421",
+   "unixnu-main-nova/out/meizu20pro/tree/.cache/xnu-work/libkern/libkern/crypto/native_sha256.h": "b7fa8774e982f365c59273d254cb855515f45293ecf7f7fb5e262f6f5e7c611e"
+  },
+  "new_source_sha256": {
+   "unixnu-main-nova/drivers/NativeRamBlock/NativeRamBlock.cpp": "08437deda6354ff660a41af7f2ea56ada41c90183a78f1935f0ae326402cbacb",
+   "unixnu-main-nova/out/meizu20pro/tree/.cache/xnu-work/libkern/crypto/corecrypto_sha2.c": "a5996632c820928896bd9b2f8790ce703cbde838925343c0c809b193ecb56172",
+   "unixnu-main-nova/out/meizu20pro/tree/.cache/xnu-work/libkern/libkern/crypto/native_sha256.h": "faa8a909cf7b5ec353d87b2e1de1258fa33d212906b2617b2a838009d03dc742"
+  },
+  "pass": true
+ },
+ "build": {
+  "command": "./unixnu-nova build kernel -j8",
+  "path_shim_sha256": "7bf8733a9ae09c886d180b17d49919138c1bcff191063b2b92549c8f7fc3d169",
+  "exit_code": 0,
+  "raw_kernel": "<nova-root>/unixnu-main-nova/out/meizu20pro/kernel/kernel.macho",
+  "raw_kernel_sha256": "6baa8e83f6cc408f843c9bd5cb5c5e1c3fa7f48e4d6e235338f936e461a99055",
+  "raw_kernel_bytes": 73949184,
+  "raw_changed_from_r17": true,
+  "build_log": "<nova-root>/artifacts-nova/boot-speed-round18-nova/build-package-nova/build/build-output-nova.log",
+  "build_log_sha256": "181ae5aa500d7cf90d7cd9c0c658d25165ab04eacb0e6197882997447a1c9703",
+  "build_stderr": "<nova-root>/artifacts-nova/boot-speed-round18-nova/build-package-nova/build/build-stderr-nova.log",
+  "build_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "build_result": "<nova-root>/artifacts-nova/boot-speed-round18-nova/build-package-nova/build-result-r18-nova.json",
+  "build_result_sha256": "b06d9e4cc1f07f468894b872350a2c19a9c60fee890fe089fdc99d2f1df90074",
+  "generated_export_header": {
+   "path": "<nova-root>/unixnu-main-nova/out/meizu20pro/tree/build/xnu/ios-obj/EXPORT_HDRS/libkern/libkern/crypto/native_sha256.h",
+   "sha256": "faa8a909cf7b5ec353d87b2e1de1258fa33d212906b2617b2a838009d03dc742",
+   "bytes": 903,
+   "source_path": "<nova-root>/unixnu-main-nova/out/meizu20pro/tree/.cache/xnu-work/libkern/libkern/crypto/native_sha256.h",
+   "source_sha256": "faa8a909cf7b5ec353d87b2e1de1258fa33d212906b2617b2a838009d03dc742",
+   "equals_source": true
+  },
+  "pass": true
+ },
+ "objects": {
+  "corecrypto_sha2": {
+   "path": "<nova-root>/unixnu-main-nova/out/meizu20pro/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/libkern/DEVELOPMENT/corecrypto_sha2.o",
+   "sha256": "0e5e79e708f7238fc35210077b9ba004ddac77b392aa885e9205c5220b8b05a3",
+   "bytes": 19200,
+   "exact_full_build_match": true,
+   "matches_green_tu": true,
+   "green_tu_sha256": "0e5e79e708f7238fc35210077b9ba004ddac77b392aa885e9205c5220b8b05a3"
+  },
+  "NativeRamBlock": {
+   "path": "<nova-root>/unixnu-main-nova/out/meizu20pro/tree/build/native-ram-block/NativeRamBlock.o",
+   "sha256": "05304db41b0f6c76e1f9dc6726dde98679418ee3c853f6b0fc28ef4773c19cee",
+   "bytes": 381656,
+   "exact_full_build_match": true,
+   "matches_green_tu": true,
+   "green_tu_sha256": "05304db41b0f6c76e1f9dc6726dde98679418ee3c853f6b0fc28ef4773c19cee"
+  }
+ },
+ "tu_result": {
+  "path": "<nova-root>/artifacts-nova/boot-speed-round18-nova/build-package-nova/tu-result-r18-nova.json",
+  "sha256": "5818d6adc0106883490db57b85668ac6cadd457cdcb8e36d63f9c4d8a5297618",
+  "only_output_rewritten": true,
+  "debug_preserved": true,
+  "pass": true
+ },
+ "protected_objects": {
+  "BootLog": {
+   "path": "<nova-root>/unixnu-main-nova/out/meizu20pro/tree/build/native-meizu-bootlog/BootLog.o",
+   "sha256": "f60e1644f7c3ece260f88ae820f06279a015f19e6f5c4ee8b3c2230246ad1228",
+   "unchanged": true
+  },
+  "BootWatchdogPolicy": {
+   "path": "<nova-root>/unixnu-main-nova/out/meizu20pro/tree/build/meizu-watchdog-policy/BootWatchdogPolicy.o",
+   "sha256": "5bfde100b6e66ef0a2da8fc2f10b1bf1dd846fb211775b274096164ed318fa72",
+   "unchanged": true
+  },
+  "NativeUfs": {
+   "path": "<nova-root>/unixnu-main-nova/out/meizu20pro/tree/build/native-ufs/NativeUfs.o",
+   "sha256": "49154bbeb3c74300353d57686905b7f008eff06dd1d1293fe4e51d9b54e412d7",
+   "unchanged": true
+  },
+  "kern_exec": {
+   "path": "<nova-root>/unixnu-main-nova/out/meizu20pro/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/bsd/DEVELOPMENT/kern_exec.o",
+   "sha256": "70e14124c8dc5c2a16fca6a4fc163dc42599d02c4db15723ba6929055a073ad4",
+   "unchanged": true
+  },
+  "mach_msg": {
+   "path": "<nova-root>/unixnu-main-nova/out/meizu20pro/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/mach_msg.o",
+   "sha256": "04b5e54efddf4f62fcd6f8e2ccb2843abc703d693d0fd724aefe07292760537d",
+   "unchanged": true
+  },
+  "sleh": {
+   "path": "<nova-root>/unixnu-main-nova/out/meizu20pro/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/sleh.o",
+   "sha256": "9fdf2e13943402dc866b828c227d325705bd6ad68bb9818f84c7bf64572b90d1",
+   "unchanged": true
+  },
+  "NegroniFramebuffer": {
+   "path": "<nova-root>/unixnu-main-nova/out/meizu20pro/tree/build/negroni-display/NegroniFramebuffer.o",
+   "sha256": "c0a4bf1f2f5c4fa1d772590eb4b333fed7be70928b7da66198ae5e5ec431758a",
+   "unchanged": true
+  },
+  "MeizuHidProbe": {
+   "path": "<nova-root>/unixnu-main-nova/out/meizu20pro/tree/build/native-meizu-hid/MeizuHidProbe.o",
+   "sha256": "7702d32cf344b23959e8f6ba722b0a25380a9069d344fef3a940df472b3c1d9f",
+   "unchanged": true
+  },
+  "native_sha256_arm64": {
+   "path": "<nova-root>/unixnu-main-nova/out/meizu20pro/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/native_sha256_arm64.o",
+   "sha256": "9d0688778da1e22348c96446d88ab0f7b3024b081187c075523a5bb9f9f51620",
+   "unchanged": true
+  }
+ },
+ "package": {
+  "root": "<nova-root>/artifacts-nova/boot-speed-round18-nova/build-package-nova/package/boot-warm-r18-streamsha-candidate-nova",
+  "manifest": "<nova-root>/artifacts-nova/boot-speed-round18-nova/build-package-nova/package/boot-warm-r18-streamsha-candidate-nova/evidence-nova/verification-nova.json",
+  "manifest_sha256": "4a63a7675930f6de13213efd83f9b5d74ae9dbd8cd14510824284451b59e9110",
+  "candidate_image": "<nova-root>/artifacts-nova/boot-speed-round18-nova/build-package-nova/package/boot-warm-r18-streamsha-candidate-nova/boot-warm-r18-streamsha-candidate-nova.img",
+  "candidate_image_sha256": "be40edfedadbc161e3e86864c9d8803243c34426f78007f983213c07c879c21b",
+  "candidate_image_bytes": 100663296,
+  "fat_bytes": 94371840,
+  "payload_kernel": "<nova-root>/artifacts-nova/boot-speed-round18-nova/build-package-nova/package/boot-warm-r18-streamsha-candidate-nova/kernel-payload-nova.macho",
+  "payload_kernel_sha256": "46a1dbd844d42350b306d04c8603526f7ab1b6b760b945b084adb97ae4f6b8d2",
+  "raw_before_patch_sha256": "6baa8e83f6cc408f843c9bd5cb5c5e1c3fa7f48e4d6e235338f936e461a99055",
+  "changed_efi_files": [
+   "UniXNU/Payloads/kernel.macho"
+  ],
+  "preserved_efi_files": [
+   "UniXNU/Payloads/kernel.macho.adt",
+   "UniXNU/Payloads/kernel.macho.trustcache",
+   "UniXNU/Payloads/scratch-data.img",
+   "UniXNU/unixnu.toml"
+  ],
+  "only_kernel_changed_in_efi": true,
+  "preserved_efi_byte_identical_r14": true,
+  "preserved_efi_byte_identical_r17": true,
+  "toml_byte_identical": true,
+  "scratch_data_byte_identical_r17": true,
+  "trustcache_byte_identical_r17": true,
+  "non_fat_byte_identical_r14": true,
+  "non_fat_byte_identical_r17": true,
+  "raw_entry_unpatched": true,
+  "payload_entry_patched_once": true,
+  "android_v0_sha1_recomputed": true,
+  "final_fat_reextracted": true,
+  "pan_passed": true,
+  "payload_markers": [
+   "meizu: sbfault-regs",
+   "meizu: selection attempt=",
+   "nova: life v=16",
+   "nova: sblong v=15"
+  ],
+  "streaming_symbols_present": true,
+  "r17_logger_fix_retained": true,
+  "validation": "<nova-root>/artifacts-nova/boot-speed-round18-nova/build-package-nova/package-validation-r18-nova.json",
+  "validation_sha256": "ba221226f48a4c1672ed4a29a19962585cae2d1ca8caa2b5f9f5451ac8556e71",
+  "validation_checks_total": 41,
+  "validation_checks_passed": 41,
+  "validation_pass": true
+ },
+ "artifact_inventory": {
+  "path": "<nova-root>/artifacts-nova/boot-speed-round18-nova/build-package-nova/artifact-hashes-r18-nova.json",
+  "sha256": "2477b88e6c526134b669246ca81ec5a46e6a57df5f5c529fb8559c40255f6a32"
+ },
+ "report": {
+  "path": "<nova-root>/artifacts-nova/boot-speed-round18-nova/build-package-nova/REPORT-nova.md",
+  "sha256": "a869719564a23cb59d5c3207ecb9d9878a4ba06382c309318d404949f17e45ee"
+ },
+ "limitations": [
+  "No device access, adb/fastboot, mount, slot change, reboot, install or installer.",
+  "No handset boot or timing measurement; no 8.666060 s saving and no speed claim.",
+  "36 s pre-receive display wait not fixed.",
+  "Post-Hello black screen not fixed.",
+  "Candidate must await a new explicit user install command."
+ ]
+}

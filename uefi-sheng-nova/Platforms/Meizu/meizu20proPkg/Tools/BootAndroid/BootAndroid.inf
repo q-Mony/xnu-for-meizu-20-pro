@@ -1,0 +1,29 @@
+## @file
+#  Switch the Qualcomm A/B slot to Android (slot b) from the UniXNU menu.
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = BootAndroid
+  FILE_GUID                      = 5D3B7A11-9C3E-4F0B-8B6A-2E7C1D4A9F31
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = BootAndroidMain
+
+[Sources]
+  BootAndroid.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib
+  MemoryAllocationLib
+  UefiLib
+
+[Protocols]
+  gEfiBlockIoProtocolGuid

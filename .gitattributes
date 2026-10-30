@@ -1,0 +1,14 @@
+# Preserve imported source bytes exactly: no CRLF/LF conversion, no clean/smudge.
+* -text
+
+# Imported upstream trees intentionally retain their original whitespace.
+# Disable whitespace-only diff warnings for those trees so `git diff --check`
+# flags only genuinely introduced whitespace errors.
+sources-nova/** -whitespace
+unixnu-main-nova/** -whitespace
+unixnu-meizu20pro-nova/** -whitespace
+uefi-sheng-nova/** -whitespace
+docs-nova/history/** -whitespace
+tools-nova/history/** -whitespace
+provenance/source-freeze-r18-nova.json -whitespace
+provenance/patches/** -whitespace

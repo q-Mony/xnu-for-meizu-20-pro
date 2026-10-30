@@ -1,0 +1,61 @@
+# First-console configuration of the Meizu 20 Pro image: the kernel builds and links without the
+# audited block, owner and verified-root archives. Those builders need qualification evidence from a
+# running system (a live storage metadata snapshot and the original kernel candidate), so they stay
+# off until the board has booted once. meizu20pro_defconfig is the target configuration.
+
+CONFIG_XNU_BUILD_ARCHIVES=y
+CONFIG_XNU_SOURCE_CORECRYPTO14=y
+CONFIG_XNU_SOURCE_PTHREAD=y
+CONFIG_XNU_ARM_DT_PLATFORM=y
+CONFIG_XNU_ARMCPU=y
+CONFIG_XNU_NATIVE_PAN=y
+# Diagnostic: the Goodix workloop is suspected of spinning with interrupts off after
+# the first user process starts. Re-enable once that path is fixed.
+# CONFIG_XNU_MEIZU_TOUCH=y
+CONFIG_XNU_MEIZU_BOOTLOG=y
+CONFIG_XNU_CRYPTO_BOOTSTRAP="prelinked"
+CONFIG_XNU_NATIVE_MOBILE_DISPLAY=n
+CONFIG_XNU_ARMVIRT_PLATFORM=n
+
+# The BCM2837 platform header pins a Raspberry Pi panic log at 0x3c0fc000;
+# here that read is an external abort. Use the device tree (no pram node).
+CONFIG_XNU_DT_PANIC_REGION=y
+CONFIG_XNU_SHENG_PMGR=y
+# CONFIG_XNU_MEIZU_HID=y
+# Offline-derivable storage ABI bindings need the live IOBlockStorageDevice metadata.
+# CONFIG_XNU_MEIZU_STORAGE_METADATA=y
+
+# Minimal executable root: mockfs (vfs_conf) + its archive, plus the trust cache
+# the ad-hoc signed launchd fixture needs. No block device and no APFS.
+CONFIG_XNU_SOURCE_MOCKFS=y
+CONFIG_XNU_TRUST_CACHE_RUNTIME=y
+
+# Native UFS root is staged but not linked yet: NativeUfsBlock subclasses the original
+# IOBlockStorageDevice, and the kernel link needs the class/metaclass/vtable bound to the
+# target kernelcache's absolute addresses (the virtio/ram block drivers get this from
+# scripts/build-native-virtio-bindings.py and a qualified interface audit). Until those
+# bindings exist for the 16.7.16 cache, the link fails with undefined
+# IOBlockStorageDevice symbols. The verified-root archive is built but not selected.
+# Storage stack still binds to the prelinked IOStorageFamily (see notes): the public
+# sources cannot be compiled in because apfs depends on the original kext.
+CONFIG_XNU_NATIVE_UFS=y
+CONFIG_XNU_VERIFIED_ROOT_PROBE=y
+# Root acceptance: bsd_init asks the mounted media who authenticated it.
+CONFIG_XNU_OWNER_ROOT_AUDIT=y
+CONFIG_XNU_OWNER_ROOT_TRUST=y
+# Owner mount chain, in the order the build enforces it: cache mount (SystemOS volume),
+# cache startup, boot manifest, then the writable Data seed.
+CONFIG_XNU_OWNER_CACHE_MOUNT=y
+CONFIG_XNU_OWNER_CACHE_STARTUP=y
+CONFIG_XNU_OWNER_BOOT_MANIFEST=y
+CONFIG_XNU_OWNER_DATA_MOUNT=y
+CONFIG_XNU_OWNER_UNION_SYSTEMOS=y
+# The SystemOS Cryptex volume of the signed policy, and the trimmed Data seed.
+CONFIG_XNU_OWNER_CACHE_VOLUME_UUID="96096B28-B6DC-4BC7-9D3A-2632A0FE53F1"
+CONFIG_XNU_OWNER_DATA_VOLUME_UUID="691978E3-CC8E-4F14-9BF9-D55DAB2D1A4C"
+CONFIG_XNU_VERIFIED_ROOT_ARCHIVE="{tree}/build/verified-root-os-xnu/libVerifiedRootProbe.a"
+# CONFIG_XNU_MEIZU_STORAGE_FAMILY=y
+
+# The owner Data seed needs a writable IOMedia-backed RAM disk: the legacy md device is not
+# mountable by the original APFS (ENOENT), and the transport is gated on the AES archive.
+CONFIG_XNU_NATIVE_RAM_BLOCK=y

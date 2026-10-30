@@ -1,0 +1,320 @@
+{
+  "schema": "nova-submodules-v1",
+  "new_file_no_previous_version": true,
+  "submodules": {
+    "main": [
+      {
+        "path": "unixnu-main-nova/drivers/ArmCpu",
+        "url": "https://github.com/UniXNU/ArmCpu.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "1951cc8444b340d7d8879e9418220cf29eb711d7",
+        "describe": "1951cc8",
+        "dirty_count": 0,
+        "dirty_paths": []
+      },
+      {
+        "path": "unixnu-main-nova/drivers/ArmDTPlatform",
+        "url": "https://github.com/UniXNU/ArmDTPlatform.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "0d544705c2e89725caabc0542bb96bc8febd8c70",
+        "describe": "0d54470",
+        "dirty_count": 0,
+        "dirty_paths": []
+      },
+      {
+        "path": "unixnu-main-nova/drivers/ArmVirtPlatform",
+        "url": "https://github.com/UniXNU/ArmVirtPlatform.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "532de8c017e394e69a0b48dc0ffc4ac0d0701177",
+        "describe": "532de8c",
+        "dirty_count": 0,
+        "dirty_paths": []
+      },
+      {
+        "path": "unixnu-main-nova/drivers/DarwinBoot",
+        "url": "https://github.com/UniXNU/DarwinBoot.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "d099354d0eab34df5088ca1ba89c9c88bc3260bb",
+        "describe": "d099354-dirty",
+        "dirty_count": 3,
+        "dirty_paths": [
+          " M DarwinBootPkg/Driver/DarwinBoot.c",
+          " M DarwinBootPkg/Driver/Entry.S",
+          "?? DarwinBootPkg/Driver/GopReservedPages.h"
+        ]
+      },
+      {
+        "path": "unixnu-main-nova/drivers/NativeAES",
+        "url": "https://github.com/UniXNU/NativeAES.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "a34964b8c2fec2e83c8e4f68fb7d6fb7e4b2227b",
+        "describe": "a34964b",
+        "dirty_count": 0,
+        "dirty_paths": []
+      },
+      {
+        "path": "unixnu-main-nova/drivers/NativeAdreno",
+        "url": "https://github.com/UniXNU/NativeAdreno.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "cedcaa2949c795e71a47e78ae413c8a41b17d7d0",
+        "describe": "cedcaa2",
+        "dirty_count": 0,
+        "dirty_paths": []
+      },
+      {
+        "path": "unixnu-main-nova/drivers/NativeGeniSpi",
+        "url": "https://github.com/UniXNU/NativeGeniSpi.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "b5399b5646c4d7415deec6d887fd51715a97a024",
+        "describe": "b5399b5",
+        "dirty_count": 0,
+        "dirty_paths": []
+      },
+      {
+        "path": "unixnu-main-nova/drivers/NativeHidInput",
+        "url": "https://github.com/UniXNU/NativeHidInput.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "ba03e5d147452b2166aab7435d219fa10877672b",
+        "describe": "ba03e5d",
+        "dirty_count": 0,
+        "dirty_paths": []
+      },
+      {
+        "path": "unixnu-main-nova/drivers/NativeKeyStoreEvents",
+        "url": "https://github.com/UniXNU/NativeKeyStoreEvents.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "e59bac4ad1ac8825919ae94da8440a64d8ab90b3",
+        "describe": "e59bac4",
+        "dirty_count": 0,
+        "dirty_paths": []
+      },
+      {
+        "path": "unixnu-main-nova/drivers/NativeMetal",
+        "url": "https://github.com/UniXNU/NativeMetal.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "a96feceda55e8fed1e20c0a2998736cef7aab006",
+        "describe": "a96fece",
+        "dirty_count": 0,
+        "dirty_paths": []
+      },
+      {
+        "path": "unixnu-main-nova/drivers/NativeMobileDisplay",
+        "url": "https://github.com/UniXNU/NativeMobileDisplay.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "c031d882b9721d943383d11f66dc4748252ce929",
+        "describe": "c031d88",
+        "dirty_count": 0,
+        "dirty_paths": []
+      },
+      {
+        "path": "unixnu-main-nova/drivers/NativeRamBlock",
+        "url": "https://github.com/UniXNU/NativeRamBlock.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "d4d22d9819b0162eda49f6402235dddc2279410d",
+        "describe": "d4d22d9-dirty",
+        "dirty_count": 4,
+        "dirty_paths": [
+          " M NativeRamBlock.cpp",
+          "?? WarmCapture.h",
+          "?? WarmLoad.h",
+          "?? WarmLoadContract.h"
+        ]
+      },
+      {
+        "path": "unixnu-main-nova/drivers/NativeUfs",
+        "url": "https://github.com/UniXNU/NativeUfs.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "af785c1777161a62931425c2faaa536ce0bebd5b",
+        "describe": "af785c1-dirty",
+        "dirty_count": 7,
+        "dirty_paths": [
+          " M NativeUfs.cpp",
+          " M RootLayout.h",
+          " M RootWindowRead.h",
+          " M tests/RootLayout.cpp",
+          " M tests/RootPathBridge.cpp",
+          " M tests/RootWindowRead.cpp",
+          " M tests/root_path_fixture.py"
+        ]
+      },
+      {
+        "path": "unixnu-main-nova/drivers/NativeVirtioBlock",
+        "url": "https://github.com/UniXNU/NativeVirtioBlock.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "98909eb9198a4360d7a43be831887cb8b74d814d",
+        "describe": "98909eb",
+        "dirty_count": 0,
+        "dirty_paths": []
+      },
+      {
+        "path": "unixnu-main-nova/drivers/NativeVirtioConsole",
+        "url": "https://github.com/UniXNU/NativeVirtioConsole.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "066f9bded311233ed56824e13a5628077619efda",
+        "describe": "066f9bd",
+        "dirty_count": 0,
+        "dirty_paths": []
+      },
+      {
+        "path": "unixnu-main-nova/kits/AdrenoFirmware",
+        "url": "https://github.com/UniXNU/AdrenoFirmware.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "40fdb8ea87606612ac6f1e80bbb49955d0ce4051",
+        "describe": "40fdb8e",
+        "dirty_count": 0,
+        "dirty_paths": []
+      },
+      {
+        "path": "unixnu-main-nova/kits/AdrenoPM4",
+        "url": "https://github.com/UniXNU/AdrenoPM4.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "445f8fe6d115738352b9d78dc70af6d61aa7f62f",
+        "describe": "445f8fe",
+        "dirty_count": 0,
+        "dirty_paths": []
+      },
+      {
+        "path": "unixnu-main-nova/kits/AirNir",
+        "url": "https://github.com/UniXNU/AirNir.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "032a867b5dc3121164bbd706e4e81e3b9fcd2b8f",
+        "describe": "032a867",
+        "dirty_count": 0,
+        "dirty_paths": []
+      },
+      {
+        "path": "unixnu-main-nova/kits/ArmSmmu4K",
+        "url": "https://github.com/UniXNU/ArmSmmu4K.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "4d0d6598b1a36aeec3de01091893fa6660e49388",
+        "describe": "4d0d659",
+        "dirty_count": 0,
+        "dirty_paths": []
+      },
+      {
+        "path": "unixnu-main-nova/kits/NativePrelink",
+        "url": "https://github.com/UniXNU/NativePrelink.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "2b6ffb50117eee820b98aca9bd51b5c7dfb2970e",
+        "describe": "2b6ffb5-dirty",
+        "dirty_count": 1,
+        "dirty_paths": [
+          " M emit_prelink.py"
+        ]
+      },
+      {
+        "path": "unixnu-main-nova/kits/VerifiedRoot",
+        "url": "https://github.com/UniXNU/VerifiedRoot.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "2854c61f6c4dfda870ac3d93e1f03d9181edb041",
+        "describe": "2854c61-dirty",
+        "dirty_count": 3,
+        "dirty_paths": [
+          " M adapters/xnu_crypto.c",
+          " M include/verified_root.h",
+          " M tools/manifest.py"
+        ]
+      }
+    ],
+    "uefi": [
+      {
+        "path": "uefi-sheng-nova/Binaries",
+        "url": "https://github.com/Project-Silicium/Device-Binaries.git",
+        "present": true,
+        "exported_as": "excluded-vendor-binaries",
+        "head": "a1501e0c2e642d6ac0d8f52c85af2a67b75a7799",
+        "describe": "a1501e0",
+        "dirty_count": 1,
+        "dirty_paths": [
+          "?? meizu20pro"
+        ]
+      },
+      {
+        "path": "uefi-sheng-nova/Common/Mu",
+        "url": "https://github.com/microsoft/mu_plus.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "b8d46c71610318e36a661819e1e3c0b8bdda413a",
+        "describe": "v2026080000.0.0",
+        "dirty_count": 0,
+        "dirty_paths": []
+      },
+      {
+        "path": "uefi-sheng-nova/Common/Mu_OEM_Sample",
+        "url": "https://github.com/microsoft/mu_oem_sample.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "b70b4b7bb02c43bf9db2172dfb3ed0457e2361d6",
+        "describe": "v2026080000.0.0",
+        "dirty_count": 0,
+        "dirty_paths": []
+      },
+      {
+        "path": "uefi-sheng-nova/Mu_Basecore",
+        "url": "https://github.com/microsoft/mu_basecore.git",
+        "present": true,
+        "exported_as": "pinned-source-plus-local-patch",
+        "head": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+        "describe": "v2026080000.0.1-dirty",
+        "dirty_count": 11,
+        "dirty_paths": [
+          " M ArmPkg/Library/ArmGenericTimerPhyCounterLib/ArmGenericTimerPhyCounterLib.c",
+          " M ArmPkg/Library/ArmGenericTimerPhyCounterLib/ArmGenericTimerPhyCounterLib.inf",
+          " M ArmPkg/Library/ArmGenericTimerVirtCounterLib/ArmGenericTimerVirtCounterLib.c",
+          " M ArmPkg/Library/ArmGenericTimerVirtCounterLib/ArmGenericTimerVirtCounterLib.inf",
+          " M MdeModulePkg/Application/BootManagerMenuApp/BootManagerMenu.c",
+          " M MdeModulePkg/Application/BootManagerMenuApp/BootManagerMenu.h",
+          " M MdeModulePkg/Bus/Usb/UsbBusDxe/UsbBus.h",
+          " M MdePkg/Include/AArch64/AsmMacroLib.h",
+          " M SecurityPkg/Library/AuthVariableLib/AuthService.c",
+          " M SecurityPkg/Library/AuthVariableLib/AuthVariableLib.inf",
+          " M UefiCpuPkg/Library/ArmMmuLib/AArch64/ArmMmuLibCore.c"
+        ]
+      },
+      {
+        "path": "uefi-sheng-nova/Silicium-ACPI",
+        "url": "https://github.com/Project-Silicium/Silicium-ACPI.git",
+        "present": true,
+        "exported_as": "flattened-source",
+        "head": "2d465ad77c25de908f0ec7bdfcb57f865b61233c",
+        "describe": "2d465ad",
+        "dirty_count": 1,
+        "dirty_paths": [
+          "?? Platforms/Meizu/"
+        ]
+      },
+      {
+        "path": "uefi-sheng-nova/Silicon/Silicium/OpensslPkg/Library/OpensslLib/openssl",
+        "url": "https://github.com/openssl/openssl.git",
+        "present": true,
+        "exported_as": "pinned-source-manifest",
+        "head": "67b5686b4419b4cb8caa502711c41815f5279751",
+        "describe": "openssl-3.5.5",
+        "dirty_count": 0,
+        "dirty_paths": []
+      }
+    ],
+    "board": []
+  }
+}

@@ -1,0 +1,81 @@
+#!/usr/bin/env python3
+"""Run the copied UniXNU CLI with Nova-owned paths and caches."""
+import os
+from pathlib import Path
+import sys
+
+ROOT = Path(__file__).resolve().parent
+MAIN = ROOT / 'unixnu-main-nova'
+BOARD = ROOT / 'unixnu-meizu20pro-nova'
+UEFI = ROOT / 'uefi-sheng-nova'
+OUT = MAIN / 'out'
+EDK2 = OUT / 'feeds/mu_basecore-89034cbb'
+
+
+def inside(value):
+    return Path(value).expanduser().resolve().is_relative_to(ROOT)
+
+
+def main():
+    os.chdir(ROOT)
+    for key in list(os.environ):
+        if (key.startswith(('UNIXNU_', 'XNU_', 'GIT_')) and key != 'UNIXNU_UNIQUE_CHIP_ID') or key in {
+            'CLANG_BIN', 'WORKSPACE', 'PACKAGES_PATH', 'CONF_PATH', 'EDK_TOOLS_PATH',
+            'UEFI_TREE', 'KERNEL_SDKROOT', 'PYTHONPATH', 'PYTHONHOME', 'PYTHONPYCACHEPREFIX',
+            'GIT_DIR', 'GIT_WORK_TREE', 'GIT_COMMON_DIR', 'GIT_INDEX_FILE',
+            'GIT_OBJECT_DIRECTORY', 'GIT_ALTERNATE_OBJECT_DIRECTORIES', 'MAKEFLAGS',
+            'BASH_ENV', 'ENV', 'MAKEFILES', 'MFLAGS', 'CDPATH',
+        }:
+            os.environ.pop(key, None)
+    cache = ROOT / '.cache-nova'
+    for name in ('tmp', 'clang', 'xdg', 'ccache'):
+        (cache / name).mkdir(parents=True, exist_ok=True)
+    os.environ.update({
+        'UNIXNU_ROOT': str(MAIN), 'UNIXNU_DEVICE': str(BOARD),
+        'UNIXNU_OUT': str(OUT), 'UNIXNU_UEFI': str(UEFI),
+        'UNIXNU_EDK2': str(EDK2), 'UEFI_TREE': str(UEFI),
+        'CONF_PATH': str(OUT / 'meizu20pro/edk2-conf'),
+        'UNIXNU_DTB': str(ROOT / 'inputs-nova/meizu20pro.dtb'),
+        'TMPDIR': str(cache / 'tmp') + '/',
+        'CLANG_MODULE_CACHE_PATH': str(cache / 'clang'),
+        'XDG_CACHE_HOME': str(cache / 'xdg'), 'CCACHE_DIR': str(cache / 'ccache'),
+        'PYTHONDONTWRITEBYTECODE': '1',
+    })
+    # Resolve directory aliases too; retain Nova and installed system tools.
+    allowed = []
+    system_roots = tuple(map(Path, ('/opt/homebrew', '/usr', '/bin', '/sbin',
+                                   '/Library/Developer/CommandLineTools', '/Applications/Xcode.app')))
+    for item in os.environ.get('PATH', '').split(os.pathsep):
+        if not item:
+            continue
+        resolved = Path(item).expanduser().resolve()
+        if resolved.is_relative_to(ROOT) or any(resolved.is_relative_to(p) for p in system_roots):
+            allowed.append(str(resolved))
+    os.environ['PATH'] = os.pathsep.join(dict.fromkeys(allowed + ['/usr/bin', '/bin', '/usr/sbin', '/sbin']))
+    sys.dont_write_bytecode = True
+    sys.path.insert(0, str(MAIN / 'scripts'))
+    from unixnu.cli import main as run_cli, parser
+    args = sys.argv[1:] or ['--help']
+    if args not in (['--help'], ['-h']):
+        args += ['--device', str(BOARD), '--out', str(OUT), '--uefi', str(UEFI), '--edk2', str(EDK2)]
+        parsed = parser().parse_args(args)
+        path_fields = ('device', 'out', 'uefi', 'edk2', 'local', 'local_drivers', 'local_kits',
+                       'local_patches', 'local_scripts', 'local_package', 'kernelcache', 'kernel',
+                       'trust_cache', 'owner_trust_cache', 'data_ramdisk', 'gpu_addon',
+                       'wifi_mac_file', 'fd', 'dtb', 'ramdisk', 'output')
+        for field in path_fields:
+            value = getattr(parsed, field, None)
+            if value and value != 'none' and not inside(value):
+                raise SystemExit(f'Nova isolation: --{field.replace("_", "-")} must resolve inside {ROOT}')
+        for spec in getattr(parsed, 'local_module', None) or []:
+            if '=' not in spec or not inside(spec.split('=', 1)[1]):
+                raise SystemExit('Nova isolation: --local-module must resolve inside Nova')
+        ipsw = getattr(parsed, 'ipsw', None)
+        if ipsw and not ipsw.startswith(('https://', 'http://')) and not inside(ipsw):
+            raise SystemExit('Nova isolation: local IPSW input must resolve inside Nova')
+    sys.argv = [str(MAIN / 'unixnu'), *args]
+    run_cli()
+
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,10 @@
+{
+ "schema": "nova-r18-source-freeze-postbuild-check-v1",
+ "new_file_no_previous_version": true,
+ "freeze": "artifacts-nova/boot-speed-round18-nova/build-package-nova/source-freeze-r18-nova.json",
+ "freeze_sha256": "77f483d631ad403930c2631df0a324754d88893046caffbaa8d4db15cd9355fc",
+ "count": 6186,
+ "missing": [],
+ "mismatched_after_build": [],
+ "pass": true
+}

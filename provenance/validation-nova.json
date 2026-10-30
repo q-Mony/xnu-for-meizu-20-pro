@@ -1,0 +1,106 @@
+{
+  "schema": "nova-export-validation-v1",
+  "new_file_no_previous_version": true,
+  "repo": "repo-nova",
+  "inventory": {
+    "file_count": 8795,
+    "total_bytes": 114650606,
+    "max_file_bytes": 3630250,
+    "executable_count": 262
+  },
+  "checks": {
+    "no_nested_git": true,
+    "no_symlinks": true,
+    "no_forbidden_payload": true,
+    "no_file_over_50mib": true,
+    "hidden_gitmodules_absent": true,
+    "binaries_dir_absent": true,
+    "build_dir_absent": true,
+    "main_out_absent": true,
+    "inputs_snapshot_logs_absent": true,
+    "secret_scan_clean": true,
+    "device_serial_absent": true,
+    "policy_fixture_pass": true,
+    "source_byte_verification": true,
+    "r18_coverage_complete": true
+  },
+  "pass": true,
+  "nested_git": [],
+  "symlinks": [],
+  "forbidden": [],
+  "large_files": [],
+  "secret_findings_redacted": [],
+  "device_serial_findings_redacted": [],
+  "absolute_path_files_redacted": [
+    {
+      "path_sha256": "c0fd3e0cc41b9a83",
+      "label": "absolute-local-path"
+    },
+    {
+      "path_sha256": "327746805fb2b443",
+      "label": "absolute-local-path"
+    },
+    {
+      "path_sha256": "177a198ae225e810",
+      "label": "absolute-local-path"
+    },
+    {
+      "path_sha256": "db929d5fe1ca7f9c",
+      "label": "absolute-local-path"
+    },
+    {
+      "path_sha256": "508b9500ae269215",
+      "label": "absolute-local-path"
+    },
+    {
+      "path_sha256": "38f4a6d6b7ceb37c",
+      "label": "absolute-local-path"
+    },
+    {
+      "path_sha256": "097b25e356f96c21",
+      "label": "absolute-local-path"
+    },
+    {
+      "path_sha256": "0c33818f8f409870",
+      "label": "absolute-local-path"
+    }
+  ],
+  "source_verification": {
+    "checked": 8729,
+    "matched": 8729,
+    "mismatched_count": 0,
+    "mismatched_sample": [],
+    "missing_sources_count": 0,
+    "critical_bad": []
+  },
+  "coverage": {
+    "freeze_count": 6186,
+    "matched": 6185,
+    "explained_excluded": 1,
+    "missing_unexplained": 0,
+    "extra_total": 2599,
+    "extra_groups": {
+      "out_of_r18_freeze_scope:uefi": 2089,
+      "out_of_r18_freeze_scope:fetched-dependency-snapshot": 430,
+      "export_docs_tools_metadata": 67,
+      "current_after_r18_freeze": 13
+    },
+    "coverage_ratio_including_explained": 1.0
+  },
+  "policy": {
+    "excluded_records": 219,
+    "excluded_by_reason": {
+      "backup": 4,
+      "vcs-cache": 23,
+      "deny-extension:.bin": 14,
+      "binary-content": 171,
+      "deny-extension:.pfx": 5,
+      "deny-extension:.efi": 2
+    }
+  },
+  "notes": [
+    "provenance/validation-nova.json, coverage, export-policy and inventory are metadata and not listed in the inventory.",
+    "Absolute local paths exist in a few imported source scripts as inherited defaults; they are not symlinks and must be overridden at build time.",
+    "No secrets are printed; findings, if any, carry only a hashed path label."
+  ]
+}

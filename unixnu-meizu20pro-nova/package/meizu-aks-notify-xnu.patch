@@ -1,0 +1,46 @@
+diff --git a/bsd/kern/kern_exec.c b/bsd/kern/kern_exec.c
+--- a/bsd/kern/kern_exec.c
++++ b/bsd/kern/kern_exec.c
+@@ -8766,4 +8766,9 @@ load_init_program(proc_t p)
++#if defined(XNU_MEIZU_AKS_NOTIFY) && XNU_MEIZU_AKS_NOTIFY
++	/* PID 1, after the Data mount and before launchd starts SpringBoard. */
++	extern void meizu_keystore_notification_publish(int);
++	meizu_keystore_notification_publish(data_error);
++#endif
+ 	boot_progress_stage("Data mount returned");
+ 	if (data_error) {
+ 		printf("meizu: Data mount failed %d, continuing without /private/var\n", data_error);
+ 	}
+diff --git a/iokit/Kernel/IOUserClient.cpp b/iokit/Kernel/IOUserClient.cpp
+--- a/iokit/Kernel/IOUserClient.cpp
++++ b/iokit/Kernel/IOUserClient.cpp
+@@ -70,4 +70,9 @@
+ #include "IOServicePrivate.h"
+ #include "IOKitKernelInternal.h"
+ 
++#if defined(XNU_MEIZU_AKS_NOTIFY) && XNU_MEIZU_AKS_NOTIFY
++#include "MeizuAksNotificationPolicy.h"
++extern "C" IOService *meizu_keystore_notification_lookup(void);
++#endif
++
+ #define SCALAR64(x) ((io_user_scalar_t)((unsigned int)x))
+@@ -2797,5 +2797,19 @@ internal_io_service_get_matching_service(
+ 	if ((dict = OSDynamicCast( OSDictionary, obj))) {
+ 		IOTaskRegistryCompatibilityMatching(current_task(), dict);
+ 		*service = IOService::copyMatchingService( dict );
++#if defined(XNU_MEIZU_AKS_NOTIFY) && XNU_MEIZU_AKS_NOTIFY
++		/* Preserve the real provider and the original result. An exact, class-only
++		 * AppleKeyStore lookup may see the board's notification endpoint, but
++		 * selectors/opens still fail closed on that distinct IOService class. */
++		if (!*service) {
++			OSString *requested = OSDynamicCast(OSString, dict->getObject(gIOProviderClassKey));
++			if (meizuAksExactRequest(requested ? requested->getCStringNoCopy() : nullptr,
++			        dict->getCount(),
++			        dict->getObject(gIOServiceNotificationUserKey) == kOSBooleanTrue,
++			        dict->getObject(gIOCompatibilityMatchKey) != nullptr)) {
++				*service = meizu_keystore_notification_lookup();
++			}
++		}
++#endif
+ 		kr = *service ? kIOReturnSuccess : kIOReturnNotFound;
+ 		/* Meizu diagnostic: count exact class lookups without logging payloads. */

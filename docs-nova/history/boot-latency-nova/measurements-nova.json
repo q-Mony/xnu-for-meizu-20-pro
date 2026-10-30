@@ -1,0 +1,2802 @@
+{
+  "scope": "Offline evidence measurement; no device reproduction or functional change",
+  "limits": [
+    "No timestamped Boot action or first Hello frame is captured",
+    "Pending phase4 age_ms is a measured wait age, not boot uptime",
+    "Heartbeat tick counts dump calls; tick*0.05 is nominal only",
+    "Watchdog allowances must not be blindly added to time-to-first-Hello",
+    "Log filenames are extraction times, not boot/Hello timestamps"
+  ],
+  "logs": [
+    {
+      "path": "[local-home]/...",
+      "sha256": "e5ee7199ec234746ee60d2244554dab3b5c33ab05f23c073e370cdb103983bf2",
+      "bytes": 1717129,
+      "markers": {
+        "first_dyld_open_line": 243,
+        "shared_region_map_enter_line": 594,
+        "first_framebuffer_swap_log_line": 1590
+      },
+      "long_pending_sb_waits": [
+        {
+          "pid": 26,
+          "tid": 254,
+          "seq": 261,
+          "first_line": 1075,
+          "last_line": 1568,
+          "samples": [
+            {
+              "line": 1075,
+              "age_ms": 4722
+            },
+            {
+              "line": 1327,
+              "age_ms": 14929
+            },
+            {
+              "line": 1493,
+              "age_ms": 25103
+            },
+            {
+              "line": 1568,
+              "age_ms": 35296
+            }
+          ],
+          "max_wait_age_ms": 35296,
+          "max_age_line": 1568,
+          "endpoint_pid": 1,
+          "endpoint_generation": 4,
+          "endpoint_name": "launchd"
+        },
+        {
+          "pid": 26,
+          "tid": 254,
+          "seq": 2376,
+          "first_line": 1703,
+          "last_line": 2053,
+          "samples": [
+            {
+              "line": 1703,
+              "age_ms": 9033
+            },
+            {
+              "line": 1749,
+              "age_ms": 19217
+            },
+            {
+              "line": 1783,
+              "age_ms": 29412
+            },
+            {
+              "line": 1827,
+              "age_ms": 39611
+            },
+            {
+              "line": 1870,
+              "age_ms": 49812
+            },
+            {
+              "line": 1911,
+              "age_ms": 60018
+            },
+            {
+              "line": 1959,
+              "age_ms": 70222
+            },
+            {
+              "line": 1990,
+              "age_ms": 80423
+            },
+            {
+              "line": 2022,
+              "age_ms": 90632
+            },
+            {
+              "line": 2053,
+              "age_ms": 100830
+            }
+          ],
+          "max_wait_age_ms": 100830,
+          "max_age_line": 2053,
+          "endpoint_pid": 97,
+          "endpoint_generation": 272,
+          "endpoint_name": "lsd"
+        }
+      ],
+      "serial_launchd_lsd_pairs": [
+        {
+          "launchd_seq": 261,
+          "lsd_seq": 2376,
+          "pid": 26,
+          "tid": 254,
+          "serial_wait_lower_bound_ms": 136126
+        }
+      ],
+      "observed_signature_pairs": [
+        {
+          "start_line": 245,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 376832,
+          "last_observed_open": "dyld_shared_cache_arm64",
+          "preceding_heartbeat_tick": 0,
+          "end_line": 246,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 251,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 114409472,
+          "last_observed_open": "dyld_shared_cache_arm64.01",
+          "preceding_heartbeat_tick": 0,
+          "end_line": 260,
+          "result": 0,
+          "heartbeat_samples": [
+            20,
+            40,
+            60,
+            80
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 265,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 81920,
+          "last_observed_open": "dyld_shared_cache_arm64.02",
+          "preceding_heartbeat_tick": 80,
+          "end_line": 266,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 271,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 115539968,
+          "last_observed_open": "dyld_shared_cache_arm64.03",
+          "preceding_heartbeat_tick": 80,
+          "end_line": 280,
+          "result": 0,
+          "heartbeat_samples": [
+            100,
+            120,
+            140,
+            160
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 285,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 163840,
+          "last_observed_open": "dyld_shared_cache_arm64.04",
+          "preceding_heartbeat_tick": 160,
+          "end_line": 286,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 291,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 114311168,
+          "last_observed_open": "dyld_shared_cache_arm64.05",
+          "preceding_heartbeat_tick": 160,
+          "end_line": 300,
+          "result": 0,
+          "heartbeat_samples": [
+            180,
+            200,
+            220,
+            240
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 305,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 360448,
+          "last_observed_open": "dyld_shared_cache_arm64.06",
+          "preceding_heartbeat_tick": 240,
+          "end_line": 306,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 311,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 115179520,
+          "last_observed_open": "dyld_shared_cache_arm64.07",
+          "preceding_heartbeat_tick": 240,
+          "end_line": 322,
+          "result": 0,
+          "heartbeat_samples": [
+            260,
+            280,
+            300,
+            320,
+            340
+          ],
+          "intra_sample_tick_span": 80
+        },
+        {
+          "start_line": 327,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 262144,
+          "last_observed_open": "dyld_shared_cache_arm64.08",
+          "preceding_heartbeat_tick": 340,
+          "end_line": 328,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 333,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 115523584,
+          "last_observed_open": "dyld_shared_cache_arm64.09",
+          "preceding_heartbeat_tick": 340,
+          "end_line": 342,
+          "result": 0,
+          "heartbeat_samples": [
+            360,
+            380,
+            400,
+            420
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 347,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 393216,
+          "last_observed_open": "dyld_shared_cache_arm64.10",
+          "preceding_heartbeat_tick": 420,
+          "end_line": 348,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 353,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 115589120,
+          "last_observed_open": "dyld_shared_cache_arm64.11",
+          "preceding_heartbeat_tick": 420,
+          "end_line": 362,
+          "result": 0,
+          "heartbeat_samples": [
+            440,
+            460,
+            480,
+            500
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 367,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 376832,
+          "last_observed_open": "dyld_shared_cache_arm64.12",
+          "preceding_heartbeat_tick": 500,
+          "end_line": 368,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 373,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 212992,
+          "signature_file_offset": 107757568,
+          "last_observed_open": "dyld_shared_cache_arm64.13",
+          "preceding_heartbeat_tick": 500,
+          "end_line": 382,
+          "result": 0,
+          "heartbeat_samples": [
+            520,
+            540,
+            560,
+            580
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 387,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 393216,
+          "last_observed_open": "dyld_shared_cache_arm64.14",
+          "preceding_heartbeat_tick": 580,
+          "end_line": 388,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 393,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 114868224,
+          "last_observed_open": "dyld_shared_cache_arm64.15",
+          "preceding_heartbeat_tick": 580,
+          "end_line": 402,
+          "result": 0,
+          "heartbeat_samples": [
+            600,
+            620,
+            640,
+            660
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 407,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 442368,
+          "last_observed_open": "dyld_shared_cache_arm64.16",
+          "preceding_heartbeat_tick": 660,
+          "end_line": 408,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 413,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 196608,
+          "signature_file_offset": 97222656,
+          "last_observed_open": "dyld_shared_cache_arm64.17",
+          "preceding_heartbeat_tick": 660,
+          "end_line": 420,
+          "result": 0,
+          "heartbeat_samples": [
+            680,
+            700,
+            720
+          ],
+          "intra_sample_tick_span": 40
+        },
+        {
+          "start_line": 425,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 360448,
+          "last_observed_open": "dyld_shared_cache_arm64.18",
+          "preceding_heartbeat_tick": 720,
+          "end_line": 426,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 431,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 212992,
+          "signature_file_offset": 107397120,
+          "last_observed_open": "dyld_shared_cache_arm64.19",
+          "preceding_heartbeat_tick": 720,
+          "end_line": 440,
+          "result": 0,
+          "heartbeat_samples": [
+            740,
+            760,
+            780,
+            800
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 445,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 245760,
+          "last_observed_open": "dyld_shared_cache_arm64.20",
+          "preceding_heartbeat_tick": 800,
+          "end_line": 446,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 450,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 114900992,
+          "last_observed_open": "dyld_shared_cache_arm64.21",
+          "preceding_heartbeat_tick": 800,
+          "end_line": 459,
+          "result": 0,
+          "heartbeat_samples": [
+            820,
+            840,
+            860,
+            880
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 463,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 425984,
+          "last_observed_open": "dyld_shared_cache_arm64.22",
+          "preceding_heartbeat_tick": 880,
+          "end_line": 464,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 468,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 114786304,
+          "last_observed_open": "dyld_shared_cache_arm64.23",
+          "preceding_heartbeat_tick": 880,
+          "end_line": 479,
+          "result": 0,
+          "heartbeat_samples": [
+            900,
+            920,
+            940,
+            960,
+            980
+          ],
+          "intra_sample_tick_span": 80
+        }
+      ],
+      "heartbeat_before_shared_map": {
+        "line": 591,
+        "tick": 1940
+      },
+      "system_events": [
+        {
+          "line": 643,
+          "raw_continuous_ticks": 2505385069,
+          "event": "fsck",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 644,
+          "raw_continuous_ticks": 2505390175,
+          "event": "mount-phase-1",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 645,
+          "raw_continuous_ticks": 2505394963,
+          "event": "data-protection",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 646,
+          "raw_continuous_ticks": 2505399705,
+          "event": "finish-obliteration",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 647,
+          "raw_continuous_ticks": 2505404502,
+          "event": "detect-installed-roots",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 648,
+          "raw_continuous_ticks": 2505418481,
+          "event": "commit-boot-mode",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 649,
+          "raw_continuous_ticks": 2506102467,
+          "event": "restore-datapartition",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 650,
+          "raw_continuous_ticks": 2506107434,
+          "event": "restore-datapartition",
+          "message": "optional boot task not present"
+        },
+        {
+          "line": 651,
+          "raw_continuous_ticks": 2506112314,
+          "event": "mount-phase-2",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 652,
+          "raw_continuous_ticks": 2506117105,
+          "event": "init-with-data-volume",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 653,
+          "raw_continuous_ticks": 2506122090,
+          "event": "MSUEarlyBootTask",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 654,
+          "raw_continuous_ticks": 2506126890,
+          "event": "fips",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 655,
+          "raw_continuous_ticks": 2506131672,
+          "event": "keybag",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 656,
+          "raw_continuous_ticks": 2506136466,
+          "event": "usermanagerd",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 657,
+          "raw_continuous_ticks": 2506141455,
+          "event": "dirs_cleaner",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 658,
+          "raw_continuous_ticks": 2506151435,
+          "event": "xpcroleaccountd",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 659,
+          "raw_continuous_ticks": 2506163840,
+          "event": "init_featureflags",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 661,
+          "raw_continuous_ticks": 2508948581,
+          "event": "auearlyboot",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 664,
+          "raw_continuous_ticks": 2509584443,
+          "event": "tzinit",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 811,
+          "raw_continuous_ticks": 2521828815,
+          "event": "finish-restore",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 812,
+          "raw_continuous_ticks": 2521833247,
+          "event": "finish-demo-restore",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 821,
+          "raw_continuous_ticks": 2525206430,
+          "event": "sysstatuscheck",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 822,
+          "raw_continuous_ticks": 2525210471,
+          "event": "prng_seedctl",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 823,
+          "raw_continuous_ticks": 2525212894,
+          "event": "launchd_cache_loader",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 824,
+          "raw_continuous_ticks": 2525217171,
+          "event": "boot",
+          "message": "Early boot complete. Continuing system boot."
+        }
+      ],
+      "setup_arms": [
+        {
+          "line": 2162,
+          "pid": "231",
+          "taskgen": "880",
+          "tid": "1991",
+          "attempt": "1"
+        },
+        {
+          "line": 4635,
+          "pid": "257",
+          "taskgen": "976",
+          "tid": "2339",
+          "attempt": "2"
+        },
+        {
+          "line": 6996,
+          "pid": "264",
+          "taskgen": "1004",
+          "tid": "2427",
+          "attempt": "3"
+        }
+      ],
+      "setup_watchdogs": [
+        {
+          "line": 4575,
+          "pid": 231,
+          "wall_allowance_seconds": 20.0
+        },
+        {
+          "line": 6958,
+          "pid": 257,
+          "wall_allowance_seconds": 20.0
+        }
+      ],
+      "launchd_boot_task_event_delta_seconds": 1.0329219791666666,
+      "clock_frequency_hz": 19200000
+    },
+    {
+      "path": "[local-home]/...",
+      "sha256": "82b74cfadd87ec1efc39945544d83b694e8842931cacc7422b54613b1013ccf3",
+      "bytes": 232654,
+      "markers": {
+        "first_dyld_open_line": 243,
+        "shared_region_map_enter_line": 534,
+        "first_framebuffer_swap_log_line": 1527
+      },
+      "long_pending_sb_waits": [
+        {
+          "pid": 25,
+          "tid": 253,
+          "seq": 257,
+          "first_line": 1003,
+          "last_line": 1382,
+          "samples": [
+            {
+              "line": 1003,
+              "age_ms": 6229
+            },
+            {
+              "line": 1228,
+              "age_ms": 16500
+            },
+            {
+              "line": 1382,
+              "age_ms": 26736
+            }
+          ],
+          "max_wait_age_ms": 26736,
+          "max_age_line": 1382,
+          "endpoint_pid": 1,
+          "endpoint_generation": 4,
+          "endpoint_name": "launchd"
+        },
+        {
+          "pid": 25,
+          "tid": 253,
+          "seq": 2404,
+          "first_line": 1570,
+          "last_line": 2055,
+          "samples": [
+            {
+              "line": 1570,
+              "age_ms": 873
+            },
+            {
+              "line": 1636,
+              "age_ms": 11118
+            },
+            {
+              "line": 1667,
+              "age_ms": 21336
+            },
+            {
+              "line": 1742,
+              "age_ms": 31573
+            },
+            {
+              "line": 1791,
+              "age_ms": 41836
+            },
+            {
+              "line": 1825,
+              "age_ms": 52076
+            },
+            {
+              "line": 1891,
+              "age_ms": 62326
+            },
+            {
+              "line": 1938,
+              "age_ms": 72585
+            },
+            {
+              "line": 1977,
+              "age_ms": 82847
+            },
+            {
+              "line": 2007,
+              "age_ms": 93110
+            },
+            {
+              "line": 2055,
+              "age_ms": 103352
+            }
+          ],
+          "max_wait_age_ms": 103352,
+          "max_age_line": 2055,
+          "endpoint_pid": 97,
+          "endpoint_generation": 272,
+          "endpoint_name": "lsd"
+        }
+      ],
+      "serial_launchd_lsd_pairs": [
+        {
+          "launchd_seq": 257,
+          "lsd_seq": 2404,
+          "pid": 25,
+          "tid": 253,
+          "serial_wait_lower_bound_ms": 130088
+        }
+      ],
+      "observed_signature_pairs": [
+        {
+          "start_line": 245,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 376832,
+          "last_observed_open": "dyld_shared_cache_arm64",
+          "preceding_heartbeat_tick": 0,
+          "end_line": 246,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 251,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 114409472,
+          "last_observed_open": "dyld_shared_cache_arm64.01",
+          "preceding_heartbeat_tick": 0,
+          "end_line": 258,
+          "result": 0,
+          "heartbeat_samples": [
+            20,
+            40,
+            60
+          ],
+          "intra_sample_tick_span": 40
+        },
+        {
+          "start_line": 263,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 81920,
+          "last_observed_open": "dyld_shared_cache_arm64.02",
+          "preceding_heartbeat_tick": 60,
+          "end_line": 264,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 269,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 115539968,
+          "last_observed_open": "dyld_shared_cache_arm64.03",
+          "preceding_heartbeat_tick": 60,
+          "end_line": 274,
+          "result": 0,
+          "heartbeat_samples": [
+            80,
+            100
+          ],
+          "intra_sample_tick_span": 20
+        },
+        {
+          "start_line": 279,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 163840,
+          "last_observed_open": "dyld_shared_cache_arm64.04",
+          "preceding_heartbeat_tick": 100,
+          "end_line": 280,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 285,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 114311168,
+          "last_observed_open": "dyld_shared_cache_arm64.05",
+          "preceding_heartbeat_tick": 100,
+          "end_line": 292,
+          "result": 0,
+          "heartbeat_samples": [
+            120,
+            140,
+            160
+          ],
+          "intra_sample_tick_span": 40
+        },
+        {
+          "start_line": 297,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 360448,
+          "last_observed_open": "dyld_shared_cache_arm64.06",
+          "preceding_heartbeat_tick": 160,
+          "end_line": 298,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 303,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 115179520,
+          "last_observed_open": "dyld_shared_cache_arm64.07",
+          "preceding_heartbeat_tick": 160,
+          "end_line": 310,
+          "result": 0,
+          "heartbeat_samples": [
+            180,
+            200,
+            220
+          ],
+          "intra_sample_tick_span": 40
+        },
+        {
+          "start_line": 315,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 262144,
+          "last_observed_open": "dyld_shared_cache_arm64.08",
+          "preceding_heartbeat_tick": 220,
+          "end_line": 316,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 321,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 115523584,
+          "last_observed_open": "dyld_shared_cache_arm64.09",
+          "preceding_heartbeat_tick": 220,
+          "end_line": 328,
+          "result": 0,
+          "heartbeat_samples": [
+            240,
+            260,
+            280
+          ],
+          "intra_sample_tick_span": 40
+        },
+        {
+          "start_line": 333,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 393216,
+          "last_observed_open": "dyld_shared_cache_arm64.10",
+          "preceding_heartbeat_tick": 280,
+          "end_line": 334,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 339,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 115589120,
+          "last_observed_open": "dyld_shared_cache_arm64.11",
+          "preceding_heartbeat_tick": 280,
+          "end_line": 346,
+          "result": 0,
+          "heartbeat_samples": [
+            300,
+            320,
+            340
+          ],
+          "intra_sample_tick_span": 40
+        },
+        {
+          "start_line": 351,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 376832,
+          "last_observed_open": "dyld_shared_cache_arm64.12",
+          "preceding_heartbeat_tick": 340,
+          "end_line": 352,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 357,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 212992,
+          "signature_file_offset": 107757568,
+          "last_observed_open": "dyld_shared_cache_arm64.13",
+          "preceding_heartbeat_tick": 340,
+          "end_line": 362,
+          "result": 0,
+          "heartbeat_samples": [
+            360,
+            380
+          ],
+          "intra_sample_tick_span": 20
+        },
+        {
+          "start_line": 367,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 393216,
+          "last_observed_open": "dyld_shared_cache_arm64.14",
+          "preceding_heartbeat_tick": 380,
+          "end_line": 368,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 373,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 114868224,
+          "last_observed_open": "dyld_shared_cache_arm64.15",
+          "preceding_heartbeat_tick": 380,
+          "end_line": 380,
+          "result": 0,
+          "heartbeat_samples": [
+            400,
+            420,
+            440
+          ],
+          "intra_sample_tick_span": 40
+        },
+        {
+          "start_line": 385,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 442368,
+          "last_observed_open": "dyld_shared_cache_arm64.16",
+          "preceding_heartbeat_tick": 440,
+          "end_line": 386,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 391,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 196608,
+          "signature_file_offset": 97222656,
+          "last_observed_open": "dyld_shared_cache_arm64.17",
+          "preceding_heartbeat_tick": 440,
+          "end_line": 396,
+          "result": 0,
+          "heartbeat_samples": [
+            460,
+            480
+          ],
+          "intra_sample_tick_span": 20
+        },
+        {
+          "start_line": 401,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 360448,
+          "last_observed_open": "dyld_shared_cache_arm64.18",
+          "preceding_heartbeat_tick": 480,
+          "end_line": 402,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 407,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 212992,
+          "signature_file_offset": 107397120,
+          "last_observed_open": "dyld_shared_cache_arm64.19",
+          "preceding_heartbeat_tick": 480,
+          "end_line": 414,
+          "result": 0,
+          "heartbeat_samples": [
+            500,
+            520,
+            540
+          ],
+          "intra_sample_tick_span": 40
+        },
+        {
+          "start_line": 419,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 245760,
+          "last_observed_open": "dyld_shared_cache_arm64.20",
+          "preceding_heartbeat_tick": 540,
+          "end_line": 420,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 424,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 114900992,
+          "last_observed_open": "dyld_shared_cache_arm64.21",
+          "preceding_heartbeat_tick": 540,
+          "end_line": 431,
+          "result": 0,
+          "heartbeat_samples": [
+            560,
+            580,
+            600
+          ],
+          "intra_sample_tick_span": 40
+        },
+        {
+          "start_line": 435,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 425984,
+          "last_observed_open": "dyld_shared_cache_arm64.22",
+          "preceding_heartbeat_tick": 600,
+          "end_line": 436,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 440,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 114786304,
+          "last_observed_open": "dyld_shared_cache_arm64.23",
+          "preceding_heartbeat_tick": 600,
+          "end_line": 447,
+          "result": 0,
+          "heartbeat_samples": [
+            620,
+            640,
+            660
+          ],
+          "intra_sample_tick_span": 40
+        }
+      ],
+      "heartbeat_before_shared_map": {
+        "line": 531,
+        "tick": 1340
+      },
+      "system_events": [
+        {
+          "line": 583,
+          "raw_continuous_ticks": 2456219446,
+          "event": "fsck",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 584,
+          "raw_continuous_ticks": 2456225088,
+          "event": "mount-phase-1",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 585,
+          "raw_continuous_ticks": 2456230231,
+          "event": "data-protection",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 586,
+          "raw_continuous_ticks": 2456235292,
+          "event": "finish-obliteration",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 587,
+          "raw_continuous_ticks": 2456240402,
+          "event": "detect-installed-roots",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 588,
+          "raw_continuous_ticks": 2456375554,
+          "event": "commit-boot-mode",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 589,
+          "raw_continuous_ticks": 2456385629,
+          "event": "restore-datapartition",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 590,
+          "raw_continuous_ticks": 2456390808,
+          "event": "restore-datapartition",
+          "message": "optional boot task not present"
+        },
+        {
+          "line": 591,
+          "raw_continuous_ticks": 2456396104,
+          "event": "mount-phase-2",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 592,
+          "raw_continuous_ticks": 2456401192,
+          "event": "init-with-data-volume",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 593,
+          "raw_continuous_ticks": 2456406540,
+          "event": "MSUEarlyBootTask",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 594,
+          "raw_continuous_ticks": 2456411655,
+          "event": "fips",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 595,
+          "raw_continuous_ticks": 2456416729,
+          "event": "keybag",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 596,
+          "raw_continuous_ticks": 2456421842,
+          "event": "usermanagerd",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 597,
+          "raw_continuous_ticks": 2456427167,
+          "event": "dirs_cleaner",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 598,
+          "raw_continuous_ticks": 2456437747,
+          "event": "xpcroleaccountd",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 599,
+          "raw_continuous_ticks": 2457272565,
+          "event": "init_featureflags",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 601,
+          "raw_continuous_ticks": 2458383012,
+          "event": "auearlyboot",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 604,
+          "raw_continuous_ticks": 2459037330,
+          "event": "tzinit",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 751,
+          "raw_continuous_ticks": 2471618049,
+          "event": "finish-restore",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 760,
+          "raw_continuous_ticks": 2474873466,
+          "event": "finish-demo-restore",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 761,
+          "raw_continuous_ticks": 2474877226,
+          "event": "sysstatuscheck",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 762,
+          "raw_continuous_ticks": 2474879645,
+          "event": "prng_seedctl",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 763,
+          "raw_continuous_ticks": 2474882039,
+          "event": "launchd_cache_loader",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 764,
+          "raw_continuous_ticks": 2474886361,
+          "event": "boot",
+          "message": "Early boot complete. Continuing system boot."
+        }
+      ],
+      "setup_arms": [],
+      "setup_watchdogs": [
+        {
+          "line": 2291,
+          "pid": 234,
+          "wall_allowance_seconds": 10.0
+        },
+        {
+          "line": 2419,
+          "pid": 248,
+          "wall_allowance_seconds": 20.0
+        },
+        {
+          "line": 2540,
+          "pid": 258,
+          "wall_allowance_seconds": 20.0
+        },
+        {
+          "line": 2688,
+          "pid": 274,
+          "wall_allowance_seconds": 20.0
+        },
+        {
+          "line": 2773,
+          "pid": 283,
+          "wall_allowance_seconds": 20.0
+        },
+        {
+          "line": 2868,
+          "pid": 290,
+          "wall_allowance_seconds": 20.0
+        }
+      ]
+    },
+    {
+      "path": "[local-home]/...",
+      "sha256": "00006f2806c91ba82f0b470eeafdec668b6eb1785b681985b6661a7827bb7d41",
+      "bytes": 769127,
+      "markers": {
+        "first_dyld_open_line": 243,
+        "shared_region_map_enter_line": 594,
+        "first_framebuffer_swap_log_line": 1544
+      },
+      "long_pending_sb_waits": [
+        {
+          "pid": 25,
+          "tid": 253,
+          "seq": 261,
+          "first_line": 1048,
+          "last_line": 1522,
+          "samples": [
+            {
+              "line": 1048,
+              "age_ms": 4657
+            },
+            {
+              "line": 1259,
+              "age_ms": 14868
+            },
+            {
+              "line": 1433,
+              "age_ms": 25054
+            },
+            {
+              "line": 1522,
+              "age_ms": 35241
+            }
+          ],
+          "max_wait_age_ms": 35241,
+          "max_age_line": 1522,
+          "endpoint_pid": 1,
+          "endpoint_generation": 4,
+          "endpoint_name": "launchd"
+        },
+        {
+          "pid": 25,
+          "tid": 253,
+          "seq": 2340,
+          "first_line": 1634,
+          "last_line": 2127,
+          "samples": [
+            {
+              "line": 1634,
+              "age_ms": 8597
+            },
+            {
+              "line": 1735,
+              "age_ms": 18783
+            },
+            {
+              "line": 1780,
+              "age_ms": 28978
+            },
+            {
+              "line": 1838,
+              "age_ms": 39186
+            },
+            {
+              "line": 1870,
+              "age_ms": 49382
+            },
+            {
+              "line": 1930,
+              "age_ms": 59582
+            },
+            {
+              "line": 1996,
+              "age_ms": 69781
+            },
+            {
+              "line": 2052,
+              "age_ms": 79976
+            },
+            {
+              "line": 2096,
+              "age_ms": 90176
+            },
+            {
+              "line": 2127,
+              "age_ms": 100380
+            }
+          ],
+          "max_wait_age_ms": 100380,
+          "max_age_line": 2127,
+          "endpoint_pid": 97,
+          "endpoint_generation": 272,
+          "endpoint_name": "lsd"
+        }
+      ],
+      "serial_launchd_lsd_pairs": [
+        {
+          "launchd_seq": 261,
+          "lsd_seq": 2340,
+          "pid": 25,
+          "tid": 253,
+          "serial_wait_lower_bound_ms": 135621
+        }
+      ],
+      "observed_signature_pairs": [
+        {
+          "start_line": 245,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 376832,
+          "last_observed_open": "dyld_shared_cache_arm64",
+          "preceding_heartbeat_tick": 0,
+          "end_line": 246,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 251,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 114409472,
+          "last_observed_open": "dyld_shared_cache_arm64.01",
+          "preceding_heartbeat_tick": 0,
+          "end_line": 260,
+          "result": 0,
+          "heartbeat_samples": [
+            20,
+            40,
+            60,
+            80
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 265,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 81920,
+          "last_observed_open": "dyld_shared_cache_arm64.02",
+          "preceding_heartbeat_tick": 80,
+          "end_line": 266,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 271,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 115539968,
+          "last_observed_open": "dyld_shared_cache_arm64.03",
+          "preceding_heartbeat_tick": 80,
+          "end_line": 280,
+          "result": 0,
+          "heartbeat_samples": [
+            100,
+            120,
+            140,
+            160
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 285,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 163840,
+          "last_observed_open": "dyld_shared_cache_arm64.04",
+          "preceding_heartbeat_tick": 160,
+          "end_line": 286,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 291,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 114311168,
+          "last_observed_open": "dyld_shared_cache_arm64.05",
+          "preceding_heartbeat_tick": 160,
+          "end_line": 300,
+          "result": 0,
+          "heartbeat_samples": [
+            180,
+            200,
+            220,
+            240
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 305,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 360448,
+          "last_observed_open": "dyld_shared_cache_arm64.06",
+          "preceding_heartbeat_tick": 240,
+          "end_line": 306,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 311,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 115179520,
+          "last_observed_open": "dyld_shared_cache_arm64.07",
+          "preceding_heartbeat_tick": 240,
+          "end_line": 320,
+          "result": 0,
+          "heartbeat_samples": [
+            260,
+            280,
+            300,
+            320
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 327,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 262144,
+          "last_observed_open": "dyld_shared_cache_arm64.08",
+          "preceding_heartbeat_tick": 340,
+          "end_line": 328,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 333,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 115523584,
+          "last_observed_open": "dyld_shared_cache_arm64.09",
+          "preceding_heartbeat_tick": 340,
+          "end_line": 342,
+          "result": 0,
+          "heartbeat_samples": [
+            360,
+            380,
+            400,
+            420
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 347,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 393216,
+          "last_observed_open": "dyld_shared_cache_arm64.10",
+          "preceding_heartbeat_tick": 420,
+          "end_line": 348,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 353,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 115589120,
+          "last_observed_open": "dyld_shared_cache_arm64.11",
+          "preceding_heartbeat_tick": 420,
+          "end_line": 362,
+          "result": 0,
+          "heartbeat_samples": [
+            440,
+            460,
+            480,
+            500
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 367,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 376832,
+          "last_observed_open": "dyld_shared_cache_arm64.12",
+          "preceding_heartbeat_tick": 500,
+          "end_line": 368,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 373,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 212992,
+          "signature_file_offset": 107757568,
+          "last_observed_open": "dyld_shared_cache_arm64.13",
+          "preceding_heartbeat_tick": 500,
+          "end_line": 382,
+          "result": 0,
+          "heartbeat_samples": [
+            520,
+            540,
+            560,
+            580
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 387,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 393216,
+          "last_observed_open": "dyld_shared_cache_arm64.14",
+          "preceding_heartbeat_tick": 580,
+          "end_line": 388,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 393,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 114868224,
+          "last_observed_open": "dyld_shared_cache_arm64.15",
+          "preceding_heartbeat_tick": 580,
+          "end_line": 402,
+          "result": 0,
+          "heartbeat_samples": [
+            600,
+            620,
+            640,
+            660
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 407,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 442368,
+          "last_observed_open": "dyld_shared_cache_arm64.16",
+          "preceding_heartbeat_tick": 660,
+          "end_line": 408,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 413,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 196608,
+          "signature_file_offset": 97222656,
+          "last_observed_open": "dyld_shared_cache_arm64.17",
+          "preceding_heartbeat_tick": 660,
+          "end_line": 420,
+          "result": 0,
+          "heartbeat_samples": [
+            680,
+            700,
+            720
+          ],
+          "intra_sample_tick_span": 40
+        },
+        {
+          "start_line": 425,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 360448,
+          "last_observed_open": "dyld_shared_cache_arm64.18",
+          "preceding_heartbeat_tick": 720,
+          "end_line": 426,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 431,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 212992,
+          "signature_file_offset": 107397120,
+          "last_observed_open": "dyld_shared_cache_arm64.19",
+          "preceding_heartbeat_tick": 720,
+          "end_line": 440,
+          "result": 0,
+          "heartbeat_samples": [
+            740,
+            760,
+            780,
+            800
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 445,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 245760,
+          "last_observed_open": "dyld_shared_cache_arm64.20",
+          "preceding_heartbeat_tick": 800,
+          "end_line": 446,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 450,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 114900992,
+          "last_observed_open": "dyld_shared_cache_arm64.21",
+          "preceding_heartbeat_tick": 800,
+          "end_line": 459,
+          "result": 0,
+          "heartbeat_samples": [
+            820,
+            840,
+            860,
+            880
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 463,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 425984,
+          "last_observed_open": "dyld_shared_cache_arm64.22",
+          "preceding_heartbeat_tick": 880,
+          "end_line": 464,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 468,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 114786304,
+          "last_observed_open": "dyld_shared_cache_arm64.23",
+          "preceding_heartbeat_tick": 880,
+          "end_line": 479,
+          "result": 0,
+          "heartbeat_samples": [
+            900,
+            920,
+            940,
+            960,
+            980
+          ],
+          "intra_sample_tick_span": 80
+        }
+      ],
+      "heartbeat_before_shared_map": {
+        "line": 591,
+        "tick": 1940
+      },
+      "system_events": [
+        {
+          "line": 643,
+          "raw_continuous_ticks": 2497649616,
+          "event": "fsck",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 644,
+          "raw_continuous_ticks": 2497654755,
+          "event": "mount-phase-1",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 645,
+          "raw_continuous_ticks": 2497659517,
+          "event": "data-protection",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 646,
+          "raw_continuous_ticks": 2497664223,
+          "event": "finish-obliteration",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 647,
+          "raw_continuous_ticks": 2497668974,
+          "event": "detect-installed-roots",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 648,
+          "raw_continuous_ticks": 2497682658,
+          "event": "commit-boot-mode",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 649,
+          "raw_continuous_ticks": 2497691852,
+          "event": "restore-datapartition",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 650,
+          "raw_continuous_ticks": 2497696639,
+          "event": "restore-datapartition",
+          "message": "optional boot task not present"
+        },
+        {
+          "line": 651,
+          "raw_continuous_ticks": 2497701345,
+          "event": "mount-phase-2",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 652,
+          "raw_continuous_ticks": 2497917778,
+          "event": "init-with-data-volume",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 653,
+          "raw_continuous_ticks": 2497922811,
+          "event": "MSUEarlyBootTask",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 654,
+          "raw_continuous_ticks": 2497927583,
+          "event": "fips",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 655,
+          "raw_continuous_ticks": 2497932361,
+          "event": "keybag",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 656,
+          "raw_continuous_ticks": 2497937081,
+          "event": "usermanagerd",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 657,
+          "raw_continuous_ticks": 2497942110,
+          "event": "dirs_cleaner",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 658,
+          "raw_continuous_ticks": 2497951973,
+          "event": "xpcroleaccountd",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 659,
+          "raw_continuous_ticks": 2497964492,
+          "event": "init_featureflags",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 661,
+          "raw_continuous_ticks": 2501244611,
+          "event": "auearlyboot",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 664,
+          "raw_continuous_ticks": 2501887614,
+          "event": "tzinit",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 811,
+          "raw_continuous_ticks": 2514149934,
+          "event": "finish-restore",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 812,
+          "raw_continuous_ticks": 2514154386,
+          "event": "finish-demo-restore",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 813,
+          "raw_continuous_ticks": 2514156801,
+          "event": "sysstatuscheck",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 817,
+          "raw_continuous_ticks": 2514508607,
+          "event": "prng_seedctl",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 818,
+          "raw_continuous_ticks": 2514511025,
+          "event": "launchd_cache_loader",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 819,
+          "raw_continuous_ticks": 2514515357,
+          "event": "boot",
+          "message": "Early boot complete. Continuing system boot."
+        }
+      ],
+      "setup_arms": [
+        {
+          "line": 2409,
+          "pid": "235",
+          "taskgen": "897",
+          "tid": "2046",
+          "attempt": "1"
+        }
+      ],
+      "setup_watchdogs": []
+    },
+    {
+      "path": "[local-home]/...",
+      "sha256": "5c1a8a6d084b69e0b7edf9d3ed3df1f77d7323315b77219f7adbc90488e67b2a",
+      "bytes": 1845240,
+      "markers": {
+        "first_dyld_open_line": 243,
+        "shared_region_map_enter_line": 594,
+        "first_framebuffer_swap_log_line": 1559
+      },
+      "long_pending_sb_waits": [
+        {
+          "pid": 26,
+          "tid": 254,
+          "seq": 255,
+          "first_line": 1101,
+          "last_line": 1485,
+          "samples": [
+            {
+              "line": 1101,
+              "age_ms": 7600
+            },
+            {
+              "line": 1329,
+              "age_ms": 17795
+            },
+            {
+              "line": 1485,
+              "age_ms": 27987
+            }
+          ],
+          "max_wait_age_ms": 27987,
+          "max_age_line": 1485,
+          "endpoint_pid": 1,
+          "endpoint_generation": 4,
+          "endpoint_name": "launchd"
+        },
+        {
+          "pid": 26,
+          "tid": 254,
+          "seq": 2358,
+          "first_line": 1611,
+          "last_line": 2080,
+          "samples": [
+            {
+              "line": 1611,
+              "age_ms": 1427
+            },
+            {
+              "line": 1668,
+              "age_ms": 11626
+            },
+            {
+              "line": 1719,
+              "age_ms": 21815
+            },
+            {
+              "line": 1787,
+              "age_ms": 32006
+            },
+            {
+              "line": 1822,
+              "age_ms": 42220
+            },
+            {
+              "line": 1876,
+              "age_ms": 52419
+            },
+            {
+              "line": 1931,
+              "age_ms": 62621
+            },
+            {
+              "line": 1974,
+              "age_ms": 72828
+            },
+            {
+              "line": 2017,
+              "age_ms": 83035
+            },
+            {
+              "line": 2049,
+              "age_ms": 93240
+            },
+            {
+              "line": 2080,
+              "age_ms": 103440
+            }
+          ],
+          "max_wait_age_ms": 103440,
+          "max_age_line": 2080,
+          "endpoint_pid": 97,
+          "endpoint_generation": 272,
+          "endpoint_name": "lsd"
+        }
+      ],
+      "serial_launchd_lsd_pairs": [
+        {
+          "launchd_seq": 255,
+          "lsd_seq": 2358,
+          "pid": 26,
+          "tid": 254,
+          "serial_wait_lower_bound_ms": 131427
+        }
+      ],
+      "observed_signature_pairs": [
+        {
+          "start_line": 245,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 376832,
+          "last_observed_open": "dyld_shared_cache_arm64",
+          "preceding_heartbeat_tick": 0,
+          "end_line": 246,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 251,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 114409472,
+          "last_observed_open": "dyld_shared_cache_arm64.01",
+          "preceding_heartbeat_tick": 0,
+          "end_line": 260,
+          "result": 0,
+          "heartbeat_samples": [
+            20,
+            40,
+            60,
+            80
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 265,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 81920,
+          "last_observed_open": "dyld_shared_cache_arm64.02",
+          "preceding_heartbeat_tick": 80,
+          "end_line": 266,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 271,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 115539968,
+          "last_observed_open": "dyld_shared_cache_arm64.03",
+          "preceding_heartbeat_tick": 80,
+          "end_line": 280,
+          "result": 0,
+          "heartbeat_samples": [
+            100,
+            120,
+            140,
+            160
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 285,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 163840,
+          "last_observed_open": "dyld_shared_cache_arm64.04",
+          "preceding_heartbeat_tick": 160,
+          "end_line": 286,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 291,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 114311168,
+          "last_observed_open": "dyld_shared_cache_arm64.05",
+          "preceding_heartbeat_tick": 160,
+          "end_line": 300,
+          "result": 0,
+          "heartbeat_samples": [
+            180,
+            200,
+            220,
+            240
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 305,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 360448,
+          "last_observed_open": "dyld_shared_cache_arm64.06",
+          "preceding_heartbeat_tick": 240,
+          "end_line": 306,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 311,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 115179520,
+          "last_observed_open": "dyld_shared_cache_arm64.07",
+          "preceding_heartbeat_tick": 240,
+          "end_line": 320,
+          "result": 0,
+          "heartbeat_samples": [
+            260,
+            280,
+            300,
+            320
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 325,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 262144,
+          "last_observed_open": "dyld_shared_cache_arm64.08",
+          "preceding_heartbeat_tick": 320,
+          "end_line": 328,
+          "result": 0,
+          "heartbeat_samples": [
+            340
+          ],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 333,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 115523584,
+          "last_observed_open": "dyld_shared_cache_arm64.09",
+          "preceding_heartbeat_tick": 340,
+          "end_line": 342,
+          "result": 0,
+          "heartbeat_samples": [
+            360,
+            380,
+            400,
+            420
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 347,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 393216,
+          "last_observed_open": "dyld_shared_cache_arm64.10",
+          "preceding_heartbeat_tick": 420,
+          "end_line": 348,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 353,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 115589120,
+          "last_observed_open": "dyld_shared_cache_arm64.11",
+          "preceding_heartbeat_tick": 420,
+          "end_line": 362,
+          "result": 0,
+          "heartbeat_samples": [
+            440,
+            460,
+            480,
+            500
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 367,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 376832,
+          "last_observed_open": "dyld_shared_cache_arm64.12",
+          "preceding_heartbeat_tick": 500,
+          "end_line": 368,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 373,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 212992,
+          "signature_file_offset": 107757568,
+          "last_observed_open": "dyld_shared_cache_arm64.13",
+          "preceding_heartbeat_tick": 500,
+          "end_line": 382,
+          "result": 0,
+          "heartbeat_samples": [
+            520,
+            540,
+            560,
+            580
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 387,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 393216,
+          "last_observed_open": "dyld_shared_cache_arm64.14",
+          "preceding_heartbeat_tick": 580,
+          "end_line": 388,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 393,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 114868224,
+          "last_observed_open": "dyld_shared_cache_arm64.15",
+          "preceding_heartbeat_tick": 580,
+          "end_line": 402,
+          "result": 0,
+          "heartbeat_samples": [
+            600,
+            620,
+            640,
+            660
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 407,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 442368,
+          "last_observed_open": "dyld_shared_cache_arm64.16",
+          "preceding_heartbeat_tick": 660,
+          "end_line": 408,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 413,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 196608,
+          "signature_file_offset": 97222656,
+          "last_observed_open": "dyld_shared_cache_arm64.17",
+          "preceding_heartbeat_tick": 660,
+          "end_line": 420,
+          "result": 0,
+          "heartbeat_samples": [
+            680,
+            700,
+            720
+          ],
+          "intra_sample_tick_span": 40
+        },
+        {
+          "start_line": 425,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 360448,
+          "last_observed_open": "dyld_shared_cache_arm64.18",
+          "preceding_heartbeat_tick": 720,
+          "end_line": 426,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 431,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 212992,
+          "signature_file_offset": 107397120,
+          "last_observed_open": "dyld_shared_cache_arm64.19",
+          "preceding_heartbeat_tick": 720,
+          "end_line": 440,
+          "result": 0,
+          "heartbeat_samples": [
+            740,
+            760,
+            780,
+            800
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 445,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 245760,
+          "last_observed_open": "dyld_shared_cache_arm64.20",
+          "preceding_heartbeat_tick": 800,
+          "end_line": 446,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 450,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 114900992,
+          "last_observed_open": "dyld_shared_cache_arm64.21",
+          "preceding_heartbeat_tick": 800,
+          "end_line": 459,
+          "result": 0,
+          "heartbeat_samples": [
+            820,
+            840,
+            860,
+            880
+          ],
+          "intra_sample_tick_span": 60
+        },
+        {
+          "start_line": 463,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 16384,
+          "signature_file_offset": 425984,
+          "last_observed_open": "dyld_shared_cache_arm64.22",
+          "preceding_heartbeat_tick": 880,
+          "end_line": 464,
+          "result": 0,
+          "heartbeat_samples": [],
+          "intra_sample_tick_span": 0
+        },
+        {
+          "start_line": 468,
+          "pid": 1,
+          "cmd": 97,
+          "signature_bytes": 229376,
+          "signature_file_offset": 114786304,
+          "last_observed_open": "dyld_shared_cache_arm64.23",
+          "preceding_heartbeat_tick": 880,
+          "end_line": 479,
+          "result": 0,
+          "heartbeat_samples": [
+            900,
+            920,
+            940,
+            960,
+            980
+          ],
+          "intra_sample_tick_span": 80
+        }
+      ],
+      "heartbeat_before_shared_map": {
+        "line": 591,
+        "tick": 1940
+      },
+      "system_events": [
+        {
+          "line": 643,
+          "raw_continuous_ticks": 2501303215,
+          "event": "fsck",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 644,
+          "raw_continuous_ticks": 2501308485,
+          "event": "mount-phase-1",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 645,
+          "raw_continuous_ticks": 2501313411,
+          "event": "data-protection",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 646,
+          "raw_continuous_ticks": 2501318303,
+          "event": "finish-obliteration",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 647,
+          "raw_continuous_ticks": 2501323199,
+          "event": "detect-installed-roots",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 648,
+          "raw_continuous_ticks": 2502024350,
+          "event": "commit-boot-mode",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 649,
+          "raw_continuous_ticks": 2502034086,
+          "event": "restore-datapartition",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 650,
+          "raw_continuous_ticks": 2502038995,
+          "event": "restore-datapartition",
+          "message": "optional boot task not present"
+        },
+        {
+          "line": 651,
+          "raw_continuous_ticks": 2502043857,
+          "event": "mount-phase-2",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 652,
+          "raw_continuous_ticks": 2502048775,
+          "event": "init-with-data-volume",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 653,
+          "raw_continuous_ticks": 2502053885,
+          "event": "MSUEarlyBootTask",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 654,
+          "raw_continuous_ticks": 2502058778,
+          "event": "fips",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 655,
+          "raw_continuous_ticks": 2502063702,
+          "event": "keybag",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 656,
+          "raw_continuous_ticks": 2502068586,
+          "event": "usermanagerd",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 657,
+          "raw_continuous_ticks": 2502073709,
+          "event": "dirs_cleaner",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 658,
+          "raw_continuous_ticks": 2502083914,
+          "event": "xpcroleaccountd",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 659,
+          "raw_continuous_ticks": 2502213320,
+          "event": "init_featureflags",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 661,
+          "raw_continuous_ticks": 2505016647,
+          "event": "auearlyboot",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 665,
+          "raw_continuous_ticks": 2505796938,
+          "event": "tzinit",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 812,
+          "raw_continuous_ticks": 2516960251,
+          "event": "finish-restore",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 813,
+          "raw_continuous_ticks": 2516964729,
+          "event": "finish-demo-restore",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 814,
+          "raw_continuous_ticks": 2516967123,
+          "event": "sysstatuscheck",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 815,
+          "raw_continuous_ticks": 2516969468,
+          "event": "prng_seedctl",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 816,
+          "raw_continuous_ticks": 2516971787,
+          "event": "launchd_cache_loader",
+          "message": "Doing boot task"
+        },
+        {
+          "line": 817,
+          "raw_continuous_ticks": 2516975988,
+          "event": "boot",
+          "message": "Early boot complete. Continuing system boot."
+        }
+      ],
+      "setup_arms": [
+        {
+          "line": 2249,
+          "pid": "236",
+          "taskgen": "902",
+          "tid": "2106",
+          "attempt": "1"
+        },
+        {
+          "line": 4770,
+          "pid": "263",
+          "taskgen": "1000",
+          "tid": "2435",
+          "attempt": "2"
+        },
+        {
+          "line": 6996,
+          "pid": "269",
+          "taskgen": "1025",
+          "tid": "2543",
+          "attempt": "3"
+        }
+      ],
+      "setup_watchdogs": [
+        {
+          "line": 4693,
+          "pid": 236,
+          "wall_allowance_seconds": 20.0
+        },
+        {
+          "line": 6954,
+          "pid": 263,
+          "wall_allowance_seconds": 20.0
+        },
+        {
+          "line": 9165,
+          "pid": 269,
+          "wall_allowance_seconds": 20.0
+        }
+      ]
+    }
+  ],
+  "lsd_contextual_symbols_032506": {
+    "prior_symbol_report": "[local-home]/...",
+    "sha256": "55096e075baae3705a1737952f1988057986a3639c676f5abf34538ac527efb0",
+    "qualification": "Exact unslid-PC contextual matches; no fresh cache UUID validation",
+    "frames": [
+      {
+        "line": 1154,
+        "seq": 3,
+        "frame": 4,
+        "pc": "0x1c5b0ef90",
+        "unslid_pc": "0x181cd6f90",
+        "prior_nearest_symbol": "__ZN14_LSPreferences4withEPKNS_15SecurityContextEU13block_pointerFvPKvE",
+        "offset": "0xb8"
+      },
+      {
+        "line": 1155,
+        "seq": 3,
+        "frame": 5,
+        "pc": "0x1c5b0e414",
+        "unslid_pc": "0x181cd6414",
+        "prior_nearest_symbol": "__ZN14_LSPreferences4WithEPKNS_15SecurityContextEU13block_pointerFvPKvE",
+        "offset": "0x64"
+      },
+      {
+        "line": 1157,
+        "seq": 3,
+        "frame": 7,
+        "pc": "0x1c5b0b9c8",
+        "unslid_pc": "0x181cd39c8",
+        "prior_nearest_symbol": "__ZN13LSHandlerPref12CopyHandlersEv",
+        "offset": "0x70"
+      },
+      {
+        "line": 1158,
+        "seq": 3,
+        "frame": 8,
+        "pc": "0x1c5ac057c",
+        "unslid_pc": "0x181c8857c",
+        "prior_nearest_symbol": "__ZL16_LSDatabaseCleanPU8__strongP11_LSDatabase",
+        "offset": "0x550"
+      },
+      {
+        "line": 1159,
+        "seq": 3,
+        "frame": 9,
+        "pc": "0x1c5abf674",
+        "unslid_pc": "0x181c87674",
+        "prior_nearest_symbol": "__ZL56_LSDatabaseCreateFromPersistentStoreIgnoringRecoveryFileibPtPU15__autoreleasingP7NSError",
+        "offset": "0x21c"
+      },
+      {
+        "line": 1160,
+        "seq": 3,
+        "frame": 10,
+        "pc": "0x1c5abf098",
+        "unslid_pc": "0x181c87098",
+        "prior_nearest_symbol": "__LSDatabaseCreateFromPersistentStore",
+        "offset": "0x134"
+      },
+      {
+        "line": 1161,
+        "seq": 3,
+        "frame": 11,
+        "pc": "0x1c5ac5f94",
+        "unslid_pc": "0x181c8df94",
+        "prior_nearest_symbol": "-[LSDatabaseBuilder createAndSeedLocalDatabase:]",
+        "offset": "0x58"
+      },
+      {
+        "line": 1187,
+        "seq": 4,
+        "frame": 2,
+        "pc": "0x1c5aff990",
+        "unslid_pc": "0x181cc7990",
+        "prior_nearest_symbol": "___LAUNCH_SERVICES_CLIENTS_ARE_WAITING_FOR_THE_DATABASE_TO_FINISH_SEEDING__",
+        "offset": "0x20"
+      },
+      {
+        "line": 1188,
+        "seq": 4,
+        "frame": 3,
+        "pc": "0x1c5aff8c4",
+        "unslid_pc": "0x181cc78c4",
+        "prior_nearest_symbol": "-[LSDatabaseBlockingFetchClient getServerStoreBlockingWithCompletionHandler:]",
+        "offset": "0x30"
+      },
+      {
+        "line": 1256,
+        "seq": 6,
+        "frame": 1,
+        "pc": "0x208a6465c",
+        "unslid_pc": "0x1c4c2c65c",
+        "prior_nearest_symbol": "___container_xpc_create_connection_block_invoke",
+        "offset": "0x5c"
+      },
+      {
+        "line": 1412,
+        "seq": 7,
+        "frame": 13,
+        "pc": "0x1f50037d0",
+        "unslid_pc": "0x1b11cb7d0",
+        "prior_nearest_symbol": "___52-[MIFilesystemScanner _scanAppsDirectory:withError:]_block_invoke",
+        "offset": "0x158"
+      },
+      {
+        "line": 1655,
+        "seq": 10,
+        "frame": 13,
+        "pc": "0x1f50037d0",
+        "unslid_pc": "0x1b11cb7d0",
+        "prior_nearest_symbol": "___52-[MIFilesystemScanner _scanAppsDirectory:withError:]_block_invoke",
+        "offset": "0x158"
+      },
+      {
+        "line": 1684,
+        "seq": 11,
+        "frame": 1,
+        "pc": "0x208a66d08",
+        "unslid_pc": "0x1c4c2ed08",
+        "prior_nearest_symbol": "___container_create_or_lookup_path_for_platform_block_invoke",
+        "offset": "0x668"
+      },
+      {
+        "line": 1685,
+        "seq": 11,
+        "frame": 2,
+        "pc": "0x208a74e24",
+        "unslid_pc": "0x1c4c3ce24",
+        "prior_nearest_symbol": "___container_references_iterate_by_group_sync_block_invoke",
+        "offset": "0x3e8"
+      },
+      {
+        "line": 1695,
+        "seq": 11,
+        "frame": 12,
+        "pc": "0x1f50037d0",
+        "unslid_pc": "0x1b11cb7d0",
+        "prior_nearest_symbol": "___52-[MIFilesystemScanner _scanAppsDirectory:withError:]_block_invoke",
+        "offset": "0x158"
+      }
+    ]
+  }
+}

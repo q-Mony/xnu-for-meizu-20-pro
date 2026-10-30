@@ -1,0 +1,66 @@
+{
+  "scope": "Offline; source and frozen binary identity only; no live device binding refreshed",
+  "sources": {
+    "bsd/kern/kern_descrip.c": {
+      "path": "<nova-root>/unixnu-main-nova/out/meizu20pro/tree/.cache/xnu-work/bsd/kern/kern_descrip.c",
+      "sha256": "de98acef2777732d36083b31022ca2f65dd1596e3fe9b85570ad46d9fe92df75",
+      "frozen_sha256": "de98acef2777732d36083b31022ca2f65dd1596e3fe9b85570ad46d9fe92df75",
+      "matches_frozen": true
+    },
+    "bsd/kern/ubc_subr.c": {
+      "path": "<nova-root>/unixnu-main-nova/out/meizu20pro/tree/.cache/xnu-work/bsd/kern/ubc_subr.c",
+      "sha256": "ab1e456241b01330854b49d98321b982cd8a9828ed82ec347137b6b5ffbf877d",
+      "frozen_sha256": "ab1e456241b01330854b49d98321b982cd8a9828ed82ec347137b6b5ffbf877d",
+      "matches_frozen": true
+    },
+    "bsd/kern/kern_exec.c": {
+      "path": "<nova-root>/unixnu-main-nova/out/meizu20pro/tree/.cache/xnu-work/bsd/kern/kern_exec.c",
+      "sha256": "ff20a531ddff36044b29814965bddb7e9cb3c54c4d5a507b6be70daa31ebf91c",
+      "frozen_sha256": "ff20a531ddff36044b29814965bddb7e9cb3c54c4d5a507b6be70daa31ebf91c",
+      "matches_frozen": true
+    },
+    "osfmk/ipc/mach_msg.c": {
+      "path": "<nova-root>/unixnu-main-nova/out/meizu20pro/tree/.cache/xnu-work/osfmk/ipc/mach_msg.c",
+      "sha256": "e95a2a01218352bd59befcae8ee956de3e8aa8583cda5ecaf750b28d9279ae09",
+      "frozen_sha256": "e95a2a01218352bd59befcae8ee956de3e8aa8583cda5ecaf750b28d9279ae09",
+      "matches_frozen": true
+    },
+    "libkern/os/system_event_log.c": {
+      "path": "<nova-root>/unixnu-main-nova/out/meizu20pro/tree/.cache/xnu-work/libkern/os/system_event_log.c",
+      "sha256": "2dbea7a6ef1c56861d1e89cc97fae8840d06c5d1bcaf299658f2694088ddadd0",
+      "frozen_sha256": "2dbea7a6ef1c56861d1e89cc97fae8840d06c5d1bcaf299658f2694088ddadd0",
+      "matches_frozen": true
+    }
+  },
+  "artifacts_sha256": {
+    "[local-home]/...": "4fcf20feb1639c19fac0331c3ea4180ba0d0f302078ed2bde88f04c5434a1ac1",
+    "[local-home]/...": "9a4212834eb4ac1575d1d47c91802471f833eb7e268d8b351a5913cbe90636ae",
+    "[local-home]/...": "e619e34a7ba160ee427c2d401bd86e90777f61d6295b2f8d641bc24b108a1654",
+    "[local-home]/...": "2d3dd14adef4337e16de98959aab9ddaf475748ebfa40d2ebf5263e792eab0da"
+  },
+  "native_hash_cache_enabled_in_compile_command": true,
+  "kernel_symbols": [
+    "fffffff008385874 S _ccsha256_ltc_compress",
+    "fffffff0086ffa58 S _ubc_cs_blob_add",
+    "fffffff008701428 s _cs_native4k_prepare"
+  ],
+  "sha256_samples": [
+    {
+      "pc": "0xfffffff0083859f0",
+      "symbol": "_ccsha256_ltc_compress",
+      "offset": "0x17c"
+    },
+    {
+      "pc": "0xfffffff008385cb4",
+      "symbol": "_ccsha256_ltc_compress",
+      "offset": "0x440"
+    },
+    {
+      "pc": "0xfffffff008385bb8",
+      "symbol": "_ccsha256_ltc_compress",
+      "offset": "0x344"
+    }
+  ],
+  "sol_035508_is_duplicate_of_032506": true,
+  "unsymbolicated_sample": "0xfffffff00568def4 (prelinked region; not named from main symbol table)"
+}

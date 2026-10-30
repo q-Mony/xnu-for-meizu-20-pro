@@ -1,0 +1,11 @@
+{
+  "new_file_no_previous_version": true,
+  "recorded_at": "2026-10-30T20:12:50.804194+08:00",
+  "source": "user reply to R18 black-screen observation question",
+  "user_text": "出现了黑屏",
+  "hello_seen_before_blackout": true,
+  "black_screen_reproduced_R18": true,
+  "delay_after_hello_seconds": null,
+  "wake_attempt_this_round_reported": false,
+  "note": "Previous R17 wake attempts failed; no fresh R18 wake attempt or blackout onset time reported. Do not infer them."
+}

@@ -1,0 +1,60 @@
+{
+  "task": "R18 warm-Data streaming SHA-256 adapter",
+  "status": "GREEN_LOCAL_TESTS_AND_TU_PASS",
+  "phase_order": [
+    "RED before production edits",
+    "GREEN after implementation"
+  ],
+  "red": {
+    "status": "red-confirmed",
+    "result": "red-run-nova/red-results-nova.json",
+    "result_sha256": "0f46395efa364dd793a23b731c20ec23653c7d6ad5e91c8bec7b84f86a8ff986",
+    "failures": [
+      "NativeRamBlock warmload Hash used SHA256_* (wiring check)",
+      "production header lacked streaming declarations",
+      "production adapter lacked streaming symbols (link failure)",
+      "WarmLoad fixture could not call the missing interface"
+    ],
+    "production_tus_before_change": {
+      "corecrypto_sha2": 0,
+      "NativeRamBlock": 0
+    }
+  },
+  "green": {
+    "result": "green-run-nova/results-nova.json",
+    "result_sha256": "8a969860c54a8e070c15e2397f26f81ab86df90cd59e03932f36a1dfa21127bb",
+    "streaming_digest_cases": 21019,
+    "feature_chunk_cases": 144,
+    "warmload_cases": 385,
+    "warmload_baseline": {
+      "reads": 3,
+      "allocations": 41,
+      "checks": 152,
+      "hash_inits": 3,
+      "hash_finals": 3,
+      "hash_updates": 67
+    },
+    "asan_ubsan": true,
+    "production_tus": {
+      "corecrypto_sha2": {
+        "exit_code": 0,
+        "object": "green-run-nova/corecrypto-sha2-production-nova.o",
+        "object_sha256": "0e5e79e708f7238fc35210077b9ba004ddac77b392aa885e9205c5220b8b05a3"
+      },
+      "NativeRamBlock": {
+        "exit_code": 0,
+        "object": "green-run-nova/NativeRamBlock-production-nova.o",
+        "object_sha256": "05304db41b0f6c76e1f9dc6726dde98679418ee3c853f6b0fc28ef4773c19cee"
+      }
+    }
+  },
+  "source_changes": "changes-nova.json",
+  "source_changes_sha256": "cee4962787b0df0ce33904dc50ee9f56164076667dc216aebfc5ed101d2495b9",
+  "limits": [
+    "Host timing is not a handset measurement; no 8.666060 s saving is claimed.",
+    "Privileged feature reads and preemption are instrumented host stubs.",
+    "WarmLoad fixture image is synthetic and does not claim APFS/capture validity.",
+    "No full kernel build, packaging, device command, adb/fastboot, slot change, flash or reboot.",
+    "The generated EXPORT_HDRS copy of native_sha256.h was refreshed from the allowed source header for the original-argv TU compile; libkern/libkern/crypto/Makefile already exports the header."
+  ]
+}

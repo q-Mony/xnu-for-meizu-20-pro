@@ -1,0 +1,29 @@
+diff --git a/bsd/kern/kern_exec.c b/bsd/kern/kern_exec.c
+--- a/bsd/kern/kern_exec.c
++++ b/bsd/kern/kern_exec.c
+@@ -9804,6 +9804,25 @@
+ 	if (data_error) {
+ 		printf("meizu: Data mount failed %d, continuing without /private/var\n", data_error);
+ 	}
++#if defined(XNU_MEIZU_WATCHDOG_POLICY) && XNU_MEIZU_WATCHDOG_POLICY
++	if (!data_error) {
++		extern int meizu_boot_watchdog_policy(void *, uint64_t, int);
++		int policy_error = meizu_boot_watchdog_policy(p, (uint64_t)scratch_addr, data_error);
++		if (policy_error) {
++			extern const char *meizu_watchdog_policy_diagnostic(int *, int *, int *, int *);
++			extern void native_ufs_log_read_stats(void);
++			int warm_found = -1, warm_value = -1, branch = -1, op = -1;
++			const char *stage = meizu_watchdog_policy_diagnostic(&warm_found, &warm_value, &branch, &op);
++			printf("nova: policy-diag version=11 phase=failed invocation=%d warm_found=%d warm_value=%d branch=%d op=%d stage=%s errno=%d save=attempting\n",
++			    meizu_load_init_count, warm_found, warm_value, branch, op, stage, policy_error);
++			native_ufs_log_read_stats();
++			int save = nova_policy_failure_save_once();
++			/* The save result is known only after the snapshot, so the panic
++			 * reports it without claiming that it is in that saved snapshot. */
++			panic("nova-r11 policy fail e=%d b=%d op=%d save=%d", policy_error, branch, op, save);
++		}
++	}
++#endif
+ #if defined(XNU_BOOT_PROGRESS) && XNU_BOOT_PROGRESS
+ 	extern int sheng_boot_watchdog_policy(void *, uint64_t);
+ 	boot_progress_stage("temporary watchdog launch policy enter");

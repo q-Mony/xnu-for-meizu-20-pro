@@ -1,0 +1,52 @@
+# Kernel configuration of the Meizu 20 Pro image. CONFIG_XNU_<NAME> becomes XNU_<NAME> for the
+# kernel build. This is the generic baseline; board-specific layers are enabled as they are written.
+#
+# Deliberately absent (sheng-only): CONFIG_XNU_SHENG_PMGR, CONFIG_XNU_BOOT_PROGRESS,
+# CONFIG_XNU_NATIVE_LEGACY_DISPLAY, CONFIG_XNU_NATIVE_ADRENO - each of them pulls in sheng code
+# or a sheng archive.
+# TODO: the owner/verified-root archive paths of the target image (sheng sets
+# CONFIG_XNU_NATIVE_VIRTIO_BLOCK_ARCHIVE and CONFIG_XNU_VERIFIED_ROOT_ARCHIVE).
+# The two volume UUIDs below are the ones of the shared target image (iPadOS 17.7.11): the scratch
+# Data volume and the signed SystemOS cryptex volume. Re-observe them if the target image changes.
+CONFIG_XNU_OWNER_DATA_VOLUME_UUID="18AB5557-DC2D-469B-8758-855E60F5B0DF"
+CONFIG_XNU_OWNER_CACHE_VOLUME_UUID="8846FE78-2910-4297-AF97-D59BB6F8FC16"
+
+CONFIG_XNU_BUILD_ARCHIVES=y
+CONFIG_XNU_SOURCE_CORECRYPTO14=y
+CONFIG_XNU_SOURCE_PTHREAD=y
+CONFIG_XNU_ARM_DT_PLATFORM=y
+CONFIG_XNU_ARMCPU=y
+CONFIG_XNU_MEIZU_TOUCH=y
+CONFIG_XNU_NATIVE_UFS=y
+CONFIG_XNU_NATIVE_AES=y
+CONFIG_XNU_NATIVE_VIRTIO_BLOCK=y
+CONFIG_XNU_NATIVE_RAM_BLOCK=y
+CONFIG_XNU_TRUST_CACHE_RUNTIME=y
+CONFIG_XNU_SOURCE_MOCKFS=y
+CONFIG_XNU_NATIVE_CS_HASH_CACHE=y
+CONFIG_XNU_VERIFIED_ROOT_PROBE=y
+CONFIG_XNU_OWNER_ROOT_AUDIT=y
+CONFIG_XNU_OWNER_ROOT_TRUST=y
+CONFIG_XNU_OWNER_CACHE_MOUNT=y
+CONFIG_XNU_OWNER_CACHE_STARTUP=y
+CONFIG_XNU_OWNER_BOOT_MANIFEST=y
+CONFIG_XNU_OWNER_DATA_MOUNT=y
+CONFIG_XNU_OWNER_UNION_SYSTEMOS=y
+CONFIG_XNU_DT_PANIC_REGION=y
+CONFIG_XNU_ZONE_PGZ_ALIGNMENT_PROBE=y
+CONFIG_XNU_NATIVE_ARCH_TIMER=y
+CONFIG_XNU_NATIVE_PAN=y
+
+CONFIG_XNU_CRYPTO_BOOTSTRAP="prelinked"
+CONFIG_XNU_EXTRA_LD_ARCHIVES="-Wl,-force_load,{tree}/build/meizu-watchdog-policy/libMeizuWatchdogPolicy.a -Wl,-force_load,{tree}/build/native-meizu-usb-probe/libNativeMeizuUsbProbe.a"
+CONFIG_XNU_MEIZU_WATCHDOG_POLICY=y
+CONFIG_XNU_EXTRA_CFLAGS="-Wno-reserved-identifier -Wno-pre-c11-compat -Wno-missing-designated-field-initializers -Wno-suggest-override -Wno-unnecessary-virtual-specifier -Wno-suggest-destructor-override -Wno-ms-bitfield-padding -DXNU_MEIZU_WATCHDOG_POLICY=1"
+# Opt in only with all three deliberate edits for one disposable RAM Data boot:
+# CONFIG_XNU_MEIZU_AKS_NOTIFY=y, add -DXNU_MEIZU_AKS_NOTIFY=1 -I{tree}/kits/meizu20pro to
+# CONFIG_XNU_EXTRA_CFLAGS and append -Wl,-force_load,{tree}/build/meizu-aks-notify/libMeizuKeyStoreNotification.a
+# to CONFIG_XNU_EXTRA_LD_ARCHIVES. The boot argument meizu-aks-notify=1 is also required.
+# The existing out/meizu20pro/.config must be regenerated from this defconfig
+# for an opt-in build; the archive builder checks that selected config.
+CONFIG_XNU_NATIVE_MOBILE_DISPLAY=n
+CONFIG_XNU_NEGRONI_DISPLAY=y
+CONFIG_XNU_ARMVIRT_PLATFORM=n
