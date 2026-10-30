@@ -38,7 +38,7 @@
 - 无 >=50 MiB 文件；最大文件约 3.6 MiB（Mu 的文档用 PNG）。
 - 高置信 secret 扫描 0 命中；设备序列号 0 命中；厂商 `Binaries`/`Build`、
   原 `out/`、`inputs-nova/`、`snapshot-nova/`、`logs-nova/` 均不存在。
-- 9 个继承的绝对路径文本（源码默认值/原始冻结证据），不是 symlink，已在
+- 8 个继承的绝对路径文本（源码默认值/原始冻结证据），不是 symlink，已在
   `docs-nova/PORTABILITY-NOTES.md` 说明。
 
 ## 未验证

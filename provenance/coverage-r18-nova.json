@@ -17,8 +17,8 @@
     "missing_unexplained": 0,
     "extra_total": 2599,
     "extra_groups": {
-      "out_of_r18_freeze_scope:uefi": 2089,
       "out_of_r18_freeze_scope:fetched-dependency-snapshot": 430,
+      "out_of_r18_freeze_scope:uefi": 2089,
       "export_docs_tools_metadata": 67,
       "current_after_r18_freeze": 13
     },
@@ -33,8 +33,8 @@
     }
   ],
   "extra_groups": {
-    "out_of_r18_freeze_scope:uefi": 2089,
     "out_of_r18_freeze_scope:fetched-dependency-snapshot": 430,
+    "out_of_r18_freeze_scope:uefi": 2089,
     "export_docs_tools_metadata": 67,
     "current_after_r18_freeze": 13
   },
