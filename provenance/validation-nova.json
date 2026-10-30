@@ -4,7 +4,7 @@
   "repo": "repo-nova",
   "inventory": {
     "file_count": 8795,
-    "total_bytes": 114651059,
+    "total_bytes": 114651588,
     "max_file_bytes": 3630250,
     "executable_count": 262
   },
@@ -82,8 +82,8 @@
     "extra_groups": {
       "out_of_r18_freeze_scope:uefi": 2089,
       "out_of_r18_freeze_scope:fetched-dependency-snapshot": 430,
-      "current_after_r18_freeze": 13,
-      "export_docs_tools_metadata": 67
+      "export_docs_tools_metadata": 67,
+      "current_after_r18_freeze": 13
     },
     "coverage_ratio_including_explained": 1.0
   },

@@ -88,3 +88,11 @@ python3 prepare-source-nova.py --fetch-references
 
 本次导出只做了源码级校验、策略测试与准备脚本 dry-run；没有执行完整构建、
 没有连接设备、没有刷机。构建脚本中依赖硬件或原始固件/日志的步骤不在本轮验证范围。
+
+## tree/scripts 选择
+
+导出时对实际组装树 `tree/scripts`（303 个文件）与 `unixnu-main-nova/scripts`（291）
++ `unixnu-meizu20pro-nova/scripts`（26）做了逐内容 SHA-256 比较：**没有**不属于
+这两处的 unique 构建脚本。因此不额外导出脚本目录；`tree.assemble` 会从主/板级
+`scripts/` 重新复制组装。原 `tree/scripts` 中若出现同名但内容不同的文件，会由
+主/板级当前源码覆盖，符合“当前工作内容”而不是旧组装树缓存的原则。

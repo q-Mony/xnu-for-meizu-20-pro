@@ -19,8 +19,8 @@
     "extra_groups": {
       "out_of_r18_freeze_scope:uefi": 2089,
       "out_of_r18_freeze_scope:fetched-dependency-snapshot": 430,
-      "current_after_r18_freeze": 13,
-      "export_docs_tools_metadata": 67
+      "export_docs_tools_metadata": 67,
+      "current_after_r18_freeze": 13
     },
     "coverage_ratio_including_explained": 1.0
   },
@@ -35,8 +35,8 @@
   "extra_groups": {
     "out_of_r18_freeze_scope:uefi": 2089,
     "out_of_r18_freeze_scope:fetched-dependency-snapshot": 430,
-    "current_after_r18_freeze": 13,
-    "export_docs_tools_metadata": 67
+    "export_docs_tools_metadata": 67,
+    "current_after_r18_freeze": 13
   },
   "extra_paths_sample": [
     ".gitattributes",
