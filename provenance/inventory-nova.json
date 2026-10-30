@@ -3,7 +3,7 @@
   "new_file_no_previous_version": true,
   "summary": {
     "file_count": 8795,
-    "total_bytes": 114650606,
+    "total_bytes": 114651059,
     "max_file_bytes": 3630250,
     "executable_count": 262
   },
@@ -117,8 +117,8 @@
     },
     {
       "path": "docs-nova/BUILD.md",
-      "sha256": "4346d296f80042cd03fa18364cd4688611d995e576ceb1b586489ab9534505c6",
-      "size": 3389,
+      "sha256": "aa49b6f250184551b3a83b7aabf5008f8a53b40c53457420b1219b987dfa26ee",
+      "size": 3842,
       "mode": "100644",
       "source": "generated",
       "note": "build-doc"
