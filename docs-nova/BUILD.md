@@ -55,6 +55,12 @@ python3 prepare-source-nova.py --fetch-references
 
 `build-xnu-4k-baseline.sh` 会基于已恢复的 `.cache/xnu-work` 工作树继续应用
 `patches/xnu/` 中尚未应用的补丁；**不要**先运行会重置该目录的通用 clean/fetch。
+
+> 网络边界：`prepare-source-nova.py` 本身默认离线，只有 `--fetch-references`
+> 才拉取它负责的三个固定 reference。正常 CLI 构建在缺少其他 feed（如
+> libplatform/AvailabilityVersions/corecrypto/IOStorageFamily/edk2）或
+> `.cache/sources/*.json` 头文件元数据时，仍可能按既有脚本自行访问上游；
+> 本轮未做“完全离线构建”验证。该行为不会覆盖已恢复的 Nova XNU 源码。
 当前 `patches/xnu/` 只保留 `zzzz-park-marker.patch`，其余早期补丁已包含在
 `sources-nova/xnu` 快照中。
 
